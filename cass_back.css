@@ -1,0 +1,54 @@
+/* Hub de Wikis de Jogos - Definições de Cores de Fundo */
+
+body {
+  background-image: url('file:///C:/matheus/TCC/cass_back.webp');
+  background-repeat: repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #0a0a0a; 
+}
+
+/* Fundo central semi-transparente para o conteúdo principal */
+main {
+  background-color: rgba(10, 10, 10, 0.9); /* Um pouco mais escuro para contraste */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(26, 115, 232, 0.2);
+}
+
+/* Cabeçalho Transparente */
+header {
+  background-color: rgba(10, 10, 10, 1);
+}
+
+/* Hero - O fundo é definido no style_structure.css, mas aqui garantimos o contraste do texto */
+.hero h1 {
+  background: rgba(10, 10, 10, 0.4); /* Leve fundo para o título no Hero */
+  backdrop-filter: blur(5px); /* Efeito de desfoque moderno */
+}
+
+nav ul li a {
+  background-color: rgba(10, 10, 10, 0.4); /* Fundo semi-transparente para os botões */
+  border-color: rgba(26, 115, 232, 0.6);
+}
+
+nav ul li a:hover {
+  background-color: #1a73e8;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 15px rgba(26, 115, 232, 0.8);
+}
+
+/* Cores das Seções */
+section h2 {
+  color: #1a73e8;
+}
+
+section p {
+  color: #bbb;
+}
+
+footer {
+  background-color: rgba(10, 10, 10, 0.95);
+  border-top: 1px solid rgba(26, 115, 232, 0.3);
+}

@@ -1,0 +1,195 @@
+/* Hub de Wikis de Jogos - Estrutura e Layout */
+
+/* Reset e Estilos Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+a {
+  color: #66c0f4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cabeçalho Sólido no Topo */
+header {
+  position: relative; /* Mudado de absolute para ocupar espaço no topo */
+  width: 100%;
+  padding: 1rem 1rem; /* Aumentado o espaçamento interno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 100;
+  border-bottom: 2px solid rgba(26, 115, 232, 0.5);
+  
+
+}
+
+/* Moldura Quadrada no Logo "Hub de Wikis" */
+header .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500px;
+  color: #1a73e8;
+  letter-spacing: 0px;
+  padding: 0.8rem 0.5rem; /* Espaçamento interno da moldura */
+  border: 2px solid rgba(26, 115, 232, 0.8); /* Moldura quadrada */
+  display: inline-block;
+  clip-path: polygon(0% 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, 0% 100%);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Aumentado o espaçamento entre os botões */
+  flex-wrap: wrap;
+}
+
+/* Molduras Quadradas nos Atalhos */
+nav ul li a {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 0.8rem 1.5rem; /* Aumentado para criar o formato de botão */
+  border: 1px solid rgba(26, 115, 232, 0.5); /* Moldura quadrada */
+  border-radius: 0; /* Removido arredondamento */
+  transition: all 0.3s ease;
+  display: inline-block;
+  
+    clip-path: polygon(0% 0%, calc(100% - 25px) 0%, 100% 20px, 100% 100%, 0% 100%);
+}
+
+/* Hero - Largura Total com Corte Diagonal Superior Direito */
+.hero {
+  height: 100vh;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
+  margin-top: 60px; /* Começa logo após o header */
+  margin-bottom: 10px;
+  
+  /* Corte Diagonal Padronizado */
+  clip-path: polygon(0% 0%, calc(100% - 60px) 0%, 100% 60px, 100% 100%, 0% 100%);
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Conteúdo Principal - Delimitado e com Fundo Central */
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 1300px;
+  margin: -60px auto 3rem; /* Sobe para encaixar no corte do Hero */
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  
+  /* Corte diagonal no Main */
+  clip-path: polygon(0% 0%, calc(100% - 60px) 0%, 100% 60px, 100% 100%, 0% 100%);
+}
+
+/* Seções Internas */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(26, 115, 232, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+/* Galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(26, 115, 232, 0.4);
+  transition: transform 0.3s ease;
+  clip-path: polygon(0% 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Listas de Links */
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+ul li a {
+  color: #66c0f4;
+  transition: color 0.2s;
+}
+
+ul li a:hover {
+  color: #fff;
+}
+
+/* Rodapé */
+footer {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  background-color: rgba(10, 10, 10, 0.9);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .hero {
+    height: 40vh;
+    clip-path: none;
+  }
+  main {
+    margin-top: 0;
+    padding: 2rem 1.5rem;
+    width: 100%;
+    clip-path: none;
+  }
+}

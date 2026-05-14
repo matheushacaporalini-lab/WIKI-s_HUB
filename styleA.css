@@ -1,0 +1,110 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    background: url('https://cdn1.epicgames.com/spt-assets/c313d3804fb64aefa57f0a7b827ec389/cassette-beasts-1u5q6.png') no-repeat center/cover;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 {
+    padding: 0.5rem 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    border-radius: 6px;
+    background: rgba(26, 115, 232, 0.8);
+    color: #fff;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #1a73e8;
+    color: #1a73e8;
+}
+
+section p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(26, 115, 232, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px #1a73e8;
+}
+
+.guides ul,
+.articles ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: #ccc;
+}
+
+.guides ul li,
+.articles ul li {
+    margin-bottom: 0.5rem;
+}
+
+.forum-link a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    background-color: #1a73e8;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.forum-link a:hover {
+    background-color: #155bbb;
+    color: #fff;
+    text-decoration: none;
+}
+
+.location-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #1a73e8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.location-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #66c0f4; /* Cor azul claro para o título */
+  margin-bottom: 1rem;
+}
+
+.location-card p {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.7;
+}
+

@@ -1,0 +1,92 @@
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .resource-card {
+      background-color: #1f1f1f;
+      border-radius: 8px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-left: 4px solid #1a73e8;
+    }
+    
+    .resource-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(26, 115, 232, 0.5);
+    }
+    
+    .resource-card img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+    
+    .resource-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      color: #66c0f4;
+      margin-bottom: 0.5rem;
+    }
+    
+    .resource-card .type {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    
+    .type-mineral { background-color: #8b4513; color: #fff; }
+    .type-spout { background-color: #4682b4; color: #fff; }
+    .type-hive { background-color: #daa520; color: #000; }
+    .type-weather { background-color: #9932cc; color: #fff; }
+    .type-special { background-color: #ff6347; color: #fff; }
+    
+    .location-section {
+      background-color: #1a1a1a;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid #2a2a2a;
+    }
+    
+    .tip-box {
+      background-color: #1f3a4d;
+      border-left: 4px solid #66c0f4;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .tip-box strong {
+      color: #66c0f4;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    
+    th, td {
+      padding: 0.8rem;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+    
+    th {
+      background-color: #1a73e8;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    tr:hover {
+      background-color: #252525;
+    }

@@ -1,0 +1,306 @@
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      font-size: 0.82rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+    .breadcrumb a { color: #66c0f4; }
+    .breadcrumb a:hover { color: #fff; }
+
+    /* ── Bloco de introdução com borda lateral ── */
+    .intro-block {
+      border-left: 4px solid #1a73e8;
+      padding: 1.2rem 1.5rem;
+      background: rgba(26, 115, 232, 0.06);
+      margin-bottom: 2.5rem;
+      clip-path: polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);
+    }
+    .intro-block p {
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ── Aviso de spoiler ── */
+    .spoiler-warning {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(155, 108, 211, 0.15);
+      border: 1px solid #9b6cd3;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
+      color: #ce9aff;
+      margin-bottom: 2.5rem;
+      clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 14px, 100% 100%, 0% 100%);
+    }
+
+    /* ── Capítulos da história ── */
+    .story-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .story-section h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: #1a73e8;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    /* Numeração do capítulo */
+    .chapter-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #1a73e8;
+      color: #fff;
+      font-size: 0.75rem;
+      font-family: 'Orbitron', sans-serif;
+      flex-shrink: 0;
+      clip-path: polygon(0% 0%, calc(100% - 8px) 0%, 100% 8px, 100% 100%, 0% 100%);
+    }
+
+    .story-section p {
+      color: #bbb;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Divisor entre capítulos ── */
+    .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, rgba(26,115,232,0.4), transparent);
+      margin: 3rem 0;
+    }
+
+    /* ── Card de conceito central ── */
+    .concept-card {
+      background: rgba(20, 20, 30, 0.9);
+      border: 1px solid rgba(26, 115, 232, 0.3);
+      border-left: 4px solid #9b6cd3;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      clip-path: polygon(0% 0%, calc(100% - 25px) 0%, 100% 25px, 100% 100%, 0% 100%);
+    }
+    .concept-card h4 {
+      font-family: 'Orbitron', sans-serif;
+      color: #9b6cd3;
+      font-size: 0.85rem;
+      margin-bottom: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .concept-card p {
+      color: #bbb;
+      font-size: 0.92rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ── Grid de temas narrativos ── */
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .theme-item {
+      background: rgba(20, 20, 30, 0.85);
+      border: 1px solid rgba(26, 115, 232, 0.25);
+      padding: 1rem 1.2rem;
+      clip-path: polygon(0% 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, 0% 100%);
+    }
+    .theme-item h5 {
+      font-family: 'Orbitron', sans-serif;
+      color: #1a73e8;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .theme-item p {
+      color: #999;
+      font-size: 0.83rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── Linha do tempo dos Arcanjos ── */
+    .arcanjos-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.2rem;
+    }
+    .arcanjos-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.6rem;
+      background: rgba(20, 20, 30, 0.8);
+      border: 1px solid rgba(155, 108, 211, 0.2);
+      clip-path: polygon(0% 0%, calc(100% - 18px) 0%, 100% 18px, 100% 100%, 0% 100%);
+    }
+    .arcanjo-dot {
+      width: 10px;
+      height: 10px;
+      background: #9b6cd3;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .arcanjos-list li .arcanjo-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.82rem;
+      color: #ce9aff;
+      margin-bottom: 0.2rem;
+    }
+    .arcanjos-list li .arcanjo-desc {
+      font-size: 0.85rem;
+      color: #999;
+      line-height: 1.5;
+    }
+
+    /* ── Nota de rodapé da página ── */
+    .page-note {
+      font-size: 0.8rem;
+      color: #555;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+.spoiler-toggle {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle:checked ~ .spoiler-content {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle:checked ~ .spoiler-button {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+.spoiler-toggle2 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button2 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+
+.spoiler-toggle2:checked ~ .spoiler-content2 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle2:checked ~ .spoiler-button2 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+.spoiler-toggle3 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button3 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content3 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+
+.spoiler-toggle3:checked ~ .spoiler-content3 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle3:checked ~ .spoiler-button3 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle4 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button4 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content4 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+
+.spoiler-toggle4:checked ~ .spoiler-content4 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle4:checked ~ .spoiler-button4 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
