@@ -1,38 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabela de tipos - Cassete Beasts</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="cassstyle.css" />
-  <link rel="stylesheet" href="cass_back.css" />
-  <link rel="stylesheet" href="styleA.css" />
-</head>
-<body>
-  <header>
-    <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">Hud de wikis</a></div>
-    <nav>
-      <ul>
-        <li><a href="CasseteBeast.html">Wiki Cassete Beasts</a></li>
-        <li><a href="#.html">Movimentos</a></li>
-        <li><a href="#.html">Beasts</a></li>
-      </ul>
-    </nav>
-  </header>
-    <main>
-    <div class="breadcrumb">
-      <a href="index.html">Início</a> &gt; <a href="CasseteBeast.html">Wiki Cassete Beasts</a> &gt; <span>Tabela de tipos</span>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela de Tipos - Cassette Beasts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleA.css" />
+	<link rel="stylesheet" href="cass_back.css" />
+    <link rel="stylesheet" href="cass_table.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" style="color: inherit; text-decoration: none">Hub de Wikis</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="slime-rancher.html">Slime Rancher 2</a></li>
+          <li><a href="CasseteBeast.html">Cassette Beasts</a></li>
+          <li><a href="index.html#gta-v">GTA V</a></li>
+          <li><a href="index.html#hogwarts-legacy">Hogwarts Legacy</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section class="gallery">
-      <h2>Tabela de tipos</h2>
-      <p>Saber a tabela de tipos é essencial para consiguir passar pelos desafios de nova murta!!</p>
-      <img src="type_table.png" alt="luta" />
-  </section>
-  </main>
-</body>  
-	<footer>
-    © 2026 Game Wiki Hub.
-	</footer>
+    <main class="article-page" style="max-width: 1200px;">
+      <div class="breadcrumb">
+        <a href="CasseteBeast.html">Wiki Cassette Beasts</a> > Tabela de Tipos
+      </div>
+
+      <section class="location-card">
+        <h3>Matriz de Interações Elementais</h3>
+        <p>
+          Em Cassette Beasts, os tipos de elementos não apenas causam dano bruto, 
+          mas desencadeiam reações químicas e modificadores de estado diretamente nos alvos. Use a tabela abaixo para planejar suas táticas.
+           O esquema está orgarnizado que fala as vantagem sobre os defensores sobre os atacantes, ou seja, o tipo do atacante é a linha e o tipo do defensor é a coluna.
+        </p>
+
+        <div class="table-legend">
+          <div class="legend-item"><span class="legend-box cell-green"></span> Vantagem / Modificador Positivo</div>
+          <div class="legend-item"><span class="legend-box cell-red"></span> Desvantagem / Modificador Negativo</div>
+          <div class="legend-item"><span class="legend-box cell-yellow"></span> Reação Especial / Efeito de Status</div>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="type-matrix">
+            <thead>
+              <tr>
+                <th class="corner-title">Atacante ↓ / Defensor →</th>
+                <th><span class="badge type-beast" title="Beast">Besta</span></th>
+                <th><span class="badge type-air" title="Air">Ar</span></th>
+                <th><span class="badge type-astral" title="Astral">Astral</span></th>
+                <th><span class="badge type-earth" title="Earth">Terra</span></th>
+                <th><span class="badge type-fire" title="Fire">Fogo</span></th>
+                <th><span class="badge type-ice" title="Ice">Gelo</span></th>
+                <th><span class="badge type-lightning" title="Lightning">Raio</span></th>
+                <th><span class="badge type-metal" title="Metal">Metal</span></th>
+                <th><span class="badge type-plant" title="Plant">Planta</span></th>
+                <th><span class="badge type-plastic" title="Plastic">Plástico</span></th>
+                <th><span class="badge type-poison" title="Poison">Veneno</span></th>
+                <th><span class="badge type-water" title="Water">Água</span></th>
+                <th><span class="badge type-glass" title="Glass">Vidro</span></th>
+                <th><span class="badge type-glitter" title="Glitter">gliter</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="row-header"><span class="badge type-beast">Besta</span></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="cell-red"></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-air">Ar</span></td>
+                <td></td><td></td><td class="cell-green"></td><td></td><td class="cell-red"></td><td></td><td class="cell-green"></td><td></td><td class="cell-red"></td><td></td><td></td><td></td><td class="cell-red"></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-astral">Astral</span></td>
+                <td></td><td class="cell-red"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="cell-red"></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-earth">Terra</span></td>
+                <td></td><td></td><td class="cell-green"></td><td></td><td class="cell-red"></td><td></td><td class="cell-red"></td><td></td><td></td><td></td><td></td><td></td><td class="cell-red"></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-fire">Fogo</span></td>
+                <td></td><td class="cell-green"></td><td></td><td></td><td></td><td class="cell-yellow"></td><td></td><td class="cell-red"></td><td class="cell-yellow"></td><td class="cell-red"></td><td class="cell-red"></td><td class="cell-green"></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-ice">Gelo</span></td>
+                <td></td><td></td><td></td><td></td><td class="cell-red"></td><td></td><td class="cell-green"></td><td></td><td></td><td></td><td></td><td class="cell-yellow"></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-lightning">Elétrico</span></td>
+                <td></td><td class="cell-red"></td><td></td><td class="cell-yellow"></td><td class="cell-red"></td><td class="cell-red"></td><td></td><td class="cell-red"></td><td class="cell-red"></td><td class="cell-green"></td><td></td><td class="cell-red"></td><td class="cell-red"></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-metal">Metal</span></td>
+                <td></td><td></td><td class="cell-red"></td><td></td><td class="cell-red"></td><td class="cell-red"></td><td class="cell-yellow"></td><td></td><td></td><td></td><td></td><td></td><td class="cell-red"></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-plant">Planta</span></td>
+                <td></td><td></td><td class="cell-red"></td><td></td><td class="cell-green"></td><td class="cell-yellow"></td><td class="cell-red"></td><td></td><td></td><td></td><td class="cell-green"></td><td class="cell-red"></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-plastic">Plástico</span></td>
+                <td></td><td></td><td class="cell-red"></td><td></td><td class="cell-green"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-poison">Veneno</span></td>
+                <td></td><td></td><td></td><td></td><td class="cell-green"></td><td></td><td></td><td class="cell-green"></td><td class="cell-red"></td><td></td><td></td><td></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-water">Água</span></td>
+                <td></td><td></td><td class="cell-green"></td><td class="cell-red"></td><td class="cell-red"></td><td class="cell-red"></td><td class="cell-green"></td><td class="cell-green"></td><td></td><td></td><td></td><td></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-glass">Vidro</span></td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td class="cell-red"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="cell-yellow"></td>
+              </tr>
+              <tr>
+                <td class="row-header"><span class="badge type-glitter">Gliter</span></td>
+                <td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td class="cell-yellow"></td><td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2026 Hub de Wikis de Jogos.</footer>
+  </body>
 </html>

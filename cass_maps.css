@@ -1,0 +1,107 @@
+/* ── Página de Mapas - Cassette Beasts ── */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0 1rem;
+}
+
+.page-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px #1a73e8;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #bbb;
+  font-size: 1rem;
+}
+
+.map-container {
+  background: #1a1a24;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.map-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff3b30;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.btn-filter {
+  background: #2a2a3a;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-filter:hover {
+  background: #ff3b30;
+  border-color: #ff3b30;
+}
+
+.btn-filter.active {
+  background: #ff3b30;
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
+}
+
+.map-display {
+  position: relative;
+  background: #0f0f15;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #222;
+}
+
+.map-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.map-legend {
+  margin-top: 1.5rem;
+  background: #252535;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: none;
+  animation: fadeIn 0.5s forwards;
+}
+
+.legend-item.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

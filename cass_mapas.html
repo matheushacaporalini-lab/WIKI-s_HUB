@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapas e Localizações - Cassette Beasts</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cassstyle.css" />
+    <link rel="stylesheet" href="cass_back.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleA.css" />
+    <style>
+        /* Estilos adicionais específicos para esta página para organizar as legendas dos mapas */
+        .map-container {
+            text-align: center;
+        }
+        .map-container h4 {
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        /* Ajuste do grid para mapas de Nova Murta (2 colunas) */
+        .grid-nova-murta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        /* Ajuste do grid para mapas do Píer (3 colunas) */
+        .grid-pier {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" style="color: inherit; text-decoration: none">Hub de Wikis</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="slime-rancher.html">Slime Rancher 2</a></li>
+          <li><a href="CasseteBeast.html">Cassette Beasts</a></li>
+          <li><a href="index.html#gta-v">GTA V</a></li>
+          <li><a href="index.html#hogwarts-legacy">Hogwarts Legacy</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main class="article-page">
+      <div class="breadcrumb">
+        <a href="CasseteBeast.html">Wiki Cassette Beasts</a> > Mapas e Localizações
+      </div>
+
+
+
+      <section class="articles">
+        <h2>Guia de Exploração</h2>
+        <p>
+          Encontrar o seu caminho pelo mundo é crucial para dominar as feras e desvendar os mistérios de Nova Murta. Abaixo, você encontrará mapas detalhados das principais regiões, separados por pontos de interesse como estações de viagem, fogueiras seguras para descanso e escritórios.
+        </p>
+      </section>
+
+      <section class="location-card">
+        <h3>Mapa Completo: Nova Murta</h3>
+        <p>
+          A ilha principal concentra a maior parte da sua aventura. Existem 4 variações de visualização para te auxiliar na exploração: o mapa base, os acampamentos (fogueiras) para recuperação, as estações para viagem rápida pelo mapa e a localização estratégica dos escritórios dos corretores.
+        </p>
+        
+        <div class="grid-nova-murta gallery-grid">
+          <div class="map-container">
+            <h4>Mapa Normal</h4>
+            <img src="cass_novamurta.png" alt="Mapa Normal de Nova Murta" />
+          </div>
+          <div class="map-container">
+            <h4>Fogueiras</h4>
+            <img src="cass_novamurta_fogueira.png" alt="Localização das Fogueiras em Nova Murta" />
+          </div>
+          <div class="map-container">
+            <h4>Estações de Viagem</h4>
+            <img src="cass_novamurta_viagem.png" alt="Estações de Viagem Rápida em Nova Murta" />
+          </div>
+          <div class="map-container">
+            <h4>Escritórios dos Corretores</h4>
+            <img src="cass_novamurta_escritorios.png" alt="Escritórios dos Corretores em Nova Murta" />
+          </div>
+        </div>
+      </section>
+
+      <section class="location-card">
+        <h3>Mapa Local: O Píer</h3>
+        <p>
+          Uma zona mais compacta, mas igualmente cheia de utilidade. Consulte as variações do Píer para não se perder na hora de buscar um local de viagem rápida ou uma fogueira para descansar a equipe.
+        </p>
+        
+        <div class="grid-pier gallery-grid">
+          <div class="map-container">
+            <h4>Mapa Normal</h4>
+            <img src="cass_pier.png" alt="Mapa Normal do Píer" />
+          </div>
+          <div class="map-container">
+            <h4>Fogueiras</h4>
+            <img src="cass_pier_fogueira.png" alt="Localização das Fogueiras no Píer" />
+          </div>
+          <div class="map-container">
+            <h4>Estações de Viagem</h4>
+            <img src="cass_pier_viagem.png" alt="Estações de Viagem Rápida no Píer" />
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer>© 2026 Hub de Wikis de Jogos.</footer>
+  </body>
+</html>

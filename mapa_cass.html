@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapas e Localizações - Cassette Beasts Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cassstyle.css" />
+  <link rel="stylesheet" href="cass_back.css" />
+  <link rel="stylesheet" href="styleA.css" />
+  <link rel="stylesheet" href="cass_maps.css" />
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">Hub de Wikis</a></div>
+    <nav>
+      <ul>
+        <li><a href="CasseteBeast.html">Início</a></li>
+        <li><a href="personagenscb.html">Personagens</a></li>
+        <li><a href="cass_table.html">Tipos</a></li>
+        <li><a href="especies.html">Espécies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> &gt; <a href="CasseteBeast.html">Wiki Cassette Beasts</a> &gt; <span>Mapas e Localizações</span>
+    </div>
+
+    <div class="page-header">
+      <h1>Mapas de Nova Murta</h1>
+      <p>Use os botões interativos para filtrar os pontos de interesse de cada mapa e planejar sua jornada.</p>
+    </div>
+
+    <section class="map-container" id="mapa-nova-murta">
+      <h2 class="map-title">Mapa Geral de Nova Murta</h2>
+
+      <div class="filter-buttons">
+        <button class="btn-filter active" onclick="alterarMapa('murta', 'normal', this)">Mapa Normal</button>
+        <button class="btn-filter" onclick="alterarMapa('murta', 'fogueira', this)">Fogueiras (Descanso)</button>
+        <button class="btn-filter" onclick="alterarMapa('murta', 'escritorios', this)">Escritórios dos Corretores</button>
+        <button class="btn-filter" onclick="alterarMapa('murta', 'viagem', this)">Viagem Rápida (Mer-Line)</button>
+      </div>
+
+      <div class="map-display">
+        <img id="img-murta" class="map-img" src="mapa_murta_normal.png" alt="Mapa de Nova Murta"
+          onerror="this.src='https://via.placeholder.com/800x450/0f0f15/ffffff?text=Mapa+Geral+Nova+Murta'; this.onerror=null;">
+      </div>
+
+      <div class="map-legend">
+        <div id="legenda-murta-normal" class="legend-item active">
+          <h3>📌 Mapa Terrestre</h3>
+          <p>Visão geral de Nova Murta, incluindo biomas como a Colina do Outono, Mar do Pântano e o Monte Murta.</p>
+        </div>
+        <div id="legenda-murta-fogueira" class="legend-item">
+          <h3>🔥 Fogueiras de Acampamento</h3>
+          <p>Locais seguros para descansar, recuperar a energia de suas fitas, gerenciar adesivos e conversar com seus parceiros de batalha.</p>
+        </div>
+        <div id="legenda-murta-escritorios" class="legend-item">
+          <h3>🏢 Escritórios dos Corretores de Imóveis</h3>
+          <p>Locais necessários para progredir na Quest pessoal de Eugene (<em>Agindo Pelo Melhor Comportamento</em>). Localizados na Colina do Outono, Mar do Pântano, Floresta de Eastham e Os Pântanos.</p>
+        </div>
+        <div id="legenda-murta-viagem" class="legend-item">
+          <h3>🚇 Estações de Trem Mer-Line</h3>
+          <p>Pontos de viagem rápida gerenciados pelo Magikaranguejo. Permitem o deslocamento instantâneo entre os terminais subterrâneos descobertos pela ilha.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-container" id="mapa-pier">
+      <h2 class="map-title">Mapa do Píer (Vilancoradouro)</h2>
+
+      <div class="filter-buttons">
+        <button class="btn-filter active" onclick="alterarMapa('pier', 'normal', this)">Mapa Normal</button>
+        <button class="btn-filter" onclick="alterarMapa('pier', 'fogueira', this)">Fogueiras (Descanso)</button>
+        <button class="btn-filter" onclick="alterarMapa('pier', 'viagem', this)">Viagem Rápida (Mer-Line)</button>
+      </div>
+
+      <div class="map-display">
+        <img id="img-pier" class="map-img" src="mapa_pier_normal.png" alt="Mapa de Vilancoradouro"
+          onerror="this.src='https://via.placeholder.com/800x450/0f0f15/ffffff?text=Mapa+do+Pier+Vilancoradouro'; this.onerror=null;">
+      </div>
+
+      <div class="map-legend">
+        <div id="legenda-pier-normal" class="legend-item active">
+          <h3>🏡 Vilancoradouro</h3>
+          <p>O centro urbano seguro de Nova Murta. Aqui ficam a Câmara Municipal, a cafeteria de Meredith, o posto dos Vigilantes e as residências dos NPCs.</p>
+        </div>
+        <div id="legenda-pier-fogueira" class="legend-item">
+          <h3>🔥 Áreas de Descanso do Píer</h3>
+          <p>Locais para acampar na segurança da vila antes de partir para explorações em áreas perigosas.</p>
+        </div>
+        <div id="legenda-pier-viagem" class="legend-item">
+          <h3>🚇 Estação Central de Vilancoradouro</h3>
+          <p>A principal estação ferroviária do jogo. Onde você encontra a Arcanjo Morgante debilitada e o hub principal de tráfego interdimensional.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos. Cassette Beasts © Bytten Studio. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function alterarMapa(mapaTipo, categoria, botaoClicado) {
+      // Atualiza a imagem
+      const imgElement = document.getElementById('img-' + mapaTipo);
+      imgElement.src = 'mapa_' + mapaTipo + '_' + categoria + '.png';
+      imgElement.onerror = function() {
+        const textoPlaceholder = mapaTipo === 'murta'
+          ? 'Nova Murta: ' + categoria.toUpperCase()
+          : 'Pier: ' + categoria.toUpperCase();
+        this.src = 'https://via.placeholder.com/800x450/0f0f15/ffffff?text=' + encodeURIComponent(textoPlaceholder);
+        this.onerror = null;
+      };
+
+      // Atualiza botão ativo
+      const container = document.getElementById('mapa-' + mapaTipo);
+      const botoes = container.getElementsByClassName('btn-filter');
+      for (let btn of botoes) {
+        btn.classList.remove('active');
+      }
+      botaoClicado.classList.add('active');
+
+      // Atualiza legenda ativa
+      const legendas = container.getElementsByClassName('legend-item');
+      for (let legenda of legendas) {
+        legenda.classList.remove('active');
+      }
+      document.getElementById('legenda-' + mapaTipo + '-' + categoria).classList.add('active');
+    }
+  </script>
+</body>
+</html>

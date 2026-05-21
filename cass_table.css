@@ -1,0 +1,177 @@
+/* ==========================================================================
+   CSS Otimizado: Tabela de Tipos 100% Tela Cheia (Sem Scroll no Desktop)
+   ========================================================================== */
+
+/* Remove os limites restritivos e impede o transbordo horizontal no computador */
+.table-responsive {
+  width: 100%;
+  overflow-x: hidden; /* Remove o scroll horizontal no computador */
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(26, 115, 232, 0.2);
+}
+
+/* Estrutura principal da tabela */
+.type-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #141414;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  table-layout: fixed; /* Crucial: Força todas as colunas a terem exatamente o mesmo tamanho */
+}
+
+/* Configuração rigorosa de tamanho de todas as células */
+.type-matrix th, 
+.type-matrix td {
+  padding: 0.25rem 0.1rem; /* Padding mínimo para não esticar as linhas */
+  border: 1px solid #252525;
+  height: 36px;
+}
+
+/* Configuração do Cabeçalho do Topo para os nomes inclinados */
+.type-matrix th {
+  background-color: #1a1a1a;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  height: 85px; /* Altura controlada para o texto diagonal */
+  position: relative;
+  overflow: visible; /* Permite que o texto inclinado suba sem quebrar a estrutura */
+  vertical-align: bottom;
+}
+
+/* Rotação Diagonal dos Nomes Superiores Corrigida */
+.type-matrix th .badge {
+  display: block;
+  position: absolute;
+  bottom: 22px; /* Ajusta a altura da base do texto */
+  left: 50%;
+  transform: translateX(-30%) rotate(-45deg); /* Centraliza e rotaciona perfeitamente */
+  transform-origin: left bottom;
+  width: 90px; /* Largura fixa ideal para o maior nome (Elétrico / Lightning) */
+  text-align: left;
+  padding: 0.2rem 0.4rem;
+  box-shadow: none;
+  white-space: nowrap; /* Impede que o texto quebre em duas linhas */
+}
+
+/* Célula do canto superior esquerdo (Atacante / Defensor) */
+.type-matrix th.corner-title {
+  font-size: 0.65rem;
+  background-color: #1f1f1f;
+  color: #888;
+  vertical-align: middle;
+  height: auto;
+  padding: 0.5rem;
+}
+
+/* Cabeçalho da coluna da Esquerda (Atacantes) */
+.type-matrix td.row-header {
+  background-color: #1a1a1a;
+  text-align: left;
+  font-weight: bold;
+  width: 110px; /* Largura exata para caber "ELÉTRICO" ou "PLÁSTICO" sem quebrar */
+}
+
+/* Mantém os badges da esquerda retos e alinhados */
+.type-matrix td.row-header .badge {
+  transform: none;
+  width: 100%;
+  text-align: center;
+  position: static;
+  display: block;
+}
+
+/* Realce sutil ao passar o mouse na linha */
+.type-matrix tbody tr:hover {
+  background-color: rgba(26, 115, 232, 0.08);
+}
+
+/* ==========================================================================
+   Modificadores de Cor das Células (Fidelidade com a Imagem do Jogo)
+   ========================================================================== */
+.cell-green {
+  background-color: #1fb89a !important;
+}
+
+.cell-red {
+  background-color: #a80038 !important;
+}
+
+.cell-yellow {
+  background-color: #e6b042 !important;
+}
+
+/* ==========================================================================
+   Paleta de Cores dos Elementos (Badges)
+   ========================================================================== */
+.badge {
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+}
+
+.type-beast     { background-color: #a3a175; }
+.type-air       { background-color: #60c9b3; }
+.type-astral    { background-color: #4a5c8c; }
+.type-earth     { background-color: #a66353; }
+.type-fire      { background-color: #e35d3b; }
+.type-ice       { background-color: #5bb3db; }
+.type-lightning { background-color: #e3be44; color: #000; }
+.type-metal     { background-color: #83859c; }
+.type-plant     { background-color: #4da651; }
+.type-plastic   { background-color: #d13f50; }
+.type-poison    { background-color: #9d49b5; }
+.type-water     { background-color: #3b73de; }
+.type-glass     { background-color: #92a4b0; }
+.type-glitter   { background-color: #e65ec4; }
+
+/* ==========================================================================
+   Legenda Superior da Tabela
+   ========================================================================== */
+.table-legend {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem 0;
+  padding: 0.6rem;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  border: 1px solid #252525;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.legend-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Responsividade: Telas de Celular (Abaixo de 850px)
+   ========================================================================== */
+@media (max-width: 850px) {
+  .table-responsive {
+    overflow-x: auto; /* Devolve o scroll apenas em celulares para não esmagar o texto */
+  }
+  .type-matrix {
+    table-layout: auto; /* Permite o tamanho dinâmico no celular */
+  }
+  .type-matrix th, .type-matrix td {
+    min-width: 45px;
+  }
+}
