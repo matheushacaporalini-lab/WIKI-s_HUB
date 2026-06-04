@@ -1,122 +1,511 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mapas e Localizações - Cassette Beasts</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="cassstyle.css" />
-    <link rel="stylesheet" href="cass_back.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styleA.css" />
-    <style>
-        /* Estilos adicionais específicos para esta página para organizar as legendas dos mapas */
-        .map-container {
-            text-align: center;
-        }
-        .map-container h4 {
-            font-family: 'Orbitron', sans-serif;
-            color: #fff;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        /* Ajuste do grid para mapas de Nova Murta (2 colunas) */
-        .grid-nova-murta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        /* Ajuste do grid para mapas do Píer (3 colunas) */
-        .grid-pier {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html" style="color: inherit; text-decoration: none">Hub de Wikis</a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="slime-rancher.html">Slime Rancher 2</a></li>
-          <li><a href="CasseteBeast.html">Cassette Beasts</a></li>
-          <li><a href="index.html#gta-v">GTA V</a></li>
-          <li><a href="index.html#hogwarts-legacy">Hogwarts Legacy</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapas e Localizações - Wiki Cassette Beasts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles_mapas.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" style="color:inherit;text-decoration:none;">Hub de Wikis</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="CasseteBeast.html">Wiki CB</a></li>
+        <li><a href="historia_cass.html">História</a></li>
+        <li><a href="personagenscb.html">Personagens</a></li>
+        <li><a href="cass_table.html">Tipos</a></li>
+        <li><a href="especies.html">Espécies</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ 
+  
+
+  <main>
+     <!-- PAGE HEADER -->
     
-    <main class="article-page">
-      <div class="breadcrumb">
-        <a href="CasseteBeast.html">Wiki Cassette Beasts</a> > Mapas e Localizações
+
+    <div class="content-panel">
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> &rsaquo;
+      <a href="CasseteBeast.html">Wiki Cassette Beasts</a> &rsaquo;
+      <span>Mapas e Localizações</span>
+    </div>
+            <div class="page-header">
+              <h1>Mapas & Localizações</h1>
+
+            </div>
+    <!-- MAPAS COM TABS -->
+    <div class="map-section">
+      <div class="map-section-title"> Nova Murta</div>
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('wirral','geral')">Mapa Geral</button>
+        <button class="tab-btn" onclick="switchTab('wirral','acampamentos')">Acampamentos</button>
+        <button class="tab-btn" onclick="switchTab('wirral','viagem')">Viagem Rápida</button>
+      </div>
+      <div id="wirral-geral" class="map-panel active">
+        <div class="map-img-wrap">
+          <img src="New_Wirral_map.png" alt="Mapa Geral de Nova Murta" />
+        </div>
+        <p class="map-caption">Mapa completo de Nova Murta com todas as regiões visíveis.</p>
+      </div>
+      <div id="wirral-acampamentos" class="map-panel">
+        <div class="map-img-wrap">
+          <img src="New_Wirral_map_-_Campsites.png" alt="Acampamentos de Nova Murta" />
+        </div>
+        <p class="map-caption">Localização de todos os acampamentos (fogueira) em Nova Murta.</p>
+      </div>
+      <div id="wirral-viagem" class="map-panel">
+        <div class="map-img-wrap">
+          <img src="New_Wirral_map_-_Fast_travel.png" alt="Viagem Rápida de Nova Murta" />
+        </div>
+        <p class="map-caption">Pontos de viagem rápida e estações Mer-Line disponíveis em Nova Murta.</p>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <div class="map-section-title"> Brightside Pier</div>
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="switchTab('pier','geral')">Mapa Geral</button>
+        <button class="tab-btn" onclick="switchTab('pier','acampamento')">Acampamento</button>
+        <button class="tab-btn" onclick="switchTab('pier','viagem')">Viagem Rápida</button>
+      </div>
+      <div id="pier-geral" class="map-panel active">
+        <div class="map-img-wrap">
+          <img src="Brightside_Pier_map.png" alt="Mapa Geral do Brightside Pier" />
+        </div>
+        <p class="map-caption">Mapa completo do Brightside Pier.</p>
+      </div>
+      <div id="pier-acampamento" class="map-panel">
+        <div class="map-img-wrap">
+          <img src="Brightside_Pier_map_-_Campsite.png" alt="Acampamento do Brightside Pier" />
+        </div>
+        <p class="map-caption">Localização do acampamento no Brightside Pier.</p>
+      </div>
+      <div id="pier-viagem" class="map-panel">
+        <div class="map-img-wrap">
+          <img src="Brightside_Pier_map_-_Fast_travel.png" alt="Viagem Rápida do Brightside Pier" />
+        </div>
+        <p class="map-caption">Pontos de viagem rápida e estação Mer-Line no Brightside Pier.</p>
+      </div>
+    </div>
+
+    <hr class="div">
+
+    <!-- INTRO -->
+    <div class="highlight-card">
+      <h3> Nova Murta </h3>
+      <p>Nova Murta é uma ilha misteriosa onde estranhos de diferentes mundos acabam chegando sem conseguir voltar.
+         A ilha é dividida em várias regiões distintas, cada uma com seu próprio bioma, monstros exclusivos e segredos escondidos.
+          Para explorá-la de ponta a ponta, você precisará desbloquear habilidades de travessia gravando os monstros certos nas fitas certas — sem elas, 
+          grandes porções do mapa ficam inacessíveis.</p>
+    </div>
+
+    <!-- HABILIDADES DE TRAVESSIA -->
+    <div class="section-title"><span class="icon">⚡</span>Habilidades de Travessia</div>
+    <div class="ability-grid">
+      <div class="ability-chip"><span class="chip-icon">🦋</span><div><strong>Voo de Asa-Mariposa</strong> — atravessa abismos</div></div>
+      <div class="ability-chip"><span class="chip-icon">🧲</span><div><strong>Eletromagnetismo</strong> — atrai a blocos metálicos</div></div>
+      <div class="ability-chip"><span class="chip-icon">🎃</span><div><strong>Bola de Cipó de Abóbora</strong> — quebra pedregulhos</div></div>
+      <div class="ability-chip"><span class="chip-icon">🌀</span><div><strong>Corrida do Balazita</strong> — sprint e quebra rochas menores</div></div>
+      <div class="ability-chip"><span class="chip-icon">🏊</span><div><strong>Nado Profundo</strong> — atravessa corpos d'água</div></div>
+      <div class="ability-chip"><span class="chip-icon">🌿</span><div><strong>Escalar Hera</strong> — sobe paredes cobertas de vegetação</div></div>
+    </div>
+
+    <hr class="div">
+
+    <!-- REGIÕES PRINCIPAIS -->
+    <div class="section-title"><span class="icon"></span>Regiões de Nova Murta</div>
+
+    <div class="region-grid">
+
+      <!-- Vilancoradouro -->
+      <div class="region-card">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-title-block">
+              <h3>Vilancoradouro</h3>
+              <div class="subtitle">Hub Central · Cidade dos Náufragos</div>
+            </div>
+          </div>
+          <p class="card-desc">O coração de Nova Murta. É aqui que a maioria dos estranhos começa sua jornada, encontrando os Vigilantes e aprendendo a usar fitas cassete. Contém o Café Gramofone, a Câmara Municipal e o posto dos Vigilantes.</p>
+          <div class="tag-row">
+
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">NPCs chave</span><span class="val">Ianthe, Dra. Vila, Magikaranguejo</span></div>
+            <div class="info-row"><span class="lbl">Serviços</span><span class="val">Descanso, conserto de fitas, comércio</span></div>
+            <div class="info-row"><span class="lbl">Estação</span><span class="val">Estação de Vilancoradouro (Morgante)</span></div>
+          </div>
+        </div>
       </div>
 
-
-
-      <section class="articles">
-        <h2>Guia de Exploração</h2>
-        <p>
-          Encontrar o seu caminho pelo mundo é crucial para dominar as feras e desvendar os mistérios de Nova Murta. Abaixo, você encontrará mapas detalhados das principais regiões, separados por pontos de interesse como estações de viagem, fogueiras seguras para descanso e escritórios.
-        </p>
-      </section>
-
-      <section class="location-card">
-        <h3>Mapa Completo: Nova Murta</h3>
-        <p>
-          A ilha principal concentra a maior parte da sua aventura. Existem 4 variações de visualização para te auxiliar na exploração: o mapa base, os acampamentos (fogueiras) para recuperação, as estações para viagem rápida pelo mapa e a localização estratégica dos escritórios dos corretores.
-        </p>
-        
-        <div class="grid-nova-murta gallery-grid">
-          <div class="map-container">
-            <h4>Mapa Normal</h4>
-            <img src="cass_novamurta.png" alt="Mapa Normal de Nova Murta" />
+      <!-- Arredores de Vilancoradouro -->
+      <div class="region-card accent-plant">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🌿</div>
+            <div class="card-title-block">
+              <h3>Arredores de Vilancoradouro</h3>
+              <div class="subtitle">Área Tutorial · Campos Externos</div>
+            </div>
           </div>
-          <div class="map-container">
-            <h4>Fogueiras</h4>
-            <img src="cass_novamurta_fogueira.png" alt="Localização das Fogueiras em Nova Murta" />
+          <p class="card-desc">A primeira área explorada com Kayleigh. Repleta de monstros básicos como Saltamola e Domiposa. Aqui o jogador aprende a capturar criaturas em fitas e usa pela primeira vez a habilidade de Voo de Asa-Mariposa.</p>
+          <div class="tag-row">
+
           </div>
-          <div class="map-container">
-            <h4>Estações de Viagem</h4>
-            <img src="cass_novamurta_viagem.png" alt="Estações de Viagem Rápida em Nova Murta" />
-          </div>
-          <div class="map-container">
-            <h4>Escritórios dos Corretores</h4>
-            <img src="cass_novamurta_escritorios.png" alt="Escritórios dos Corretores em Nova Murta" />
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Saltamola, Domiposa, Pulagarra</span></div>
+            <div class="info-row"><span class="lbl">Habilidade</span><span class="val">Voo de Asa-Mariposa (Domiposa)</span></div>
+            <div class="info-row"><span class="lbl">Segredo</span><span class="val">Baú de Vigilante atrás da cachoeira inicial</span></div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="location-card">
-        <h3>Mapa Local: O Píer</h3>
-        <p>
-          Uma zona mais compacta, mas igualmente cheia de utilidade. Consulte as variações do Píer para não se perder na hora de buscar um local de viagem rápida ou uma fogueira para descansar a equipe.
-        </p>
-        
-        <div class="grid-pier gallery-grid">
-          <div class="map-container">
-            <h4>Mapa Normal</h4>
-            <img src="cass_pier.png" alt="Mapa Normal do Píer" />
+      <!-- Parque de Nova Murta -->
+      <div class="region-card accent-plant">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🌳</div>
+            <div class="card-title-block">
+              <h3>Parque de Nova Murta</h3>
+              <div class="subtitle">Área Intermediária · Bosques ao Norte</div>
+            </div>
           </div>
-          <div class="map-container">
-            <h4>Fogueiras</h4>
-            <img src="cass_pier_fogueira.png" alt="Localização das Fogueiras no Píer" />
+          <p class="card-desc">Uma grande área de bosques ao norte de Vilancoradouro, com lagos, pontes e plataformas elevadas. É onde Meredith é encontrada pela primeira vez e onde Murilo (Comandante n.1) patrulha numa plataforma alta.</p>
+          <div class="tag-row">
+
           </div>
-          <div class="map-container">
-            <h4>Estações de Viagem</h4>
-            <img src="cass_pier_viagem.png" alt="Estações de Viagem Rápida no Píer" />
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Murilo (#1) — requer Eletromagnetismo</span></div>
+            <div class="info-row"><span class="lbl">Parceiro</span><span class="val">Meredith (encontrada aqui)</span></div>
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Bisbilupin, Brushroom, Boltam</span></div>
           </div>
         </div>
-      </section>
+      </div>
 
-    </main>
-    <footer>© 2026 Hub de Wikis de Jogos.</footer>
-  </body>
+      <!-- Colina do Outono -->
+      <div class="region-card accent-earth">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🍂</div>
+            <div class="card-title-block">
+              <h3>Colina do Outono</h3>
+              <div class="subtitle">Terreno Elevado · Lar do Culto</div>
+            </div>
+          </div>
+          <p class="card-desc">Um bioma de outono com folhagens alaranjadas e terreno acidentado. Contém as ruínas da fortaleza dos Corretores e, no topo, a Vila Luz — comunidade cercada do culto de Dorian. É a área da quest de Kayleigh.</p>
+          <div class="tag-row">
+
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Siesta (#3) — ao leste</span></div>
+            <div class="info-row"><span class="lbl">Arcanjo</span><span class="val">Portaluz (Vila Luz / Devoção)</span></div>
+            <div class="info-row"><span class="lbl">Parceiro</span><span class="val">Kayleigh (quest ligada aqui)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terras Mortas -->
+      <div class="region-card accent-purple">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">💀</div>
+            <div class="card-title-block">
+              <h3>Terras Mortas</h3>
+              <div class="subtitle">Bioma Sombrio · Região de Perigo</div>
+            </div>
+          </div>
+          <p class="card-desc">Um bioma árido e opressivo com esqueletos, areia seca e uma atmosfera de morte. Abriga Vitória Frankenstein como Comandante e é passagem obrigatória para as Ilhas do Sul, onde Judas aguarda.</p>
+          <div class="tag-row">
+
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Vitória Frankenstein (#7) — via Eletromagnetismo</span></div>
+            <div class="info-row"><span class="lbl">Acesso</span><span class="val">Eletromagnetismo (bloco azul a leste)</span></div>
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Pawndead, Esquelevangelista, Apocalicorvo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ilhas do Sul -->
+      <div class="region-card accent-water">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🏝️</div>
+            <div class="card-title-block">
+              <h3>Ilhas do Sul</h3>
+              <div class="subtitle">Região Costeira · Fim do Mundo</div>
+            </div>
+          </div>
+          <p class="card-desc">Pedaços de terra espalhados na costa sul extrema. Extremamente isoladas, com monstros pesados e o Comandante Judas esperando no fragmento mais remoto. Nível recomendado: 30 ou mais.</p>
+          <div class="tag-row">
+
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Judas (#4) — ponta sudeste</span></div>
+            <div class="info-row"><span class="lbl">Recompensa</span><span class="val">Adesivo de Ataque Preventivo</span></div>
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Manilança, Gesqueleto, Dendileo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floresta de Eastham -->
+      <div class="region-card accent-plant">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🌲</div>
+            <div class="card-title-block">
+              <h3>Floresta de Eastham</h3>
+              <div class="subtitle">Bosques Densas · Meandroleste</div>
+            </div>
+          </div>
+          <p class="card-desc">Uma densa floresta ao leste do mapa, subdividida em Bosques de Meandroleste. É aqui que Clee-0, uma robô-garçonete desativada, aguarda ser reativada com a quest Operada por Moeda.</p>
+          <div class="tag-row">
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Clee-0 (#5) — quest: Operada por Moeda</span></div>
+            <div class="info-row"><span class="lbl">Próximo</span><span class="val">Meandro (Levi Magneticus #6)</span></div>
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Kirikuri, Huntorch, Fungogh</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mar do Pântano -->
+      <div class="region-card accent-water">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🌊</div>
+            <div class="card-title-block">
+              <h3>Mar do Pântano</h3>
+              <div class="subtitle">Zona Pantanosa · Noroeste</div>
+            </div>
+          </div>
+          <p class="card-desc">Um vasto pântano ao noroeste, com plataformas flutuantes e planos de água parada. Abriga Bellona e Celestina como Comandantes. A quest de Eugene tem um escritório dos Corretores nesta região.</p>
+          <div class="tag-row">
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Comandantes</span><span class="val">Bellona (#8), Celestina (#9)</span></div>
+            <div class="info-row"><span class="lbl">Acampamento</span><span class="val">Ponto de descanso no centro</span></div>
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Frillypad, Liligator, Jellyton</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Os Pântanos -->
+      <div class="region-card accent-purple">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🌑</div>
+            <div class="card-title-block">
+              <h3>Os Pântanos</h3>
+              <div class="subtitle">Zona Avançada · Área de Viola</span></div>
+            </div>
+          </div>
+          <p class="card-desc">Pântanos sombrios a oeste onde Viola é encontrada pela primeira vez ajudando o jogador contra uma emboscada de Jellytons. Sibila, a Comandante n.11, também habita as encostas desta região.</p>
+          <div class="tag-row">
+
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Parceiro</span><span class="val">Viola (encontrada aqui)</span></div>
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Sibila (#11)</span></div>
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Jellyton, Apocalicorvo, Capricorpse</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prado da Cerejeira -->
+      <div class="region-card">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🌸</div>
+            <div class="card-title-block">
+              <h3>Prado da Cerejeira</h3>
+              <div class="subtitle">Campos do Norte · Lar de Doginho</div>
+            </div>
+          </div>
+          <p class="card-desc">Um prado aberto com cerejeiras floridas ao norte da ilha. Doginho é encontrado no nordeste desta área, tentando escalar penhascos. Barbie (Comandante n.10) fica no lado leste.</p>
+          <div class="tag-row">
+
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Parceiro</span><span class="val">Doginho (nordeste) — requer Bola de Cipó</span></div>
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Barbie (#10) — via Corrida do Balazita</span></div>
+            <div class="info-row"><span class="lbl">Monstros</span><span class="val">Dendileo, Vitoré, Pamppole</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Monte Murta -->
+      <div class="region-card accent-ice">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🏔️</div>
+            <div class="card-title-block">
+              <h3>Monte Murta</h3>
+              <div class="subtitle">Pico Nevado · Fim da Jornada</div>
+            </div>
+          </div>
+          <p class="card-desc">O ponto mais alto de Nova Murta. Codi, o último dos 12 Comandantes, aguarda nas falésias leste. Babelite, o Arcanjo da Ignorância, habita o topo. A Fazenda Piper está nas proximidades, onde a Bola de Cipó de Abóbora é obtida.</p>
+          <div class="tag-row">
+
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Comandante</span><span class="val">Codi (#12) — requer Bola de Cipó</span></div>
+            <div class="info-row"><span class="lbl">Arcanjo</span><span class="val">Babelite (Ignorância)</span></div>
+            <div class="info-row"><span class="lbl">Local chave</span><span class="val">Fazenda Piper — habilidade Bola de Cipó</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estação da Ponte da Noite -->
+      <div class="region-card accent-astral">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🌌</div>
+            <div class="card-title-block">
+              <h3>Estação da Ponte da Noite</h3>
+              <div class="subtitle">Local Final · Confronto com Aleph</div>
+            </div>
+          </div>
+          <p class="card-desc">A estação escondida revelada pela música de Morgante — o destino final de toda a jornada em Nova Murta. Encontrada ao resolver as pistas da canção após derrotar 8 Arcanjos. É onde o confronto com Aleph acontece.</p>
+          <div class="tag-row">
+          </div>
+          <div class="info-rows">
+            <div class="info-row"><span class="lbl">Como acessar</span><span class="val">Resolva a música de Morgante (8+ Arcanjos)</span></div>
+            <div class="info-row"><span class="lbl">Inimigo</span><span class="val">Aleph → Aleph Nulo → Morgante Gestalt</span></div>
+            <div class="info-row"><span class="lbl">Nota</span><span class="val">Localização varia por save — norte/sul, leste/oeste</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /region-grid -->
+
+    <hr class="div">
+
+    <!-- ESTAÇÕES MER-LINE -->
+    <div class="section-title"><span class="icon">🚇</span>Estações Mer-Line</div>
+    <div class="highlight-card">
+      <h3>O Sistema Ferroviário Subterrâneo</h3>
+      <p>As estações Mer-Line são túneis e trilhos subterrâneos que conectam toda a ilha. Cada estação possui a <strong>Plataforma A</strong> (viagem rápida entre estações conhecidas) e a <strong>Plataforma B</strong> (viagens interdimensionais, bloqueadas por 642 anos). Magikaranguejo, o emissário da entidade chamada The Mer-Line, gerencia todas as estações. As estações subterrâneas também funcionam como arenas para os Arcanjos ocultos — cada Arcanjo (exceto Mamon) possui sua própria ala da rede ferroviária.</p>
+    </div>
+
+    <div class="region-grid">
+      <div class="region-card">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🚉</div>
+            <div class="card-title-block"><h3>Estação de Vilancoradouro</h3><div class="subtitle">Estação Principal</div></div>
+          </div>
+          <p class="card-desc">A primeira estação descoberta pelo jogador, logo no início do tutorial. É aqui que Morgante é encontrada ferida. Após a quest "Lá Vem o Sol", Ianthe concede acesso especial pela Plataforma A.</p>
+        </div>
+      </div>
+      <div class="region-card accent-earth">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🏗️</div>
+            <div class="card-title-block"><h3>Quartel-General dos Corretores</h3><div class="subtitle">Base de Mamon</div></div>
+          </div>
+          <p class="card-desc">Uma fortaleza de concreto — não uma estação tradicional — construída por Mamon sobre Nova Murta. Destino final da quest de Eugene, onde Mamon (Consumismo) é derrotado e Allegra é encontrada.</p>
+        </div>
+      </div>
+      <div class="region-card accent-purple">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-header">
+            <div class="card-icon">🏛️</div>
+            <div class="card-title-block"><h3>Estação de Energia</h3><div class="subtitle">Pedreira de Dinossauros</div></div>
+          </div>
+          <p class="card-desc">Descoberta na quest "Lá Vem o Sol" ao atingir Nível 4 no Quadro dos Vigilantes. Contém diários dos cientistas que encontraram Hélia (Fusão) e desencadearam a loucura que destruiu a instalação.</p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- DICAS DE EXPLORAÇÃO -->
+    <div class="section-title"><span class="icon">💡</span>Dicas de Exploração</div>
+
+    <div class="loc-detail">
+      <div class="loc-num">01</div>
+      <div class="loc-body">
+        <h4>Priorize habilidades de travessia cedo</h4>
+        <p>Voo de Domiposa e Eletromagnetismo são essenciais logo nas primeiras horas. Sem elas, áreas inteiras — incluindo a maioria dos Comandantes — ficam completamente inacessíveis. Capture os monstros certos nas missões iniciais.</p>
+      </div>
+    </div>
+
+    <div class="loc-detail">
+      <div class="loc-num">02</div>
+      <div class="loc-body">
+        <h4>Baús de Vigilante escondem itens raros</h4>
+        <p>Espalhados pelo mapa inteiro, os Baús de Vigilante contêm Adesivos de movimento, fitas básicas e itens de remaster. Muitos ficam em áreas aparentemente inacessíveis — procure caminhos alternativos acima e abaixo do terreno visível.</p>
+        <div class="tip-box"><strong>Dica:</strong> Baús em plataformas elevadas geralmente exigem Eletromagnetismo; baús atrás de pedregulhos exigem Corrida do Balazita ou Bola de Cipó.</div>
+      </div>
+    </div>
+
+    <div class="loc-detail">
+      <div class="loc-num">03</div>
+      <div class="loc-body">
+        <h4>A música de Morgante é gerada proceduralmente</h4>
+        <p>A localização da Estação da Ponte da Noite muda entre saves. Preste atenção nas pistas da letra — ela indica norte/sul, leste/oeste, descrição do terreno e ação a realizar. Derrotar todos os 9 Arcanjos (incluindo o extra) revela o tile exato no mapa.</p>
+      </div>
+    </div>
+
+    <div class="loc-detail">
+      <div class="loc-num">04</div>
+      <div class="loc-body">
+        <h4>Revisitação: revanche dos Comandantes</h4>
+        <p>Após conquistar o título de Comandante Vigilante, todos os 12 Comandantes e Ianthe+Wilma aceitam revanche. As batalhas de revanche são consideravelmente mais difíceis — trazem novos monstros e combinações táticas mais elaboradas.</p>
+      </div>
+    </div>
+
+    <div class="loc-detail">
+      <div class="loc-num">05</div>
+      <div class="loc-body">
+        <h4>Acampamentos restauram HP e fitas</h4>
+        <p>Espalhados por todas as regiões avançadas, os acampamentos são pontos de descanso gratuitos que restauram HP e reparam a durabilidade das fitas. Em regiões longe de Vilancoradouro, localizar o acampamento antes de explorar pode ser a diferença entre sobreviver ou não.</p>
+      </div>
+    </div><!-- /loc-detail -->
+
+    </div><!-- /content-panel -->
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos · Cassette Beasts © Bytten Studio · Todos os direitos reservados.
+  </footer>
+
+
+  <script>
+    function switchTab(group, tab) {
+      // deactivate all panels for this group
+      document.querySelectorAll('[id^="' + group + '-"]').forEach(function(p){ p.classList.remove('active'); });
+      // deactivate all buttons in the same tab-bar
+      var panels = document.getElementById(group + '-' + tab).closest('.map-section').querySelectorAll('.tab-btn');
+      panels.forEach(function(b){ b.classList.remove('active'); });
+      // activate selected
+      document.getElementById(group + '-' + tab).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+</body>
 </html>

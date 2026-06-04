@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wiki de Slime Rancher 2 - Hub de Wikis</title>
+    <title>Wiki de Cassette Beasts - Hub de Wikis</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="cassstyle.css" />
     <link rel="stylesheet" href="cass_back.css" />
     <link rel="stylesheet" href="styleA.css" />
-	<link rel="stylesheet" href="cass_carrosel.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="cass_carrosel.css" />
   </head>
   <body>
     <header>
@@ -34,7 +35,7 @@
         <h1>Wiki Cassete Beasts</h1>
       </section>
 
-      <section class="articles">
+      <section class="articles reveal">
         <h2>Artigos e História</h2>
         <p>
           explore o misterioso mundo de nova murta, descubra o porque você parar
@@ -48,13 +49,12 @@
         </ul>
       </section>
 
-		<section class="gallery">
-				<h2>Galeria de Imagens</h2>
-				<p>
-				  Navegue por artes conceituais, comandantes, capturas de tela do jogo
-				  e artes de fãs de Nova Murta.
-				</p>
-				
+      <section class="gallery">
+        <h2 class="reveal">Galeria de Imagens</h2>
+        <p class="reveal">
+          Navegue por artes conceituais, comandantes , capturas de tela do jogo
+          e artes de fãs de Nova Murta.
+        </p>
 				<div class="carousel-container">
 				  
 				  <button class="carousel-btn btn-prev" onclick="document.getElementById('cassTrack').scrollBy({ left: -400, behavior: 'smooth' })">&#10094;</button>
@@ -69,21 +69,6 @@
 					<div class="carousel-item">
 					  <img src="cass_camp.png" alt="acampando" />
 					  <div class="carousel-caption">Acampamento</div>
-					</div>
-
-          <div class="carousel-item">
-					  <img src="robin_bom_companheiro.png" alt="luta" />
-					  <div class="carousel-caption">Arcanjo Robin</div>
-					</div>
-
-          <div class="carousel-item">
-					  <img src="navio.png" alt="acampando" />
-					  <div class="carousel-caption">Navio</div>
-					</div>
-
-          <div class="carousel-item">
-					  <img src="fogueira_noite.png" alt="acampando" />
-					  <div class="carousel-caption">Converça com Allegra</div>
 					</div>
 					
 					<div class="carousel-item">
@@ -109,10 +94,10 @@
 				  </div>
 
 				  <button class="carousel-btn btn-next" onclick="document.getElementById('cassTrack').scrollBy({ left: 400, behavior: 'smooth' })">&#10095;</button>
-				  
-				</div>
-			  </section>
-      <section class="guides">
+        </div> 
+      </section>
+
+      <section class="guides reveal">
         <h2>Guias de Estratégia</h2>
         <p>
           Dicas e tutoriais para te ajudar a ter sucesso Absoluto sobre os
@@ -121,13 +106,13 @@
         <ul>
           <li><a href="cass_table.html">tabela de tipos</a></li>
           <li><a href="especies.html">Especies</a></li>
-          <li><a href="resorces.html">Movimentos</a></li>
-          <li><a href="resorces.html">Efeitos</a></li>
-          <li><a href="resorces.html">Conquistas</a></li>
+          <li><a href="movimentos.html">Movimentos</a></li>
+          <li><a href="efeitos.html">Efeitos</a></li>
+          <li><a href="conquistas.html">Conquistas</a></li>
         </ul>
       </section>
 
-      <section class="guides">
+      <section class="guides reveal">
         <div>
           <h2>SoundTrack</h2>
           <p>
@@ -144,19 +129,17 @@
             allowfullscreen=""
             allow="
               autoplay;
-			  Loop;
-              clipboard-write;s
+              clipboard-write;
               encrypted-media;
               fullscreen;
               picture-in-picture;
             "
             loading="lazy"
           ></iframe>
-          <!--não mexer no iframe, não dá pra separar pro css de forma que fique bonito-->
         </div>
       </section>
 
-      <section class="forum-link">
+      <section class="forum-link reveal">
         <h2>Fórum de Discussão</h2>
         <p>
           Junte-se à comunidade para compartilhar dicas, fazer perguntas e
@@ -166,5 +149,7 @@
       </section>
     </main>
     <footer>© 2026 Hub de Wikis de Jogos.</footer>
+
+    <script src="animations.js"></script>
   </body>
 </html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Efeitos de Status - Cassette Beasts Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Variáveis ── */
+    :root {
+      --bg: #0a0a0f;
+      --bg2: #111118;
+      --bg3: #18181f;
+      --border: rgba(26, 115, 232, 0.25);
+      --blue: #1a73e8;
+      --blue-glow: rgba(26, 115, 232, 0.35);
+      --purple: #9b6cd3;
+      --text: #ccc;
+      --text-dim: #777;
+      --white: #f0f0f0;
+
+      --buff:    #2e6e3e;
+      --debuff:  #7a1e1e;
+      --transmu: #1e4a7a;
+      --misc:    #5a4a1e;
+
+      --buff-txt:    #6ee88e;
+      --debuff-txt:  #f07070;
+      --transmu-txt: #70b8f0;
+      --misc-txt:    #e8c870;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text);
+      background-image: url("cb_wireframe.png");
+      background-repeat: repeat;
+      background-position: center center;
+      background-size: contain;
+      background-color: #0a0a0a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: #66c0f4; text-decoration: none; }
+    a:hover { color: #fff; text-decoration: underline; }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(10, 10, 15, 0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      backdrop-filter: blur(10px);
+    }
+
+    header .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--blue);
+      letter-spacing: 2px;
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(26, 115, 232, 0.5);
+      clip-path: polygon(0% 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, 0% 100%);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(26, 115, 232, 0.3);
+      color: var(--text);
+      display: inline-block;
+      transition: all 0.2s ease;
+      clip-path: polygon(0% 0%, calc(100% - 12px) 0%, 100% 12px, 100% 100%, 0% 100%);
+    }
+
+    nav ul li a:hover {
+      background-color: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* ── Main ── */
+    main {
+      flex-grow: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 2rem;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+    }
+    .breadcrumb a { color: #66c0f4; }
+
+    /* ── Page header ── */
+    .page-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--white);
+      text-shadow: 0 0 30px var(--blue-glow);
+      margin-bottom: 0.4rem;
+    }
+    .page-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      margin-bottom: 2rem;
+    }
+
+    /* ── Intro box ── */
+    .intro-box {
+      background: rgba(17, 17, 24, 0.85);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 6px 6px 0;
+      padding: 1.2rem 1.6rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.9rem;
+      color: var(--text);
+      clip-path: polygon(0% 0%, calc(100% - 24px) 0%, 100% 24px, 100% 100%, 0% 100%);
+      backdrop-filter: blur(6px);
+    }
+
+    /* ── Kind pills ── */
+    .kind-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 2rem;
+    }
+    .kind-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+      clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 10px, 100% 100%, 0% 100%);
+      user-select: none;
+    }
+    .kind-pill:hover { transform: translateY(-1px); }
+    .kind-pill.active { outline: 2px solid #fff; }
+    .kind-pill[data-kind="Buff"]          { background: rgba(46,110,62,0.4);  border: 1px solid var(--buff-txt);    color: var(--buff-txt);    }
+    .kind-pill[data-kind="Debuff"]        { background: rgba(122,30,30,0.4);  border: 1px solid var(--debuff-txt);  color: var(--debuff-txt);  }
+    .kind-pill[data-kind="Transmutation"] { background: rgba(30,74,122,0.4);  border: 1px solid var(--transmu-txt); color: var(--transmu-txt); }
+    .kind-pill[data-kind="Misc"]          { background: rgba(90,74,30,0.4);   border: 1px solid var(--misc-txt);    color: var(--misc-txt);    }
+    .kind-pill[data-kind="all"]           { background: rgba(26,115,232,0.2); border: 1px solid var(--blue);        color: var(--blue);        }
+
+    /* ── Search ── */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 180px;
+      max-width: 320px;
+    }
+    .search-wrap::before {
+      content: "⌕";
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      font-size: 1rem;
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      background: rgba(17, 17, 24, 0.9);
+      border: 1px solid var(--border);
+      color: var(--white);
+      padding: 0.5rem 0.75rem 0.5rem 2rem;
+      font-size: 0.85rem;
+      font-family: 'Roboto', sans-serif;
+      outline: none;
+      clip-path: polygon(0% 0%, calc(100% - 12px) 0%, 100% 12px, 100% 100%, 0% 100%);
+    }
+    .search-input::placeholder { color: var(--text-dim); }
+    .search-input:focus { border-color: var(--blue); }
+
+    .count-badge {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+    .count-badge strong { color: var(--blue); }
+
+    /* ── Grid ── */
+    .effects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    /* ── Effect card ── */
+    .effect-card {
+      background: rgba(17, 17, 24, 0.75);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem 1.1rem;
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 14px, 100% 100%, 0% 100%);
+      backdrop-filter: blur(4px);
+    }
+    .effect-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(26, 115, 232, 0.6);
+      background: rgba(26, 115, 232, 0.07);
+    }
+    .effect-card.hidden { display: none; }
+
+    /* border color by kind */
+    .effect-card[data-kind="Buff"]          { border-left: 3px solid var(--buff-txt);    }
+    .effect-card[data-kind="Debuff"]        { border-left: 3px solid var(--debuff-txt);  }
+    .effect-card[data-kind="Transmutation"] { border-left: 3px solid var(--transmu-txt); }
+    .effect-card[data-kind="Misc"]          { border-left: 3px solid var(--misc-txt);    }
+
+    .effect-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      object-fit: contain;
+      border-radius: 4px;
+      background: rgba(0,0,0,0.3);
+      padding: 3px;
+    }
+    .effect-icon-placeholder {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      background: rgba(26,115,232,0.1);
+      border: 1px dashed rgba(26,115,232,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .effect-body { flex: 1; min-width: 0; }
+
+    .effect-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .effect-kind {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      margin-bottom: 0.45rem;
+    }
+    .kind-Buff          { background: rgba(46,110,62,0.35);  color: var(--buff-txt);    }
+    .kind-Debuff        { background: rgba(122,30,30,0.35);  color: var(--debuff-txt);  }
+    .kind-Transmutation { background: rgba(30,74,122,0.35);  color: var(--transmu-txt); }
+    .kind-Misc          { background: rgba(90,74,30,0.35);   color: var(--misc-txt);    }
+
+    .effect-desc {
+      font-size: 0.81rem;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    /* ── Section headers ── */
+    .section-header {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: var(--blue);
+      border-bottom: 1px solid rgba(26,115,232,0.3);
+      padding-bottom: 0.4rem;
+      margin: 2rem 0 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .section-header .kind-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ── Stat chips ── */
+    .stats-bar {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .stat-chip {
+      background: rgba(17,17,24,0.85);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 10px, 100% 100%, 0% 100%);
+      backdrop-filter: blur(4px);
+    }
+    .stat-chip strong { color: var(--blue); font-family: 'Orbitron', sans-serif; }
+
+    /* ── No results ── */
+    .no-results {
+      text-align: center;
+      color: var(--text-dim);
+      padding: 3rem;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      background: rgba(10, 10, 15, 0.9);
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      main { padding: 1rem; }
+      .page-title { font-size: 1.5rem; }
+      .effects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" style="color:inherit;text-decoration:none;">Hub de Wikis</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="CasseteBeast.html">Wiki CB</a></li>
+        <li><a href="cass_table.html">Tipos</a></li>
+        <li><a href="especies.html">Espécies</a></li>
+        <li><a href="personagenscb.html">Personagens</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro-box">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a> &rsaquo;
+        <a href="CasseteBeast.html">Wiki Cassette Beasts</a> &rsaquo;
+        <span>Efeitos de Status</span>
+      </div>
+
+      <h1 class="page-title">Efeitos de Status</h1>
+      <p class="page-subtitle">Todos os efeitos especiais que podem ser aplicados em monstros durante a batalha</p>
+
+      <div class="stats-bar">
+        <div class="stat-chip">Total: <strong id="totalCount">—</strong></div>
+        <div class="stat-chip">Buffs: <strong id="buffCount">—</strong></div>
+        <div class="stat-chip">Debuffs: <strong id="debuffCount">—</strong></div>
+        <div class="stat-chip">Transmutações: <strong id="transmuCount">—</strong></div>
+        <div class="stat-chip">Especiais: <strong id="miscCount">—</strong></div>
+      </div>
+
+      <p style="font-size:0.87rem; color:#aaa; line-height:1.7;">
+        Efeitos de status são condições especiais aplicadas a monstros através de movimentos.
+        <strong style="color:var(--buff-txt)">Buffs</strong> têm efeito positivo direto,
+        <strong style="color:var(--debuff-txt)">Debuffs</strong> têm efeito negativo,
+        <strong style="color:var(--transmu-txt)">Transmutações</strong> alteram o Tipo do monstro afetado, e
+        <strong style="color:var(--misc-txt)">Especiais</strong> têm resultados únicos que podem ser positivos ou negativos.
+      </p>
+    </div>
+
+
+
+    <!-- Grid -->
+    <div class="effects-grid" id="effectsGrid"></div>
+    <div class="no-results" id="noResults">Nenhum efeito encontrado.</div>
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos. Cassette Beasts © Bytten Studio. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // ── Data ─────────────────────────────────────────────────────────────────
+    // [name_pt, name_en (for icon URL), kind, description]
+    const EFFECTS = [
+      // Buffs
+      ["Abramacabra",        "Abramacabra",        "Buff",          "Efeito mágico especial de buff. Aplica uma série de buffs aleatórios ao monstro afetado."],
+      ["Precisão +",         "Accuracy_Up",         "Buff",          "Aumenta a chance de acerto dos ataques do monstro afetado."],
+      ["Revestimento de Ar", "Air_Coating",         "Transmutation", "Altera o Tipo do monstro para Ar, mudando suas fraquezas e resistências em batalha."],
+      ["Parede de Ar",       "Air_Wall",            "Buff",          "Cria uma parede elemental de Ar que absorve certos ataques recebidos antes de ser destruída."],
+      ["Turbo de PA",        "AP_Boost",            "Buff",          "Aumenta os pontos de ação (PA) do monstro afetado, permitindo usar movimentos mais fortes."],
+      ["Revestimento Astral","Astral_Coating",      "Transmutation", "Altera o Tipo do monstro para Astral, modificando fraquezas e resistências."],
+      ["Parede Astral",      "Astral_Wall",         "Buff",          "Cria uma parede elemental Astral que absorve certos ataques recebidos."],
+      ["Revestimento Besta", "Beast_Coating",       "Transmutation", "Altera o Tipo do monstro para Besta."],
+      ["Parede Besta",       "Beast_Wall",          "Buff",          "Cria uma parede elemental Besta que absorve certos tipos de dano."],
+      ["Poder Canalizado",   "Channelled_Power",    "Buff",          "Carrega poder por alguns turnos. Libera um ataque devastador quando o efeito termina."],
+      ["Dano Físico Ar",     "Contact_Dmg_Air",     "Buff",          "O monstro causa dano do Tipo Ar em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Astral", "Contact_Dmg_Astral",  "Buff",          "O monstro causa dano do Tipo Astral em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Besta",  "Contact_Dmg_Beast",   "Buff",          "O monstro causa dano do Tipo Besta em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Terra",  "Contact_Dmg_Earth",   "Buff",          "O monstro causa dano do Tipo Terra em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Fogo",   "Contact_Dmg_Fire",    "Buff",          "O monstro causa dano do Tipo Fogo em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Vidro",  "Contact_Dmg_Glass",   "Buff",          "O monstro causa dano do Tipo Vidro em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Glitter","Contact_Dmg_Glitter", "Buff",          "O monstro causa dano do Tipo Glitter em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Gelo",   "Contact_Dmg_Ice",     "Buff",          "O monstro causa dano do Tipo Gelo em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Raio",   "Contact_Dmg_Lightning","Buff",         "O monstro causa dano do Tipo Raio em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Metal",  "Contact_Dmg_Metal",   "Buff",          "O monstro causa dano do Tipo Metal em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Planta", "Contact_Dmg_Plant",   "Buff",          "O monstro causa dano do Tipo Planta em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Plástico","Contact_Dmg_Plastic","Buff",          "O monstro causa dano do Tipo Plástico em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Veneno", "Contact_Dmg_Poison",  "Buff",          "O monstro causa dano do Tipo Veneno em qualquer inimigo que o ataque fisicamente."],
+      ["Dano Físico Água",   "Contact_Dmg_Water",   "Buff",          "O monstro causa dano do Tipo Água em qualquer inimigo que o ataque fisicamente."],
+      ["Abraçado",           "Cottoned_On",         "Buff",          "O monstro foi envolvido em algodão mágico. Fornece uma proteção especial contra certos ataques."],
+      ["Velocidade Dupla",   "Double_Speed",        "Buff",          "Dobra a velocidade do monstro afetado, fazendo-o agir muito antes dos oponentes mais lentos."],
+      ["Revestimento Terra", "Earth_Coating",       "Transmutation", "Altera o Tipo do monstro para Terra."],
+      ["Parede de Terra",    "Earth_Wall",          "Buff",          "Cria uma parede elemental de Terra que absorve certos ataques."],
+      ["Evasão +",           "Evasion_Up",          "Buff",          "Aumenta a evasão do monstro, tornando-o mais difícil de acertar com ataques."],
+      ["Revestimento de Fogo","Fire_Coating",       "Transmutation", "Altera o Tipo do monstro para Fogo."],
+      ["Parede de Fogo",     "Fire_Wall",           "Buff",          "Cria uma parede elemental de Fogo. Inimigos que a destruírem recebem dano de Fogo."],
+      ["Apostas",            "Gambit",              "Buff",          "O monstro aumenta drasticamente seus atributos por alguns turnos, mas é eliminado automaticamente ao fim do efeito."],
+      ["Parede de Gema",     "Gemstone_Wall",       "Buff",          "Cria uma parede elemental de Gema especialmente resistente."],
+      ["Fantasma",           "Ghostly",             "Buff",          "O monstro torna-se invulnerável por um período. Ataques não o afetam enquanto o efeito durar."],
+      ["Revestimento de Vidro","Glass_Coating",     "Transmutation", "Altera o Tipo do monstro para Vidro."],
+      ["Parede de Vidro",    "Glass_Wall",          "Buff",          "Cria uma parede elemental de Vidro que absorve certos ataques."],
+      ["Revestimento Glitter","Glitter_Coating",    "Transmutation", "Altera o Tipo do monstro para Glitter (Purpurina)."],
+      ["Parede Glitter",     "Glitter_Wall",        "Buff",          "Cria uma parede elemental de Glitter que absorve certos ataques."],
+      ["Folha Curativa",     "Healing_Leaf",        "Buff",          "Restaura HP do monstro afetado a cada turno enquanto o efeito durar."],
+      ["Vapor Curativo",     "Healing_Steam",       "Buff",          "Restaura HP do monstro e de seus aliados através de vapor regenerativo."],
+      ["Hibernando",         "Hibernating",         "Buff",          "O monstro entra em modo de hibernação, curando HP massivamente mas ficando vulnerável a ataques."],
+      ["Revestimento de Gelo","Ice_Coating",        "Transmutation", "Altera o Tipo do monstro para Gelo."],
+      ["Parede de Gelo",     "Ice_Wall",            "Buff",          "Cria uma parede elemental de Gelo que absorve certos ataques e pode congelar atacantes."],
+      ["Interceptando",      "Intercepting",        "Buff",          "O monstro desvia todos os ataques destinados ao aliado ao lado, recebendo-os em seu lugar."],
+      ["Revestimento Raio",  "Lightning_Coating",   "Transmutation", "Altera o Tipo do monstro para Raio."],
+      ["Parede de Raio",     "Lightning_Wall",      "Buff",          "Cria uma parede elemental de Raio que pode paralisar atacantes."],
+      ["Mirando",            "Locked_On",           "Buff",          "O monstro está mirando em um alvo específico, garantindo que próximos ataques o acertem com precisão total."],
+      ["Meditando",          "Meditating",          "Buff",          "O monstro medita por um turno, carregando um golpe poderoso para o próximo ataque."],
+      ["Ataque Físico +",    "Melee_Attack_Up",     "Buff",          "Aumenta o poder de ataque físico (corpo-a-corpo) do monstro afetado."],
+      ["Defesa Física +",    "Melee_Defence_Up",    "Buff",          "Aumenta a defesa física (corpo-a-corpo) do monstro afetado."],
+      ["Revestimento Metal", "Metal_Coating",       "Transmutation", "Altera o Tipo do monstro para Metal."],
+      ["Parede de Metal",    "Metal_Wall",          "Buff",          "Cria uma parede elemental de Metal de altíssima resistência."],
+      ["Mente Fundida",      "Mind-Meld",           "Buff",          "Monstros aliados sincronizam suas mentes, compartilhando buffs ativos entre si."],
+      ["Multiataque",        "Multistrike",         "Buff",          "O próximo ataque do monstro será executado múltiplas vezes consecutivas no mesmo alvo."],
+      ["Multialvo",          "Multitarget",         "Buff",          "O próximo ataque do monstro atingirá todos os inimigos em campo simultaneamente."],
+      ["Postura de Bloqueio","Parry_Stance",        "Buff",          "O monstro entra em postura defensiva, bloqueando e revidando o próximo ataque que receber."],
+      ["Revestimento Planta","Plant_Coating",       "Transmutation", "Altera o Tipo do monstro para Planta."],
+      ["Parede de Planta",   "Plant_Wall",          "Buff",          "Cria uma parede elemental de Planta que pode drenar HP dos atacantes."],
+      ["Revestimento Plástico","Plastic_Coating",   "Transmutation", "Altera o Tipo do monstro para Plástico."],
+      ["Parede de Plástico", "Plastic_Wall",        "Buff",          "Cria uma parede elemental de Plástico que absorve certos ataques à distância."],
+      ["Revestimento Veneno","Poison_Coating",      "Transmutation", "Altera o Tipo do monstro para Veneno."],
+      ["Parede de Veneno",   "Poison_Wall",         "Buff",          "Cria uma parede elemental de Veneno que pode envenenar atacantes."],
+      ["Ataque à Distância +","Ranged_Attack_Up",   "Buff",          "Aumenta o poder dos ataques à distância (especiais) do monstro afetado."],
+      ["Defesa à Distância +","Ranged_Defence_Up",  "Buff",          "Aumenta a resistência a ataques à distância (especiais) do monstro afetado."],
+      ["Ritual",             "Ritual",              "Buff",          "O monstro realiza um ritual especial que concede efeitos poderosos ao ser concluído."],
+      ["Velocidade +",       "Speed_Up",            "Buff",          "Aumenta a velocidade do monstro, fazendo-o agir antes dos adversários."],
+      ["Defesa em Torre",    "Tower_Defence",       "Buff",          "O monstro se fixa no lugar, ganhando enorme bônus de defesa enquanto não se mover."],
+      ["Revestimento Água",  "Water_Coating",       "Transmutation", "Altera o Tipo do monstro para Água."],
+      ["Parede de Água",     "Water_Wall",          "Buff",          "Cria uma parede elemental de Água que pode extinguir efeitos de Fogo."],
+      // Debuffs
+      ["Precisão -",         "Accuracy_Down",       "Debuff",        "Reduz a chance de acerto dos ataques do monstro afetado."],
+      ["Dreno de PA",        "AP_Drain",            "Debuff",        "Drena os pontos de ação (PA) do monstro, impedindo o uso de movimentos mais potentes."],
+      ["Fúria",              "Berserk",             "Debuff",        "O monstro entra em estado de fúria: ataca aleatoriamente, inclusive aliados, sem controle."],
+      ["Bomba",              "Bomb",                "Debuff",        "Uma bomba é acoplada ao monstro. Explode após um número de turnos, causando dano massivo."],
+      ["Armadilha",          "Booby_Trapped",       "Debuff",        "O monstro está armadilhado. Qualquer coisa que o danifique também causa dano ao atacante."],
+      ["Queimando",          "Burned",              "Debuff",        "O monstro sofre dano de Fogo ao final de cada turno (10% do HP máximo + 1). O dano é dobrado se o alvo tiver o status Inflamável. Ataques de Fogo têm 10% de chance de aplicar este efeito."],
+      ["Condutor",           "Conductive",          "Debuff",        "O monstro está condutor: qualquer ataque de Raio que o atinja causa dano em cadeia para aliados próximos."],
+      ["Confuso",            "Confused",            "Debuff",        "O monstro fica confuso e pode atacar aliados ou a si mesmo por acidente a cada turno."],
+      ["Evasão -",           "Evasion_Down",        "Debuff",        "Reduz a evasão do monstro, tornando-o mais fácil de acertar com ataques."],
+      ["Evasão Anulada",     "Evasion_Nullified",   "Debuff",        "A evasão do monstro é zerada completamente. Todos os ataques o acertam automaticamente."],
+      ["Inflamável",         "Flammable",           "Debuff",        "O monstro torna-se inflamável. Qualquer dano de Fogo causa o dobro do efeito, inclusive do status Queimando."],
+      ["Amedrontado",        "Flinched",            "Debuff",        "O monstro é impedido de agir no próximo turno devido ao medo ou ao impacto sofrido."],
+      ["Névoa",              "Fog",                 "Debuff",        "A névoa reduz drasticamente a precisão de todos os ataques do monstro afetado."],
+      ["Laços de Vidro",     "Glass_Bonds",         "Debuff",        "O monstro fica preso em laços de vidro. Se receber dano, os cacos explodem causando dano extra."],
+      ["Estilhaços",         "Glass_Shards",        "Misc",          "Estilhaços de vidro ficam embutidos no monstro. Qualquer dano adicional faz os estilhaços explodirem."],
+      ["Sugado",             "Leeched",             "Debuff",        "HP do monstro é drenado a cada turno e transferido para o causador do efeito."],
+      ["Ataque Físico -",    "Melee_Attack_Down",   "Debuff",        "Reduz o poder de ataque físico (corpo-a-corpo) do monstro afetado."],
+      ["Defesa Física -",    "Melee_Defence_Down",  "Debuff",        "Reduz a defesa física (corpo-a-corpo) do monstro afetado."],
+      ["Petrificado",        "Petrified",           "Debuff",        "O monstro é transformado em pedra e não pode agir. Ataques de Terra podem quebrá-lo completamente."],
+      ["Envenenado",         "Poisoned",            "Debuff",        "O monstro sofre dano de Veneno ao final de cada turno. O dano aumenta progressivamente ao longo dos turnos."],
+      ["Ataque à Distância -","Ranged_Attack_Down", "Debuff",        "Reduz o poder dos ataques à distância (especiais) do monstro afetado."],
+      ["Defesa à Distância -","Ranged_Defence_Down","Debuff",        "Reduz a resistência a ataques à distância (especiais) do monstro afetado."],
+      ["Ressonância",        "Resonance",           "Debuff",        "O monstro ressoa com seu próprio Tipo. Se receber dano do mesmo Tipo, sofre dano massivo amplificado."],
+      ["Estilhaços Metálicos","Shrapnel",           "Debuff",        "Estilhaços metálicos são cravados no monstro, causando dano contínuo a cada turno."],
+      ["Dormindo",           "Sleep",               "Debuff",        "O monstro adormece e não pode agir. Ataques recebidos enquanto dormindo causam dano dobrado, mas acordam-no."],
+      ["Soterrado na Neve",  "Snowed_In",           "Debuff",        "O monstro fica soterrado em neve. Sua velocidade é zerada e não pode agir por alguns turnos."],
+      ["Velocidade -",       "Speed_Down",          "Debuff",        "Reduz a velocidade do monstro, fazendo-o agir depois dos adversários."],
+      ["Fita Travada",       "Tape_Jam",            "Debuff",        "A fita cassete do monstro trava. Ele não consegue usar movimentos que consumam PA até o efeito acabar."],
+      ["Alvo Único",         "Unitarget",           "Debuff",        "O monstro só pode mirar em um único alvo por vez. Movimentos de área ficam bloqueados."],
+      ["Janela",             "Window",              "Debuff",        "Uma janela é aberta no monstro. Ataques que atravessam a janela acertam monstros aliados atrás dele."],
+      // Misc
+      ["Encontro Próximo",   "Close_Encounter",     "Misc",          "Efeito especial de encontro. Resulta em um efeito único dependendo do contexto da batalha."],
+      ["Combate Justo",      "Fair_Fight",          "Misc",          "Nivelamenta todos os atributos de batalha. Remove buffs e debuffs de stat e equaliza o campo de batalha."],
+      ["Ressuscitado",       "Resurrected",         "Misc",          "O monstro foi ressuscitado após ser derrotado, retornando à batalha com HP parcial."],
+      ["Mola",               "Spring-Loaded",       "Misc",          "O monstro está carregado como uma mola. Na próxima vez que for atingido, libera uma explosão de dano."],
+      ["Convocado",          "Summoned",            "Misc",          "O monstro foi convocado para o campo de batalha por um aliado. Retorna ao banco quando o efeito terminar."],
+    ];
+
+    // ── Icon URL helper ────────────────────────────────────────────────────────
+    function iconUrl(nameEn) {
+      const slug = nameEn.replace(/ /g, '_');
+      return `https://wiki.cassettebeasts.com/images/thumb/`;
+    }
+
+    // Mapping to real icon filenames from the wiki (first 2 hex chars of MD5 of File:Status_X.png)
+    // We'll use direct wiki image URLs with thumb paths
+    function getIconUrl(nameEn) {
+      const sanitized = nameEn.replace(/ /g, '_');
+      // Using the wiki's image pattern; fallback handled via onerror
+      return `https://wiki.cassettebeasts.com/images/thumb/Status_${sanitized}.png/42px-Status_${sanitized}.png`;
+    }
+
+    // Kind labels PT
+    const KIND_PT = {
+      Buff: "Buff",
+      Debuff: "Debuff",
+      Transmutation: "Transmutação",
+      Misc: "Especial"
+    };
+
+    // Kind emoji
+    const KIND_EMOJI = {
+      Buff: "⬆",
+      Debuff: "⬇",
+      Transmutation: "🔄",
+      Misc: "✦"
+    };
+
+    // ── Build grid ─────────────────────────────────────────────────────────────
+    const grid = document.getElementById('effectsGrid');
+
+    function buildGrid(data) {
+      grid.innerHTML = '';
+      data.forEach(([namePt, nameEn, kind, desc]) => {
+        const card = document.createElement('div');
+        card.className = 'effect-card';
+        card.dataset.kind = kind;
+        card.dataset.name = namePt.toLowerCase() + ' ' + nameEn.toLowerCase();
+
+        // Try wiki icon, fallback to emoji placeholder
+        const imgSrc = `https://wiki.cassettebeasts.com/images/thumb/Status_${nameEn.replace(/ /g,'_')}.png/42px-Status_${nameEn.replace(/ /g,'_')}.png`;
+
+        card.innerHTML = `
+          <img class="effect-icon"
+               src="${imgSrc}"
+               alt="${namePt}"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="effect-icon-placeholder" style="display:none">${KIND_EMOJI[kind]}</div>
+          <div class="effect-body">
+            <div class="effect-name">${namePt}</div>
+            <span class="effect-kind kind-${kind}">${KIND_PT[kind]}</span>
+            <div class="effect-desc">${desc}</div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      updateCounts();
+    }
+
+    // ── Counts ─────────────────────────────────────────────────────────────────
+    function updateCounts() {
+      const all   = EFFECTS.length;
+      const buff  = EFFECTS.filter(e => e[2]==='Buff').length;
+      const deb   = EFFECTS.filter(e => e[2]==='Debuff').length;
+      const trans = EFFECTS.filter(e => e[2]==='Transmutation').length;
+      const misc  = EFFECTS.filter(e => e[2]==='Misc').length;
+      document.getElementById('totalCount').textContent  = all;
+      document.getElementById('buffCount').textContent   = buff;
+      document.getElementById('debuffCount').textContent = deb;
+      document.getElementById('transmuCount').textContent= trans;
+      document.getElementById('miscCount').textContent   = misc;
+
+      // visible
+      const visible = [...document.querySelectorAll('.effect-card:not(.hidden)')].length;
+      document.getElementById('visibleCount').textContent = visible;
+      document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    // ── Init ───────────────────────────────────────────────────────────────────
+    buildGrid(EFFECTS);
+  </script>
+</body>
+</html>

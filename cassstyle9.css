@@ -1,0 +1,168 @@
+    /* ── Overrides e estilos específicos de movimentos ── */
+ 
+    /* Filtros de categoria e tipo */
+    .filters-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .filter-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-right: 0.3rem;
+      white-space: nowrap;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      font-family: 'Roboto', sans-serif;
+      padding: 0.3rem 0.7rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      clip-path: polygon(0% 0%, calc(100% - 8px) 0%, 100% 8px, 100% 100%, 0% 100%);
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+    .filter-btn.cat-melee.active   { background: #c06060; border-color: #c06060; }
+    .filter-btn.cat-ranged.active  { background: #e07050; border-color: #e07050; }
+    .filter-btn.cat-status.active  { background: #9b6cd3; border-color: #9b6cd3; }
+    .filter-btn.cat-misc.active    { background: #4aad5a; border-color: #4aad5a; }
+    .filter-btn.cat-passive.active { background: #c09858; border-color: #c09858; }
+ 
+    /* Coluna de categoria (badge colorido) */
+    .cat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .cat-Melee   { background: rgba(192,96,96,0.18); color: #e07070; border: 1px solid rgba(192,96,96,0.35); }
+    .cat-Ranged  { background: rgba(224,112,80,0.18); color: #f09070; border: 1px solid rgba(224,112,80,0.35); }
+    .cat-Status  { background: rgba(155,108,211,0.18); color: #c090f0; border: 1px solid rgba(155,108,211,0.35); }
+    .cat-Misc    { background: rgba(74,173,90,0.18); color: #70cc80; border: 1px solid rgba(74,173,90,0.35); }
+ 
+    /* Coluna Poder / Acurácia / Custo */
+    .col-power    { width: 64px; font-family: 'Orbitron', sans-serif; font-size: 0.75rem; font-weight: 700; color: #f09070; }
+    .col-accuracy { width: 80px; font-size: 0.8rem; color: #70cc80; }
+    .col-cost     { width: 70px; font-size: 0.78rem; }
+    .col-passive  { font-size: 0.72rem; color: #c09858; font-weight: 700; }
+    .col-passive-badge {
+      display: inline-block;
+      background: rgba(192,152,88,0.18);
+      border: 1px solid rgba(192,152,88,0.35);
+      color: #e0b860;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+    .col-name-move {
+      text-align: left !important;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      white-space: nowrap;
+      min-width: 160px;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    .col-name-move .type-badge,
+    .type-badge {
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    .dash { color: var(--text-dim); }
+ 
+    /* Legenda de categorias */
+    .cat-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.2rem;
+      padding: 1rem 1.2rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .cat-legend-title {
+      width: 100%;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.3rem;
+    }
+    .cat-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: var(--text);
+    }
+    .cat-legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+ 
+    /* descrição do movimento (coluna extra) */
+    .col-desc {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-align: left !important;
+      max-width: 260px;
+      white-space: normal;
+      line-height: 1.4;
+    }
+ 
+    /* info box sobre stickers */
+    .sticker-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .sticker-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--blue);
+      padding: 1rem 1.2rem;
+      clip-path: polygon(0% 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%);
+    }
+    .sticker-card h4 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.72rem;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.4rem;
+    }
+    .sticker-card p {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+      margin: 0;
+    }

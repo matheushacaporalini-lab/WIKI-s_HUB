@@ -1,1238 +1,354 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Espécies - Cassette Beasts Wiki</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="cassstyle.css" />
-    <link rel="stylesheet" href="cass_back2.css" />
-    <link rel="stylesheet" href="styleA.css" />
-    <link rel="stylesheet" href="cassstyle4.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="index.html" style="color: inherit; text-decoration: none"
-          >Hub de Wikis</a
-        >
-      </div>
-      <nav>
-        <ul>
-          <li><a href="CasseteBeast.html">Wiki Cassete Beasts</a></li>
-          <li><a href="cass_table.html">Tabela de Tipos</a></li>
-          <li><a href="personagenscb.html">Personagens</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espécies - Cassette Beasts Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style_especies.css" />
 
-    <main>
-      <div class="breadcrumb">
-        <a href="index.html">Início</a> &gt;
-        <a href="CasseteBeast.html">Wiki Cassete Beasts</a> &gt;
-        <span>Espécies</span>
-      </div>
+</head>
+<body>
 
-      <div class="article-header">
-        <h1>Espécies de Cassette Beasts</h1>
-      </div>
+  <header>
+    <div class="logo">
+      <a href="index.html" style="color:inherit;text-decoration:none;">Hub de Wikis</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="CasseteBeast.html">Wiki CB</a></li>
+        <li><a href="cass_table.html">Tipos</a></li>
+        <li><a href="personagenscb.html">Personagens</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <div class="intro-section">
-        <h2 style="margin-top: 0; border: none; padding: 0">
-          📋 Guia de Espécies
-        </h2>
-        <p>
-          Aqui você encontrará a lista completa de todas as espécies de Cassette
-          Beasts com seus estatísticas básicas. A tabela inclui número de
-          Pokédex, tipo, sprite e todos os stats de batalha (HP, Ataque Físico,
-          Defesa Física, Ataque Especial, Defesa Especial e Velocidade).
-        </p>
-        <p style="margin-bottom: 0">
-          <strong>Dica:</strong> Passe o mouse sobre uma linha para destacá-la.
-          A tabela é responsiva e se adapta a diferentes tamanhos de tela.
-        </p>
-      </div>
+  <main>
+    <div class="intro-box">
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> &rsaquo;
+      <a href="CasseteBeast.html">Wiki Cassette Beasts</a> &rsaquo;
+      <span>Espécies</span>
+    </div>
+      
+    <h1 class="page-title">Espécies</h1>
+    <p class="page-subtitle">Bestiário completo de Nova Murta — todos os monstros, stats e tipos</p>
+    <div class="stats-bar" id="statsBar">
+      Tabela completa de todas as espécies de Cassette Beasts. 
+      Filtre por tipo, busque por nome ou clique nos cabeçalhos para ordenar.
+       Os stats incluem HP, Atk, Def, S.Atk, S.Def e Speed, com o Total indicando o poder geral da criatura.
+      <div class="stat-chip">Total de espécies: <strong id="totalCount">—</strong></div>
+    
+  
+    </div>
+    </div>
 
-      <div class="species-table-container">
-        <table class="species-table">
-          <thead>
-            <tr>
-              <th style="width: 80px">Sprite</th>
-              <th style="width: 150px">Nome</th>
-              <th style="width: 80px">Nº</th>
-              <th style="width: 100px">Tipo</th>
-              <th style="width: 60px">HP</th>
-              <th style="width: 60px">M.Atk</th>
-              <th style="width: 60px">M.Def</th>
-              <th style="width: 60px">R.Atk</th>
-              <th style="width: 60px">R.Def</th>
-              <th style="width: 60px">Speed</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=001"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Magikaranguejo</td>
-              <td class="number-cell">#000</td>
-              <td class="type-cell"><span class="type-badge">Astral</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=001"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Saltamola</td>
-              <td class="number-cell">#001</td>
-              <td class="type-cell">
-                <span class="type-badge-beast">Besta</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=002"
-                  alt="Sirenata"
-                />
-              </td>
-              <td class="name-cell">Pulagarra</td>
-              <td class="number-cell">#002</td>
-              <td class="type-cell">
-                <span class="type-badge-beast">Besta</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=003"
-                  alt="Cat-5"
-                />
-              </td>
-              <td class="name-cell">Estripânico</td>
-              <td class="number-cell">#003</td>
-              <td class="type-cell">
-                <span class="type-badge-beast">Besta</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=004"
-                  alt="Cloutiper"
-                />
-              </td>
-              <td class="name-cell">Bisbilupin</td>
-              <td class="number-cell">#004</td>
-              <td class="type-cell">
-                <span class="type-badge-beast">Besta</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=005"
-                  alt="Brushroom"
-                />
-              </td>
-              <td class="name-cell">Larampiro</td>
-              <td class="number-cell">#005</td>
-              <td class="type-cell">
-                <span class="type-badge-beast">Besta</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=006"
-                  alt="Ramit"
-                />
-              </td>
-              <td class="name-cell">Carnavíbora</td>
-              <td class="number-cell">#006</td>
-              <td class="type-cell">
-                <span class="type-badge-Veneno">Veneno</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=007"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Mascabus</td>
-              <td class="number-cell">#007</td>
-              <td class="type-cell">
-                <span class="type-badge-Veneno">Veneno</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=008"
-                  alt="Mutini"
-                />
-              </td>
-              <td class="name-cell">Jormundiouro</td>
-              <td class="number-cell">#008</td>
-              <td class="type-cell">
-                <span class="type-badge-Veneno">Veneno</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=009"
-                  alt="Flarefowl"
-                />
-              </td>
-              <td class="name-cell">Bailedusa</td>
-              <td class="number-cell">#009</td>
-              <td class="type-cell">
-                <span class="type-badge-Veneno">Veneno</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Aeroboros</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge-Ar">Ar</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Trafeguejo</td>
-              <td class="number-cell">#011</td>
-              <td class="type-cell">
-                <span class="type-badge-Plastico">Plástico</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Gorgumáforo</td>
-              <td class="number-cell">#012</td>
-              <td class="type-cell">
-                <span class="type-badge-Plastico">Plástico</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Lagostáculo</td>
-              <td class="number-cell">#013</td>
-              <td class="type-cell">
-                <span class="type-badge-Plastico">Plástico</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Docemônio</td>
-              <td class="number-cell">#014</td>
-              <td class="type-cell">
-                <span class="type-badge-beast">Besta</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Malquimia</td>
-              <td class="number-cell">#015</td>
-              <td class="type-cell">
-                <span class="type-badge-Veneno">Veneno</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-          </tbody>
+    <!-- quantidade-->
+    
 
-          <tbody>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=001"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Miasmodeu</td>
-              <td class="number-cell">#016</td>
-              <td class="type-cell">
-                <span class="type-badge-Veneno">Veneno</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=002"
-                  alt="Sirenata"
-                />
-              </td>
-              <td class="name-cell">Vendemônio</td>
-              <td class="number-cell">#017</td>
-              <td class="type-cell">
-                <span class="type-badge-metal">Metal</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=003"
-                  alt="Cat-5"
-                />
-              </td>
-              <td class="name-cell">Chiclebaal</td>
-              <td class="number-cell">#018</td>
-              <td class="type-cell">
-                <span class="type-badge-metal">Metal</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=004"
-                  alt="Cloutiper"
-                />
-              </td>
-              <td class="name-cell">Cloutiper</td>
-              <td class="number-cell">#004</td>
-              <td class="type-cell"><span class="type-badge">Metal</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=005"
-                  alt="Brushroom"
-                />
-              </td>
-              <td class="name-cell">Brushroom</td>
-              <td class="number-cell">#005</td>
-              <td class="type-cell"><span class="type-badge">Planta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=006"
-                  alt="Ramit"
-                />
-              </td>
-              <td class="name-cell">Ramit</td>
-              <td class="number-cell">#006</td>
-              <td class="type-cell"><span class="type-badge">Ar</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=007"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Pombomb</td>
-              <td class="number-cell">#007</td>
-              <td class="type-cell"><span class="type-badge">Besta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=008"
-                  alt="Mutini"
-                />
-              </td>
-              <td class="name-cell">Mutini</td>
-              <td class="number-cell">#008</td>
-              <td class="type-cell"><span class="type-badge">Água</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=009"
-                  alt="Flarefowl"
-                />
-              </td>
-              <td class="name-cell">Flarefowl</td>
-              <td class="number-cell">#009</td>
-              <td class="type-cell"><span class="type-badge">Fogo</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-          </tbody>
+    
 
-          <tbody>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=001"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Pombomb</td>
-              <td class="number-cell">#001</td>
-              <td class="type-cell"><span class="type-badge">Besta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=002"
-                  alt="Sirenata"
-                />
-              </td>
-              <td class="name-cell">Sirenata</td>
-              <td class="number-cell">#002</td>
-              <td class="type-cell"><span class="type-badge">Besta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=003"
-                  alt="Cat-5"
-                />
-              </td>
-              <td class="name-cell">Cat-5</td>
-              <td class="number-cell">#003</td>
-              <td class="type-cell">
-                <span class="type-badge">Plástico</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=004"
-                  alt="Cloutiper"
-                />
-              </td>
-              <td class="name-cell">Cloutiper</td>
-              <td class="number-cell">#004</td>
-              <td class="type-cell"><span class="type-badge">Metal</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=005"
-                  alt="Brushroom"
-                />
-              </td>
-              <td class="name-cell">Brushroom</td>
-              <td class="number-cell">#005</td>
-              <td class="type-cell"><span class="type-badge">Planta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=006"
-                  alt="Ramit"
-                />
-              </td>
-              <td class="name-cell">Ramit</td>
-              <td class="number-cell">#006</td>
-              <td class="type-cell"><span class="type-badge">Ar</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=007"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Pombomb</td>
-              <td class="number-cell">#007</td>
-              <td class="type-cell"><span class="type-badge">Besta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=008"
-                  alt="Mutini"
-                />
-              </td>
-              <td class="name-cell">Mutini</td>
-              <td class="number-cell">#008</td>
-              <td class="type-cell"><span class="type-badge">Água</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=009"
-                  alt="Flarefowl"
-                />
-              </td>
-              <td class="name-cell">Flarefowl</td>
-              <td class="number-cell">#009</td>
-              <td class="type-cell"><span class="type-badge">Fogo</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-          </tbody>
+    <!-- Table -->
+    <div class="table-wrap">
+      <table class="species-table" id="speciesTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)" title="Número">#</th>
+            <th onclick="sortTable(1)" title="Nome" style="text-align:left">Nome</th>
+            <th onclick="sortTable(2)">Tipo</th>
+            <th onclick="sortTable(3)" class="col-hp"  title="Hit Points">HP</th>
+            <th onclick="sortTable(4)" class="col-atk" title="Ataque Físico">Atk</th>
+            <th onclick="sortTable(5)" class="col-def" title="Defesa Física">Def</th>
+            <th onclick="sortTable(6)" class="col-satk" title="Ataque Especial">S.Atk</th>
+            <th onclick="sortTable(7)" class="col-sdef" title="Defesa Especial">S.Def</th>
+            <th onclick="sortTable(8)" class="col-spd" title="Velocidade">Speed</th>
+            <th onclick="sortTable(9)" title="Total de Stats">Total</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=001"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Pombomb</td>
-              <td class="number-cell">#001</td>
-              <td class="type-cell"><span class="type-badge">Besta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=002"
-                  alt="Sirenata"
-                />
-              </td>
-              <td class="name-cell">Sirenata</td>
-              <td class="number-cell">#002</td>
-              <td class="type-cell"><span class="type-badge">Besta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=003"
-                  alt="Cat-5"
-                />
-              </td>
-              <td class="name-cell">Cat-5</td>
-              <td class="number-cell">#003</td>
-              <td class="type-cell">
-                <span class="type-badge">Plástico</span>
-              </td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=004"
-                  alt="Cloutiper"
-                />
-              </td>
-              <td class="name-cell">Cloutiper</td>
-              <td class="number-cell">#004</td>
-              <td class="type-cell"><span class="type-badge">Metal</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=005"
-                  alt="Brushroom"
-                />
-              </td>
-              <td class="name-cell">Brushroom</td>
-              <td class="number-cell">#005</td>
-              <td class="type-cell"><span class="type-badge">Planta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=006"
-                  alt="Ramit"
-                />
-              </td>
-              <td class="name-cell">Ramit</td>
-              <td class="number-cell">#006</td>
-              <td class="type-cell"><span class="type-badge">Ar</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=007"
-                  alt="Pombomb"
-                />
-              </td>
-              <td class="name-cell">Pombomb</td>
-              <td class="number-cell">#007</td>
-              <td class="type-cell"><span class="type-badge">Besta</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=008"
-                  alt="Mutini"
-                />
-              </td>
-              <td class="name-cell">Mutini</td>
-              <td class="number-cell">#008</td>
-              <td class="type-cell"><span class="type-badge">Água</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=009"
-                  alt="Flarefowl"
-                />
-              </td>
-              <td class="name-cell">Flarefowl</td>
-              <td class="number-cell">#009</td>
-              <td class="type-cell"><span class="type-badge">Fogo</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <tr>
-              <td class="sprite-cell">
-                <img
-                  src="https://via.placeholder.com/64?text=010"
-                  alt="Venoct"
-                />
-              </td>
-              <td class="name-cell">Venoct</td>
-              <td class="number-cell">#010</td>
-              <td class="type-cell"><span class="type-badge">Veneno</span></td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-              <td class="stat-cell">—</td>
-            </tr>
-            <!-- Adicione mais espécies conforme necessário -->
-          </tbody>
-        </table>
-      </div>
+        <tbody id="tbody">
+        </tbody>
+      </table>
 
-      <div class="type-legend">
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #ff6b6b"></div>
-          <span>Fogo</span>
+
+    <!-- Type legend -->
+    <div class="legend">
+      <div class="legend-title">Legenda de Tipos</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#e0a050"></div>Besta</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#c070e0"></div>Veneno</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#70d8d4"></div>Ar</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#e07070"></div>Plástico</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#a8c4e0"></div>Metal</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f08050"></div>Fogo</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#60a8f0"></div>Água</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#70cc80"></div>Planta</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#c09858"></div>Terra</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#e8cc50"></div>Raio</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#90ddf0"></div>Gelo</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#a090f0"></div>Astral</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#b0e0e0"></div>Vidro</div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // ── Data ──────────────────────────────────────────────────────────────
+    // [num, name_pt, type, hp, atk, def, satk, sdef, speed]
+    const SPECIES = [
+      ["#000","Magikaranguejo","Astral",105,160,105,160,150,120], 
+      ["#001","Saltamola","Beast",90,130,80,80,90,130],
+      ["#002","Pulagarra","Beast",90,170,100,90,100,150],
+      ["#003","Estripânico","Beast",120,200,100,90,120,170],
+      ["#004","Bisbilupin","Beast",90,160,80,150,90,130],
+      ["#005","Carnavíbora","Beast",120,160,80,180,90,170],
+      ["#006","Carniviper","Poison",60,120,80,120,80,140],
+      ["#007","Masquerattle","Poison",90,140,80,140,90,160],
+      ["#008","Jormungold","Poison",100,155,100,155,100,190],
+      ["#009","Mardiusa","Poison",130,160,100,120,130,160],
+      ["#010","Aeroboros","Air",190,30,100,160,160,160],
+      ["#011","Trafeguejo","Plastic",80,120,80,120,110,90],
+      ["#012","Gorgumáforo","Plastic",120,120,120,160,120,160],
+      ["#013","Lagostáculo","Plastic",150,120,160,120,160,90],
+      ["#014","Docemônio","Beast",115,110,100,110,105,100],
+      ["#015","Malquimia","Poison",120,125,110,145,110,130],
+      ["#016","Miasmodeu","Poison",130,150,120,170,120,150],
+      ["#017","Vendemônio","Metal",130,110,130,120,130,120],
+      ["#018","Chiclebaal","Metal",150,110,160,130,160,130],
+      ["#019","Espiricordeiro","Beast",115,110,105,110,100,100],
+      ["#020","Lanotergeist","Astral",120,145,110,125,110,130],
+      ["#021","Ariespectro","Astral",130,170,120,150,120,150],
+      ["#022","Zumbé","Earth",130,130,130,110,130,110],
+      ["#023","Capricorpo","Earth",160,140,160,110,160,110],
+      ["#024","Serenata","Air",110,70,80,130,120,90],
+      ["#025","Decibella","Air",135,100,110,170,160,125],
+      ["#026","Dendileo","Plant",120,80,120,100,120,60],
+      ["#027","Florifauces","Plant",160,100,160,130,160,90],
+      ["#028","Macabra","Beast",140,120,60,100,100,120],
+      ["#029","Folclorde","Beast",140,135,135,100,120,120],
+      ["#030","Domiposa","Air",100,100,100,100,120,80],
+      ["#031","Asatriste","Lightning",120,100,120,100,120,90],
+      ["#032","Marimaníaco","Lightning",130,110,120,180,140,120],
+      ["#033","Tokusseto","Air",120,170,120,100,120,170],
+      ["#034","Escuvigori","Beast",90,110,110,100,90,100],
+      ["#035","	Manilança","Metal",110,120,170,100,150,100],
+      ["#036","Palangolin","Metal",150,120,120,100,100,160],
+      ["#037","Gatitela","Lightning",100,110,90,110,90,100],
+      ["#038","Gategoria-5","Lightning",150,160,100,120,120,150],
+      ["#039","Canisoco","Metal",100,120,110,80,80,110],
+      ["#040","Canholupus","Metal",130,160,140,110,110,150],
+      ["#041","Balazita","Fire",80,70,70,100,70,200],
+      ["#042","Velocirifle","Fire",100,100,100,140,100,160],
+      ["#043","Artilhanossauro","Fire",110,170,120,170,110,120],
+      ["#044","Engrezilla","Metal",110,120,170,170,110,120],
+      ["#045","Diveal","Water",100,100,125,125,100,50],
+      ["#046","Scubalrus","Water",130,125,160,160,125,100],
+      ["#047","Nevermort","Poison",150,70,75,80,75,150],
+      ["#048","Apocalicorvo","Poison",160,120,120,120,120,160],
+      ["#049","Clocksley","Plastic",80,80,80,150,130,80],
+      ["#050","Robingun","Plastic",110,110,110,200,150,120],
+      ["#051","Thwackalope","Air",110,180,110,110,110,180],
+      ["#052","Allseer","Metal",100,50,120,150,80,100],
+      ["#053","Khufo","Astral",120,160,140,160,100,120],
+      ["#054","Triphinx","Metal",140,50,140,190,140,140],
+      ["#055","Braxsuit","Air",100,100,70,100,90,140],
+      ["#056","Flapwoods","Air",140,140,100,140,100,180],
+      ["#057","Sanzatime","Earth",100,120,120,100,110,50],
+      ["#058","Fortiwinx","Earth",130,165,155,130,140,80],
+      ["#059","Salamago","Fire",100,50,80,150,120,100],
+      ["#060","Pyromeleon","Fire",150,60,100,200,150,140],
+      ["#061","Muskrateer","Beast",80,100,80,80,80,120],
+      ["#062","Ratcousel","Plastic",136,136,136,136,136,120],
+      ["#063","Padpole","Water",120,120,80,80,80,120],
+      ["#064","Frillypad","Water",140,180,100,100,100,140],
+      ["#065","Liligator","Water",150,200,100,100,100,150],
+      ["#066","Elfless","Ice",100,100,100,100,100,100],
+      ["#067","Grampus","Ice",160,150,160,100,130,100],
+      ["#068","Faerious","Ice",160,160,100,120,100,160],
+      ["#069","Brushroom","Plant",100,100,100,90,110,100],
+      ["#070","Fungogh","Plant",120,160,160,100,140,120],
+      ["#071","Boltam","Lightning",90,90,90,90,90,150],
+      ["#072","Plasmachifre","Lightning",120,120,120,120,160,160],
+      ["#073","Busheye","Plant",150,90,90,90,90,90],
+      ["#074","Huntorch","Plant",150,140,90,90,90,140],
+      ["#075","Hedgeherne","Plant",150,140,110,140,110,150],
+      ["#076","Terracooka","Earth",100,110,110,100,100,80],
+      ["#077","Coaldron","Earth",160,110,140,160,140,90],
+      ["#078","Asterdígrado","Astral",180,40,150,40,150,40],
+      ["#079","Cosmosseto","Astral",200,60,180,150,150,60],
+      ["#080","Mascotoy","Plastic",120,150,100,80,80,70],
+      ["#081","Mascotorn","Plastic",150,200,150,100,110,90],
+      ["#082","Binvader","Metal",90,90,140,140,90,50],
+      ["#083","Binterloper","Plastic",110,110,170,170,110,110],
+      ["#084","Twirligig","Plant",190,50,150,50,150,10],
+      ["#085","Kirikuri","Plant",190,160,150,70,110,120],
+      ["#086","Jellyton","Poison",120,200,130,150,90,110],
+      ["#087","Espirueta","Water",140,70,70,110,70,140],
+      ["#088","Reinamare","Water",170,115,100,145,100,170],
+      ["#089","Jumpkin","Plant",130,100,100,75,100,140],
+      ["#090","Beanstalker","Plant",140,185,110,100,100,165],
+      ["#091","Draculeaf","Plant",160,125,125,125,125,140],
+      ["#092","Pawndead","Earth",90,90,90,90,90,90],
+      ["#093","Esquelevangelista","Earth",110,110,110,110,110,110],
+      ["#094","Kingrave","Earth",110,220,110,160,110,110],
+      ["#095","Queenyx","Earth",180,110,110,110,110,200],
+      ["#096","Burnace","Fire",100,60,150,100,150,40],
+      ["#097","Smogmagog","Fire",140,110,195,110,195,50],
+      ["#098","Faucetear","Water",90,100,90,110,100,90],
+      ["#099","Fountess","Water",125,135,125,155,135,125],
+      ["#100","Cluckabilly","Air",100,115,90,105,90,100],
+      ["#101","Rockertrice","Air",130,145,130,135,130,130],
+      ["#102","Pondwalker","Water",100,100,100,100,100,100],
+      ["#103","Sharktanker","Water",130,150,140,130,140,110],
+      ["#104","Pombomba","Fire",100,90,90,100,120,100],
+      ["#105","Spitzfyre","Fire",140,110,110,160,150,130],
+      ["#106","Icepeck","Ice",80,150,80,80,80,190],
+      ["#107","Cryoshear","Ice",150,180,90,90,90,200],
+      ["#108","Sparktan","Lightning",100,80,90,90,90,150],
+      ["#109","Zeustrike","Lightning",140,100,110,120,130,200],
+      ["#110","Kuneko","Air",115,115,115,115,115,115],
+      ["#111","Shining Kuneko","Astral",140,140,140,140,140,140],
+      ["#112","Djinn-Tônica","Astral",150,100,150,150,100,150],
+      ["#113","Arkidd","Lightning",100,150,100,100,100,250],
+      ["#114","Undyin","Water",200,110,110,160,110,110],
+      ["#115","Spooki-onna","Ice",190,120,130,130,130,100],
+      ["#116","Khepri","Fire",100,1,100,300,250,79],
+      ["#117","Averevoir","Air",150,100,150,100,150,190],
+      ["#118","Glaistain","Glass",120,160,90,160,90,220],
+      ["#119","Miss Mimic","Metal",110,210,110,110,110,150],
+      ["#120","Anathema","Beast",150,155,140,140,130,85],
+      ["#121","Pinbolt","Lightning",120,120,105,160,105,190],
+      ["#122","Diveberg","Ice",100,160,150,125,135,130],
+      ["#123","Adeptile","Astral",110,80,180,150,180,100],
+      ["#124","Trapwurm","Earth",120,150,120,90,120,90],
+      ["#125","Wyrmaw","Earth",150,180,130,110,130,100],
+      ["#126","Ferriclaw","Metal",90,140,100,90,140,140],
+      ["#127","Auriclaw","Metal",100,170,100,100,170,160],
+      ["#128","Picksie","Earth",130,130,130,130,130,150],
+      ["#129","Pawper","Beast",120,130,100,100,120,130],
+      ["#130","Pawprince","Beast",140,160,110,110,140,140],
+      // Sem número definido
+      ["#???","Amphare","Lightning",120,100,120,100,80,80],
+      ["#???","Blunderbusk","Fire",150,120,150,150,100,130],
+      ["#???","Charlequin","Fire",80,110,80,120,100,110],
+      ["#???","Fragliacci","Fire",100,140,100,170,160,130],
+      ["#???","Hauntome","Air",110,180,150,180,80,100],
+      ["#???","Lapacitor","Lightning",150,125,150,125,150,100],
+      ["#???","Littlered","Beast",100,100,100,100,100,100],
+      ["#???","Majortom","Metal",150,150,150,110,110,130],
+      ["#???","Minortom","Metal",130,130,130,70,70,70],
+      ["#???","Minosteam","Metal",150,180,180,120,120,90],
+      ["#???","Rosehood","Plant",160,110,100,160,110,160],
+      ["#???","Scarleteeth","Beast",110,160,160,100,160,110],
+      ["#???","Umbrahella","Poison",150,120,140,170,200,60],
+    ];
+
+    // Type label PT
+    const TYPE_PT = {
+      Beast:"Besta", Poison:"Veneno", Air:"Ar", Plastic:"Plástico",
+      Metal:"Metal", Fire:"Fogo", Water:"Água", Plant:"Planta",
+      Earth:"Terra", Lightning:"Raio", Ice:"Gelo", Astral:"Astral", Glass:"Vidro"
+    };
+
+    // stat color class
+    function statClass(v) {
+      if (v < 80)  return 'stat-low';
+      if (v < 120) return 'stat-mid';
+      if (v < 170) return 'stat-high';
+      return 'stat-vhigh';
+    }
+
+    // stat bar width (max ~300 for Khepri's S.Atk, use 280 as ceiling)
+    const STAT_MAX = 280;
+    function barW(v) { return Math.min(100, Math.round(v / STAT_MAX * 100)); }
+
+    // stat cell html
+    function statCell(v, colClass) {
+      return `<td class="col-stat ${colClass}">
+        <div class="stat-bar-wrap">
+          <span class="stat-val ${statClass(v)}">${v}</span>
+          <div class="stat-bar">
+            <div class="stat-bar-fill" style="width:${barW(v)}%"></div>
+          </div>
         </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #4ecdc4"></div>
-          <span>Água</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #95e1d3"></div>
-          <span>Planta</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #ffe66d"></div>
-          <span>Elétrico</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #a29bfe"></div>
-          <span>Psíquico</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #dfe6e9"></div>
-          <span>Normal</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #74b9ff"></div>
-          <span>Ar</span>
-        </div>
-        <div class="legend-item">
-          <div class="legend-color" style="background-color: #a29bfe"></div>
-          <span>Metal</span>
-        </div>
-      </div>
+      </td>`;
+    }
 
-      <section style="margin-top: 3rem">
-        <h2>Como Usar Esta Tabela</h2>
-        <ul>
-          <li><strong>Sprite:</strong> Imagem visual da espécie</li>
-          <li><strong>Nome:</strong> Nome da espécie</li>
-          <li><strong>Nº:</strong> Número na Pokédex de Nova Murta</li>
-          <li><strong>Tipo:</strong> Tipo principal da espécie</li>
-          <li>
-            <strong>HP:</strong> Pontos de Vida - quanto dano a espécie pode
-            resistir
-          </li>
-          <li>
-            <strong>M.Atk:</strong> Ataque Físico - potência de ataques físicos
-          </li>
-          <li>
-            <strong>M.Def:</strong> Defesa Física - resistência contra ataques
-            físicos
-          </li>
-          <li>
-            <strong>R.Atk:</strong> Ataque Especial - potência de ataques
-            especiais
-          </li>
-          <li>
-            <strong>R.Def:</strong> Defesa Especial - resistência contra ataques
-            especiais
-          </li>
-          <li>
-            <strong>Speed:</strong> Velocidade - determina quem ataca primeiro
-            em batalha
-          </li>
-        </ul>
-      </section>
-    </main>
+    // Build rows
+    function buildRows(data) {
 
-    <footer>
-      © 2026 Hub de Wikis de Jogos. Cassette Beasts © Bytten Studio.
-    </footer>
-  </body>
+      data.forEach(d => {
+        const [num, name, type, hp, atk, def, satk, sdef, spd] = d;
+        const total = hp + atk + def + satk + sdef + spd;
+        const tr = document.createElement('tr');
+        tr.dataset.type = type;
+        tr.dataset.name = name.toLowerCase();
+        tr.innerHTML = `
+          <td class="col-num">${num}</td>
+          <td class="col-name">${name}</td>
+          <td><span class="type-badge type-${type}">${TYPE_PT[type] ?? type}</span></td>
+          ${statCell(hp,  'col-hp')}
+          ${statCell(atk, 'col-atk')}
+          ${statCell(def, 'col-def')}
+          ${statCell(satk,'col-satk')}
+          ${statCell(sdef,'col-sdef')}
+          ${statCell(spd, 'col-spd')}
+          <td class="col-total">${total}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+      updateCounts();
+    }
+
+
+    // ── contagem ───────────────────────────────────────────────────────────────
+
+   function updateCounts() {
+  const total = document.querySelectorAll('#tbody tr').length;
+  document.getElementById('totalCount').textContent = total;
+}
+
+    // ── Sort ───────────────────────────────────────────────────────────────
+    function sortTable(col) {
+      const ths = document.querySelectorAll('.species-table th');
+      ths.forEach((th, i) => {
+        th.classList.remove('sort-asc', 'sort-desc');
+        if (i === col) th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+      });
+
+      const rows = [...document.querySelectorAll('#tbody tr')];
+      rows.sort((a, b) => {
+        const aVal = a.cells[col]?.querySelector('.stat-val')?.textContent ?? a.cells[col]?.textContent ?? '';
+        const bVal = b.cells[col]?.querySelector('.stat-val')?.textContent ?? b.cells[col]?.textContent ?? '';
+        const aNum = parseFloat(aVal);
+        const bNum = parseFloat(bVal);
+        if (!isNaN(aNum) && !isNaN(bNum)) return (aNum - bNum) * sortDir;
+        return aVal.localeCompare(bVal, 'pt') * sortDir;
+      });
+
+      if (sortCol === col) sortDir *= -1;
+      else { sortCol = col; sortDir = 1; }
+
+      const tbody = document.getElementById('tbody');
+      rows.forEach(r => tbody.appendChild(r));
+    }
+
+    // ── Filter btn hover color ──────────────────────────────────────────────
+    document.querySelectorAll('.filter-btn[data-type]').forEach(btn => {
+      const hc = btn.style.getPropertyValue('--hc');
+      if (!hc) return;
+      btn.addEventListener('mouseenter', () => { btn.style.color = hc; btn.style.borderColor = hc; });
+      btn.addEventListener('mouseleave', () => {
+        if (!btn.classList.contains('active')) {
+          btn.style.color = ''; btn.style.borderColor = '';
+        }
+      });
+    });
+
+    // ── Init ───────────────────────────────────────────────────────────────
+    buildRows(SPECIES);
+  </script>
+</body>
 </html>

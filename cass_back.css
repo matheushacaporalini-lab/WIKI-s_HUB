@@ -1,7 +1,7 @@
 /* Hub de Wikis de Jogos - Definições de Cores de Fundo */
 
 body {
-  background-image: url('file:///C:/matheus/TCC/cass_back.webp');
+  background-image: url('cass_back.webp');
   background-repeat: repeat;
   background-position: center center;
   background-attachment: fixed;

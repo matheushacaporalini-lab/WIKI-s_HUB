@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conquistas - Cassette Beasts Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="cassstyle.css" />
+  <link rel="stylesheet" href="cass_back.css" />
+  <link rel="stylesheet" href="styleA.css" />
+  <link rel="stylesheet" href="cassstyle7.css" />
+
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">Hub de Wikis</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="CasseteBeast.html">Wiki CB</a></li>
+        <li><a href="personagenscb.html">Personagens</a></li>
+        <li><a href="historia_cass.html">História</a></li>
+        <li><a href="cass_table.html">Tipos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> &gt; <a href="CasseteBeast.html">Wiki Cassette Beasts</a> &gt; <span>Conquistas</span>
+    </div>
+
+    <section>
+      <h2>Conquistas</h2>
+      <p style="color:#bbb;margin-bottom:1.5rem;">Lista completa das <strong style="color:#e0e0e0;">123 conquistas Steam</strong> de Cassette Beasts. Clique em uma conquista para marcá-la como obtida — o progresso fica salvo no seu navegador.</p>
+
+      <!-- Stats -->
+      <div class="ach-stats">
+        <div class="stat-card"><div class="snum">123</div><div class="slbl">Total</div></div>
+        <div class="stat-card"><div class="snum" id="statDone">0</div><div class="slbl">Obtidas</div></div>
+        <div class="stat-card"><div class="snum">50–60h</div><div class="slbl">Para 100%</div></div>
+        <div class="stat-card"><div class="snum">14</div><div class="slbl">Embustes</div></div>
+        <div class="stat-card"><div class="snum">12</div><div class="slbl">Comandantes</div></div>
+        <div class="stat-card"><div class="snum">6</div><div class="slbl">Parceiros</div></div>
+      </div>
+
+      <!-- Barra de progresso -->
+      <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label"><span id="progressPct">0%</span> completo · <span id="progressCount">0 / 123</span> conquistas</div>
+
+      <!-- Filtros -->
+      <div class="filter-bar">
+        <input class="search-input" id="searchInput" placeholder="🔍 Buscar conquista..." oninput="doFilter()" />
+        <button class="filter-btn active" onclick="setFilter('all',this)">Todas</button>
+        <button class="filter-btn" onclick="setFilter('historia',this)">História</button>
+        <button class="filter-btn" onclick="setFilter('parceiro',this)">Parceiros</button>
+        <button class="filter-btn" onclick="setFilter('colecao',this)">Coleção</button>
+        <button class="filter-btn" onclick="setFilter('embuste',this)">Embustes</button>
+        <button class="filter-btn" onclick="setFilter('comandante',this)">Comandantes</button>
+        <button class="filter-btn" onclick="setFilter('fusao',this)">Fusões</button>
+        <button class="filter-btn" onclick="setFilter('habilidade',this)">Habilidades</button>
+        <button class="filter-btn" onclick="setFilter('missao',this)">Side Quests</button>
+        <button class="filter-btn" onclick="setFilter('segredo',this)">Ocultas</button>
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 1 — TUTORIAL & INÍCIO
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>🎮 Tutorial e Início</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="1" data-cat="historia" data-name="este é o mundo em que vivemos tutorial">
+          <div class="check-box" id="cb1"></div>
+          <div class="ach-icon">🌍</div>
+          <div class="ach-body">
+            <div class="ach-name">Este É o Mundo em Que Vivemos</div>
+            <div class="ach-orig">This Is The World We Live In</div>
+            <div class="ach-desc">Complete o tutorial.</div>
+            <div class="ach-meta"><span class="ach-num">#1</span><span class="rb rb-c">Comum · 77%</span><span class="cb cb-historia">História</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="2" data-cat="colecao" data-name="counting sheep obtenha bansheep">
+          <div class="check-box" id="cb2"></div>
+          <div class="ach-icon">🐑</div>
+          <div class="ach-body">
+            <div class="ach-name">Contando Ovelhas</div>
+            <div class="ach-orig">Counting Sheep</div>
+            <div class="ach-desc">Obtenha Bansheep.</div>
+            <div class="ach-meta"><span class="ach-num">#2</span><span class="rb rb-c">Comum · 80%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="3" data-cat="colecao" data-name="i want candy obtenha candevil">
+          <div class="check-box" id="cb3"></div>
+          <div class="ach-icon">😈</div>
+          <div class="ach-body">
+            <div class="ach-name">Eu Quero Doce</div>
+            <div class="ach-orig">I Want Candy</div>
+            <div class="ach-desc">Obtenha Candevil.</div>
+            <div class="ach-meta"><span class="ach-num">#3</span><span class="rb rb-u">Incomum · 44%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 2 — FUSÕES RENEGADAS
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>🔀 Fusões Renegadas</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="4" data-cat="fusao" data-name="soma das partes derrote fusão renegada">
+          <div class="check-box" id="cb4"></div>
+          <div class="ach-icon">🔀</div>
+          <div class="ach-body">
+            <div class="ach-name">Soma das Partes</div>
+            <div class="ach-orig">Sum of its Parts</div>
+            <div class="ach-desc">Derrote uma Fusão Renegada.</div>
+            <div class="ach-meta"><span class="ach-num">#4</span><span class="rb rb-u">Incomum · 52%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="5" data-cat="fusao" data-name="monster mash derrote horda swarm">
+          <div class="check-box" id="cb5"></div>
+          <div class="ach-icon">👾</div>
+          <div class="ach-body">
+            <div class="ach-name">Monster Mash</div>
+            <div class="ach-orig">Monster Mash</div>
+            <div class="ach-desc">Derrote uma Horda de monstros.</div>
+            <div class="ach-meta"><span class="ach-num">#5</span><span class="rb rb-u">Incomum · 36%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="6" data-cat="fusao" data-name="não alimente depois da meia noite unstable fusion instável">
+          <div class="check-box" id="cb6"></div>
+          <div class="ach-icon">🌙</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Alimente Depois da Meia-Noite</div>
+            <div class="ach-orig">Don't Feed After Midnight</div>
+            <div class="ach-desc">Derrote uma Fusão Instável.</div>
+            <div class="ach-meta"><span class="ach-num">#6</span><span class="rb rb-r">Raro · 13%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="7" data-cat="fusao" data-name="isso não é a lua orb fusion esférica">
+          <div class="check-box" id="cb7"></div>
+          <div class="ach-icon">🌕</div>
+          <div class="ach-body">
+            <div class="ach-name">Isso Não É a Lua</div>
+            <div class="ach-orig">That's No Moon</div>
+            <div class="ach-desc">Derrote uma Fusão Esférica.</div>
+            <div class="ach-meta"><span class="ach-num">#7</span><span class="rb rb-e">Épico · 6%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="8" data-cat="fusao" data-name="virou renegado gone rogue derrote 5">
+          <div class="check-box" id="cb8"></div>
+          <div class="ach-icon">🔀</div>
+          <div class="ach-body">
+            <div class="ach-name">Virou Renegado</div>
+            <div class="ach-orig">Gone Rogue</div>
+            <div class="ach-desc">Derrote 5 Fusões Renegadas.</div>
+            <div class="ach-meta"><span class="ach-num">#8</span><span class="rb rb-u">Incomum · 36%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="9" data-cat="fusao" data-name="células renegadas rogue cells derrote 10">
+          <div class="check-box" id="cb9"></div>
+          <div class="ach-icon">🔀</div>
+          <div class="ach-body">
+            <div class="ach-name">Células Renegadas</div>
+            <div class="ach-orig">Rogue Cells</div>
+            <div class="ach-desc">Derrote 10 Fusões Renegadas.</div>
+            <div class="ach-meta"><span class="ach-num">#9</span><span class="rb rb-u">Incomum · 31%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="10" data-cat="fusao" data-name="galeria renegados rogues gallery derrote 20">
+          <div class="check-box" id="cb10"></div>
+          <div class="ach-icon">🖼️</div>
+          <div class="ach-body">
+            <div class="ach-name">Galeria dos Renegados</div>
+            <div class="ach-orig">Rogues' Gallery</div>
+            <div class="ach-desc">Derrote 20 Fusões Renegadas.</div>
+            <div class="ach-meta"><span class="ach-num">#10</span><span class="rb rb-r">Raro · 25%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="11" data-cat="fusao" data-name="estado renegado rogue state derrote 50">
+          <div class="check-box" id="cb11"></div>
+          <div class="ach-icon">🏴</div>
+          <div class="ach-body">
+            <div class="ach-name">Estado Renegado</div>
+            <div class="ach-orig">Rogue State</div>
+            <div class="ach-desc">Derrote 50 Fusões Renegadas.</div>
+            <div class="ach-meta"><span class="ach-num">#11</span><span class="rb rb-e">Épico · 14%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 3 — EXPLORAÇÃO & COLEÇÃO
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>📼 Exploração e Coleção</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="12" data-cat="colecao" data-name="turista visite cada parte nova murta mapa">
+          <div class="check-box" id="cb12"></div>
+          <div class="ach-icon">🗺️</div>
+          <div class="ach-body">
+            <div class="ach-name">Turista</div>
+            <div class="ach-orig">Tourist</div>
+            <div class="ach-desc">Visite todos os locais de Nova Murta.</div>
+            <div class="ach-meta"><span class="ach-num">#12</span><span class="rb rb-r">Raro · 30%</span><span class="cb cb-colecao">Exploração</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="13" data-cat="colecao" data-name="zoologista amador observe 120 espécies bestiário">
+          <div class="check-box" id="cb13"></div>
+          <div class="ach-icon">🔭</div>
+          <div class="ach-body">
+            <div class="ach-name">Zoologista Amador</div>
+            <div class="ach-orig">Amateur Zoologist</div>
+            <div class="ach-desc">Observe 120 espécies diferentes no Bestiário.</div>
+            <div class="ach-meta"><span class="ach-num">#13</span><span class="rb rb-r">Raro · 27%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="14" data-cat="colecao" data-name="zoologista pt 1 obtenha 10 espécies">
+          <div class="check-box" id="cb14"></div>
+          <div class="ach-icon">📼</div>
+          <div class="ach-body">
+            <div class="ach-name">Zoologista, Pt. I</div>
+            <div class="ach-orig">Zoologist, pt. I</div>
+            <div class="ach-desc">Obtenha 10 espécies diferentes em fitas.</div>
+            <div class="ach-meta"><span class="ach-num">#14</span><span class="rb rb-c">Comum · 69%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="15" data-cat="colecao" data-name="zoologista pt 2 obtenha 20 espécies">
+          <div class="check-box" id="cb15"></div>
+          <div class="ach-icon">📼</div>
+          <div class="ach-body">
+            <div class="ach-name">Zoologista, Pt. II</div>
+            <div class="ach-orig">Zoologist, pt. II</div>
+            <div class="ach-desc">Obtenha 20 espécies diferentes em fitas.</div>
+            <div class="ach-meta"><span class="ach-num">#15</span><span class="rb rb-u">Incomum · 54%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="16" data-cat="colecao" data-name="zoologista pt 3 obtenha 50 espécies">
+          <div class="check-box" id="cb16"></div>
+          <div class="ach-icon">📼</div>
+          <div class="ach-body">
+            <div class="ach-name">Zoologista, Pt. III</div>
+            <div class="ach-orig">Zoologist, pt. III</div>
+            <div class="ach-desc">Obtenha 50 espécies diferentes em fitas.</div>
+            <div class="ach-meta"><span class="ach-num">#16</span><span class="rb rb-r">Raro · 35%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="17" data-cat="colecao" data-name="zoologista pt 4 obtenha 100 espécies">
+          <div class="check-box" id="cb17"></div>
+          <div class="ach-icon">📼</div>
+          <div class="ach-body">
+            <div class="ach-name">Zoologista, Pt. IV</div>
+            <div class="ach-orig">Zoologist, pt. IV</div>
+            <div class="ach-desc">Obtenha 100 espécies diferentes em fitas.</div>
+            <div class="ach-meta"><span class="ach-num">#17</span><span class="rb rb-e">Épico · 16%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="18" data-cat="colecao" data-name="zoologista expert obtenha 120 espécies">
+          <div class="check-box" id="cb18"></div>
+          <div class="ach-icon">🏆</div>
+          <div class="ach-body">
+            <div class="ach-name">Zoologista Expert</div>
+            <div class="ach-orig">Expert Zoologist</div>
+            <div class="ach-desc">Obtenha 120 espécies diferentes em fitas.</div>
+            <div class="ach-meta"><span class="ach-num">#18</span><span class="rb rb-l">Lendário · 8%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="19" data-cat="colecao" data-name="cassette beasts master bestiário completo todos dados adicionais">
+          <div class="check-box" id="cb19"></div>
+          <div class="ach-icon">🌟</div>
+          <div class="ach-body">
+            <div class="ach-name">Cassette Beasts Master</div>
+            <div class="ach-orig">Cassette Beasts Master</div>
+            <div class="ach-desc">Obtenha dados adicionais de todas as 120 espécies — a conquista mais trabalhosa do jogo.</div>
+            <div class="ach-meta"><span class="ach-num">#19</span><span class="rb rb-l">Lendário · 5%</span><span class="cb cb-colecao">Platina</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 4 — EMBUSTES (14 conquistas)
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>✨ Embustes (Bootlegs) — 14 tipos</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="20" data-cat="embuste" data-name="embuste besta beast tipo bootleg">
+          <div class="check-box" id="cb20"></div>
+          <div class="ach-icon" style="background:rgba(245,222,179,.1)">🐾</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Bestial</div>
+            <div class="ach-orig">Beastly Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Besta.</div>
+            <div class="ach-meta"><span class="ach-num">#20</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="21" data-cat="embuste" data-name="embuste fogo fire tipo bootleg">
+          <div class="check-box" id="cb21"></div>
+          <div class="ach-icon" style="background:rgba(255,100,50,.1)">🔥</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Flamejante</div>
+            <div class="ach-orig">Fiery Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Fogo.</div>
+            <div class="ach-meta"><span class="ach-num">#21</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="22" data-cat="embuste" data-name="embuste plástico plastic toy tipo bootleg">
+          <div class="check-box" id="cb22"></div>
+          <div class="ach-icon" style="background:rgba(255,0,0,.08)">🧸</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste de Brinquedo</div>
+            <div class="ach-orig">Toy Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Plástico.</div>
+            <div class="ach-meta"><span class="ach-num">#22</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="23" data-cat="embuste" data-name="embuste planta leafy tipo bootleg">
+          <div class="check-box" id="cb23"></div>
+          <div class="ach-icon" style="background:rgba(0,128,0,.1)">🌿</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Folhoso</div>
+            <div class="ach-orig">Leafy Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Planta.</div>
+            <div class="ach-meta"><span class="ach-num">#23</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="24" data-cat="embuste" data-name="embuste água aquatic tipo bootleg">
+          <div class="check-box" id="cb24"></div>
+          <div class="ach-icon" style="background:rgba(0,100,200,.1)">💧</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Aquático</div>
+            <div class="ach-orig">Aquatic Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Água.</div>
+            <div class="ach-meta"><span class="ach-num">#24</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="25" data-cat="embuste" data-name="embuste veneno poison tipo bootleg">
+          <div class="check-box" id="cb25"></div>
+          <div class="ach-icon" style="background:rgba(160,32,240,.1)">☠️</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Venenoso</div>
+            <div class="ach-orig">Venomous Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Veneno.</div>
+            <div class="ach-meta"><span class="ach-num">#25</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="26" data-cat="embuste" data-name="embuste astral cosmic tipo bootleg">
+          <div class="check-box" id="cb26"></div>
+          <div class="ach-icon" style="background:rgba(50,50,200,.1)">🌌</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Cósmico</div>
+            <div class="ach-orig">Cosmic Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Astral.</div>
+            <div class="ach-meta"><span class="ach-num">#26</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="27" data-cat="embuste" data-name="embuste gelo ice frosty tipo bootleg">
+          <div class="check-box" id="cb27"></div>
+          <div class="ach-icon" style="background:rgba(100,200,255,.08)">❄️</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Gelado</div>
+            <div class="ach-orig">Frosty Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Gelo.</div>
+            <div class="ach-meta"><span class="ach-num">#27</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="28" data-cat="embuste" data-name="embuste raio lightning shocking tipo bootleg">
+          <div class="check-box" id="cb28"></div>
+          <div class="ach-icon" style="background:rgba(255,220,0,.08)">⚡</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Chocante</div>
+            <div class="ach-orig">Shocking Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Raio.</div>
+            <div class="ach-meta"><span class="ach-num">#28</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="29" data-cat="embuste" data-name="embuste ar air windy tipo bootleg">
+          <div class="check-box" id="cb29"></div>
+          <div class="ach-icon" style="background:rgba(127,255,212,.08)">💨</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Ventoso</div>
+            <div class="ach-orig">Windy Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Ar.</div>
+            <div class="ach-meta"><span class="ach-num">#29</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="30" data-cat="embuste" data-name="embuste terra earth stony tipo bootleg">
+          <div class="check-box" id="cb30"></div>
+          <div class="ach-icon" style="background:rgba(139,90,43,.1)">🪨</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Pedregoso</div>
+            <div class="ach-orig">Stony Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Terra.</div>
+            <div class="ach-meta"><span class="ach-num">#30</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="31" data-cat="embuste" data-name="embuste metal iron tipo bootleg">
+          <div class="check-box" id="cb31"></div>
+          <div class="ach-icon" style="background:rgba(176,196,222,.08)">⚙️</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste de Ferro</div>
+            <div class="ach-orig">Iron Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Metal.</div>
+            <div class="ach-meta"><span class="ach-num">#31</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="32" data-cat="embuste" data-name="embuste vidro glass clear tipo bootleg">
+          <div class="check-box" id="cb32"></div>
+          <div class="ach-icon" style="background:rgba(200,230,255,.06)">🪟</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste de Vidro</div>
+            <div class="ach-orig">Clear Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Vidro.</div>
+            <div class="ach-meta"><span class="ach-num">#32</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="33" data-cat="embuste" data-name="embuste purpurina glitter sparkly tipo bootleg">
+          <div class="check-box" id="cb33"></div>
+          <div class="ach-icon" style="background:rgba(255,20,147,.08)">✨</div>
+          <div class="ach-body">
+            <div class="ach-name">Embuste Brilhante</div>
+            <div class="ach-orig">Sparkly Bootleg</div>
+            <div class="ach-desc">Obtenha um Embuste do Tipo Purpurina.</div>
+            <div class="ach-meta"><span class="ach-num">#33</span><span class="rb rb-u">Incomum</span><span class="cb cb-embuste">Embuste</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 5 — HABILIDADES
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>⚡ Habilidades de Travessia</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="34" data-cat="habilidade" data-name="abra suas asas asa mariposa mothwing glide voo domiposa">
+          <div class="check-box" id="cb34"></div>
+          <div class="ach-icon">🦋</div>
+          <div class="ach-body">
+            <div class="ach-name">Abra Suas Asas</div>
+            <div class="ach-orig">Spread Your Wings</div>
+            <div class="ach-desc">Obtenha a habilidade Voo de Asa-Mariposa (gravar Domiposa).</div>
+            <div class="ach-meta"><span class="ach-num">#34</span><span class="rb rb-c">Comum · 71%</span><span class="cb cb-habilidade">Habilidade</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="35" data-cat="habilidade" data-name="corrida balazita bulletino dash">
+          <div class="check-box" id="cb35"></div>
+          <div class="ach-icon">💨</div>
+          <div class="ach-body">
+            <div class="ach-name">Corrida do Balazita</div>
+            <div class="ach-orig">Bulletino Dash</div>
+            <div class="ach-desc">Obtenha a habilidade Corrida do Balazita.</div>
+            <div class="ach-meta"><span class="ach-num">#35</span><span class="rb rb-u">Incomum · 56%</span><span class="cb cb-habilidade">Habilidade</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="36" data-cat="habilidade" data-name="sentindo eletricidade eletromagnetismo electric feel">
+          <div class="check-box" id="cb36"></div>
+          <div class="ach-icon">🧲</div>
+          <div class="ach-body">
+            <div class="ach-name">Sentindo a Eletricidade</div>
+            <div class="ach-orig">Electric Feel</div>
+            <div class="ach-desc">Obtenha a habilidade Eletromagnetismo.</div>
+            <div class="ach-meta"><span class="ach-num">#36</span><span class="rb rb-u">Incomum · 50%</span><span class="cb cb-habilidade">Habilidade</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="37" data-cat="habilidade" data-name="lições de natação swimming lessons diveal nadar">
+          <div class="check-box" id="cb37"></div>
+          <div class="ach-icon">🏊</div>
+          <div class="ach-body">
+            <div class="ach-name">Lições de Natação</div>
+            <div class="ach-orig">Swimming Lessons</div>
+            <div class="ach-desc">Obtenha a habilidade Nado do Diveal.</div>
+            <div class="ach-meta"><span class="ach-num">#37</span><span class="rb rb-u">Incomum · 45%</span><span class="cb cb-habilidade">Habilidade</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="38" data-cat="habilidade" data-name="tendo uma bola bola cipó abóbora having ball pumpkin jumpkin">
+          <div class="check-box" id="cb38"></div>
+          <div class="ach-icon">🎃</div>
+          <div class="ach-body">
+            <div class="ach-name">Tendo uma Bola</div>
+            <div class="ach-orig">Having a Ball</div>
+            <div class="ach-desc">Obtenha a habilidade Bola de Cipó de Abóbora (Jumpkin — Fazenda Piper).</div>
+            <div class="ach-meta"><span class="ach-num">#38</span><span class="rb rb-u">Incomum · 40%</span><span class="cb cb-habilidade">Habilidade</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="39" data-cat="habilidade" data-name="decolando taking flight voo averevoir">
+          <div class="check-box" id="cb39"></div>
+          <div class="ach-icon">🦅</div>
+          <div class="ach-body">
+            <div class="ach-name">Decolando</div>
+            <div class="ach-orig">Taking Flight</div>
+            <div class="ach-desc">Obtenha a habilidade Voo do Averevoir — última habilidade de travessia.</div>
+            <div class="ach-meta"><span class="ach-num">#39</span><span class="rb rb-r">Raro · 32%</span><span class="cb cb-habilidade">Habilidade</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="40" data-cat="fusao" data-name="fusões no radar fusion radar obtenha">
+          <div class="check-box" id="cb40"></div>
+          <div class="ach-icon">📡</div>
+          <div class="ach-body">
+            <div class="ach-name">Fusões no Radar</div>
+            <div class="ach-orig">Fusions on the Radar</div>
+            <div class="ach-desc">Obtenha o Radar de Fusão.</div>
+            <div class="ach-meta"><span class="ach-num">#40</span><span class="rb rb-u">Incomum · 46%</span><span class="cb cb-fusao">Fusão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="41" data-cat="segredo" data-name="pináculo evolução magikaranguejo forma impossível remaster trafeguejo astral">
+          <div class="check-box" id="cb41"></div>
+          <div class="ach-icon">🦀</div>
+          <div class="ach-body">
+            <div class="ach-name">Pináculo da Evolução</div>
+            <div class="ach-orig">Pinnacle of Evolution</div>
+            <div class="ach-desc">Obtenha o Magikaranguejo — remaster de um Trafeguejo Embuste do Tipo Astral.</div>
+            <div class="ach-meta"><span class="ach-num">#41</span><span class="rb rb-l">Lendário · 4%</span><span class="cb cb-segredo">Oculta</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 6 — VIGILANTES & MISSÕES
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>🏅 Vigilantes e Side Quests</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="42" data-cat="missao" data-name="leve-me take me on inscreva vigilantes ranger">
+          <div class="check-box" id="cb42"></div>
+          <div class="ach-icon">📋</div>
+          <div class="ach-body">
+            <div class="ach-name">Leve-Me, Pt. I</div>
+            <div class="ach-orig">Take Me On, pt. I</div>
+            <div class="ach-desc">Inscreva-se nos Vigilantes com Ianthe.</div>
+            <div class="ach-meta"><span class="ach-num">#42</span><span class="rb rb-c">Comum · 62%</span><span class="cb cb-missao">Missão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="43" data-cat="missao" data-name="moinho de rumores rumour mill obtenha rumor">
+          <div class="check-box" id="cb43"></div>
+          <div class="ach-icon">💬</div>
+          <div class="ach-body">
+            <div class="ach-name">Moinho de Rumores</div>
+            <div class="ach-orig">Rumour Mill</div>
+            <div class="ach-desc">Obtenha um rumor do quadro de avisos dos Vigilantes.</div>
+            <div class="ach-meta"><span class="ach-num">#43</span><span class="rb rb-c">Comum · 55%</span><span class="cb cb-missao">Missão</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="44" data-cat="missao" data-name="pelas videiras on the grapevine investigue rumor">
+          <div class="check-box" id="cb44"></div>
+          <div class="ach-icon">🍇</div>
+          <div class="ach-body">
+            <div class="ach-name">Pelas Videiras</div>
+            <div class="ach-orig">On the Grapevine</div>
+            <div class="ach-desc">Investigue um rumor do quadro de avisos até o fim.</div>
+            <div class="ach-meta"><span class="ach-num">#44</span><span class="rb rb-u">Incomum · 44%</span><span class="cb cb-missao">Missão</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 7 — PARCEIROS (Desbloqueio)
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>💜 Desbloqueio de Parceiros</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="45" data-cat="parceiro" data-name="kayleigh desbloqueie parceira vigilante guia">
+          <div class="check-box" id="cb45"></div>
+          <div class="ach-icon">🎙️</div>
+          <div class="ach-body">
+            <div class="ach-name">Kayleigh</div>
+            <div class="ach-orig">Kayleigh</div>
+            <div class="ach-desc">Desbloqueie Kayleigh como parceira.</div>
+            <div class="ach-meta"><span class="ach-num">#45</span><span class="rb rb-c">Comum · 72%</span><span class="cb cb-parceiro">Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="46" data-cat="parceiro" data-name="meredith desbloqueie parceira londrina">
+          <div class="check-box" id="cb46"></div>
+          <div class="ach-icon">📺</div>
+          <div class="ach-body">
+            <div class="ach-name">Meredith</div>
+            <div class="ach-orig">Meredith</div>
+            <div class="ach-desc">Desbloqueie Meredith como parceira.</div>
+            <div class="ach-meta"><span class="ach-num">#46</span><span class="rb rb-u">Incomum · 48%</span><span class="cb cb-parceiro">Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="47" data-cat="parceiro" data-name="eugene desbloqueie parceiro protetor">
+          <div class="check-box" id="cb47"></div>
+          <div class="ach-icon">🏹</div>
+          <div class="ach-body">
+            <div class="ach-name">Eugene</div>
+            <div class="ach-orig">Eugene</div>
+            <div class="ach-desc">Desbloqueie Eugene como parceiro.</div>
+            <div class="ach-meta"><span class="ach-num">#47</span><span class="rb rb-c">Comum · 68%</span><span class="cb cb-parceiro">Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="48" data-cat="parceiro" data-name="felix desbloqueie parceiro artista">
+          <div class="check-box" id="cb48"></div>
+          <div class="ach-icon">🖌️</div>
+          <div class="ach-body">
+            <div class="ach-name">Felix</div>
+            <div class="ach-orig">Felix</div>
+            <div class="ach-desc">Desbloqueie Felix como parceiro.</div>
+            <div class="ach-meta"><span class="ach-num">#48</span><span class="rb rb-u">Incomum · 52%</span><span class="cb cb-parceiro">Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="49" data-cat="parceiro" data-name="viola desbloqueie parceira shakespeare pântano">
+          <div class="check-box" id="cb49"></div>
+          <div class="ach-icon">🎭</div>
+          <div class="ach-body">
+            <div class="ach-name">Viola</div>
+            <div class="ach-orig">Viola</div>
+            <div class="ach-desc">Desbloqueie Viola como parceira.</div>
+            <div class="ach-meta"><span class="ach-num">#49</span><span class="rb rb-r">Raro · 38%</span><span class="cb cb-parceiro">Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="50" data-cat="parceiro" data-name="barkley doginho desbloqueie cachorro spitz">
+          <div class="check-box" id="cb50"></div>
+          <div class="ach-icon">🐕</div>
+          <div class="ach-body">
+            <div class="ach-name">Doginho (Barkley)</div>
+            <div class="ach-orig">Barkley</div>
+            <div class="ach-desc">Desbloqueie Doginho como parceiro (requer habilidade Bola de Cipó de Abóbora).</div>
+            <div class="ach-meta"><span class="ach-num">#50</span><span class="rb rb-u">Incomum · 43%</span><span class="cb cb-parceiro">Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="51" data-cat="colecao" data-name="remasterize fita remaster">
+          <div class="check-box" id="cb51"></div>
+          <div class="ach-icon">💿</div>
+          <div class="ach-body">
+            <div class="ach-name">Remastery</div>
+            <div class="ach-orig">Remastery</div>
+            <div class="ach-desc">Faça o remaster de uma fita pela primeira vez.</div>
+            <div class="ach-meta"><span class="ach-num">#51</span><span class="rb rb-u">Incomum · 41%</span><span class="cb cb-colecao">Coleção</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 8 — QUESTS DE PARCEIROS (Kayleigh & Eugene)
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>🏃 Quest: Corri Tão Longe (Kayleigh) &amp; Agindo Pelo Melhor Comportamento (Eugene)</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="52" data-cat="parceiro" data-name="corri tão longe pt1 kayleigh quest início">
+          <div class="check-box" id="cb52"></div>
+          <div class="ach-icon">🏃</div>
+          <div class="ach-body">
+            <div class="ach-name">Corri Tão Longe, Pt. I</div>
+            <div class="ach-orig">I Ran So Far Away, pt. I</div>
+            <div class="ach-desc">Inicie a quest de Kayleigh.</div>
+            <div class="ach-meta"><span class="ach-num">#52</span><span class="rb rb-u">Incomum · 48%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="53" data-cat="parceiro" data-name="agindo melhor comportamento pt1 eugene 1 escritório corretor">
+          <div class="check-box" id="cb53"></div>
+          <div class="ach-icon">🏗️</div>
+          <div class="ach-body">
+            <div class="ach-name">Agindo Pelo Melhor Comportamento, Pt. I</div>
+            <div class="ach-orig">Acting On Your Best Behavior, pt. I</div>
+            <div class="ach-desc">Limpe 1 escritório dos Corretores de Imóveis.</div>
+            <div class="ach-meta"><span class="ach-num">#53</span><span class="rb rb-u">Incomum · 51%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="54" data-cat="parceiro" data-name="agindo melhor comportamento pt2 eugene 2 escritórios">
+          <div class="check-box" id="cb54"></div>
+          <div class="ach-icon">🏗️</div>
+          <div class="ach-body">
+            <div class="ach-name">Agindo Pelo Melhor Comportamento, Pt. II</div>
+            <div class="ach-orig">Acting On Your Best Behavior, pt. II</div>
+            <div class="ach-desc">Limpe 2 escritórios dos Corretores.</div>
+            <div class="ach-meta"><span class="ach-num">#54</span><span class="rb rb-u">Incomum · 46%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="55" data-cat="parceiro" data-name="agindo melhor comportamento pt3 eugene 3 escritórios">
+          <div class="check-box" id="cb55"></div>
+          <div class="ach-icon">🏗️</div>
+          <div class="ach-body">
+            <div class="ach-name">Agindo Pelo Melhor Comportamento, Pt. III</div>
+            <div class="ach-orig">Acting On Your Best Behavior, pt. III</div>
+            <div class="ach-desc">Limpe 3 escritórios dos Corretores.</div>
+            <div class="ach-meta"><span class="ach-num">#55</span><span class="rb rb-r">Raro · 41%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="56" data-cat="parceiro" data-name="agindo melhor comportamento pt4 eugene 4 escritórios">
+          <div class="check-box" id="cb56"></div>
+          <div class="ach-icon">🏗️</div>
+          <div class="ach-body">
+            <div class="ach-name">Agindo Pelo Melhor Comportamento, Pt. IV</div>
+            <div class="ach-orig">Acting On Your Best Behavior, pt. IV</div>
+            <div class="ach-desc">Limpe 4 escritórios dos Corretores.</div>
+            <div class="ach-meta"><span class="ach-num">#56</span><span class="rb rb-r">Raro · 37%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="57" data-cat="parceiro" data-name="agindo melhor comportamento pt5 eugene 5 escritórios">
+          <div class="check-box" id="cb57"></div>
+          <div class="ach-icon">🏗️</div>
+          <div class="ach-body">
+            <div class="ach-name">Agindo Pelo Melhor Comportamento, Pt. V</div>
+            <div class="ach-orig">Acting On Your Best Behavior, pt. V</div>
+            <div class="ach-desc">Limpe 5 escritórios dos Corretores.</div>
+            <div class="ach-meta"><span class="ach-num">#57</span><span class="rb rb-r">Raro · 35%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 9 — QUEST FELIX (Não Quer Você)
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>🌿 Quest: Não Quer Você (Felix) &amp; Missões de Viola/Meredith</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="58" data-cat="parceiro" data-name="não quer você pt1 felix conhece kuneko">
+          <div class="check-box" id="cb58"></div>
+          <div class="ach-icon">🐱</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Quer Você, Pt. I</div>
+            <div class="ach-orig">Don't You Want Me, pt. I</div>
+            <div class="ach-desc">Conheça Kuneko pela primeira vez na quest de Felix.</div>
+            <div class="ach-meta"><span class="ach-num">#58</span><span class="rb rb-u">Incomum · 46%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="59" data-cat="parceiro" data-name="não quer você pt2 felix kuneko 1 altar">
+          <div class="check-box" id="cb59"></div>
+          <div class="ach-icon">🗿</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Quer Você, Pt. II</div>
+            <div class="ach-orig">Don't You Want Me, pt. II</div>
+            <div class="ach-desc">Encontre Kuneko no 1º altar.</div>
+            <div class="ach-meta"><span class="ach-num">#59</span><span class="rb rb-u">Incomum · 42%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="60" data-cat="parceiro" data-name="não quer você pt3 felix kuneko 2 altares">
+          <div class="check-box" id="cb60"></div>
+          <div class="ach-icon">🗿</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Quer Você, Pt. III</div>
+            <div class="ach-orig">Don't You Want Me, pt. III</div>
+            <div class="ach-desc">Encontre Kuneko no 2º altar.</div>
+            <div class="ach-meta"><span class="ach-num">#60</span><span class="rb rb-r">Raro · 38%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="61" data-cat="parceiro" data-name="não quer você pt4 felix kuneko 3 altares">
+          <div class="check-box" id="cb61"></div>
+          <div class="ach-icon">🗿</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Quer Você, Pt. IV</div>
+            <div class="ach-orig">Don't You Want Me, pt. IV</div>
+            <div class="ach-desc">Encontre Kuneko no 3º altar.</div>
+            <div class="ach-meta"><span class="ach-num">#61</span><span class="rb rb-r">Raro · 34%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="62" data-cat="parceiro" data-name="não quer você pt5 felix kuneko 4 altares">
+          <div class="check-box" id="cb62"></div>
+          <div class="ach-icon">🗿</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Quer Você, Pt. V</div>
+            <div class="ach-orig">Don't You Want Me, pt. V</div>
+            <div class="ach-desc">Encontre Kuneko no 4º altar.</div>
+            <div class="ach-meta"><span class="ach-num">#62</span><span class="rb rb-r">Raro · 31%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="63" data-cat="parceiro" data-name="tempestade viola naufrágio titânia shipwreck">
+          <div class="check-box" id="cb63"></div>
+          <div class="ach-icon">⛵</div>
+          <div class="ach-body">
+            <div class="ach-name">Tempestade</div>
+            <div class="ach-orig">Tempest</div>
+            <div class="ach-desc">Leve Viola ao naufrágio da Titânia.</div>
+            <div class="ach-meta"><span class="ach-num">#63</span><span class="rb rb-u">Incomum · 34%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="64" data-cat="parceiro" data-name="falldown mall shopping meredith kaidosseu">
+          <div class="check-box" id="cb64"></div>
+          <div class="ach-icon">🏬</div>
+          <div class="ach-body">
+            <div class="ach-name">Falldown Mall</div>
+            <div class="ach-orig">Falldown Mall</div>
+            <div class="ach-desc">Leve Meredith ao Shopping Kaidosseu.</div>
+            <div class="ach-meta"><span class="ach-num">#64</span><span class="rb rb-u">Incomum · 38%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 10 — CONCLUSÃO DAS QUESTS
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>✅ Conclusão das Quests de Parceiros</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="65" data-cat="parceiro" data-name="corri tão longe pt2 kayleigh quest completa portaluz">
+          <div class="check-box" id="cb65"></div>
+          <div class="ach-icon">🏔️</div>
+          <div class="ach-body">
+            <div class="ach-name">Corri Tão Longe, Pt. II</div>
+            <div class="ach-orig">I Ran So Far Away, pt. II</div>
+            <div class="ach-desc">Complete a quest de Kayleigh — enfrente Dorian e Portaluz em Vila Luz.</div>
+            <div class="ach-meta"><span class="ach-num">#65</span><span class="rb rb-r">Raro · 35%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="66" data-cat="parceiro" data-name="agindo melhor comportamento pt6 eugene quest completa mamon">
+          <div class="check-box" id="cb66"></div>
+          <div class="ach-icon">🏢</div>
+          <div class="ach-body">
+            <div class="ach-name">Agindo Pelo Melhor Comportamento, Pt. VI</div>
+            <div class="ach-orig">Acting On Your Best Behavior, pt. VI</div>
+            <div class="ach-desc">Complete a quest de Eugene — derrote todos os escritórios e o Arcanjo Mamon.</div>
+            <div class="ach-meta"><span class="ach-num">#66</span><span class="rb rb-r">Raro · 33%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="67" data-cat="parceiro" data-name="tudo que eu sempre precisei meredith quest completa rei lugar nenhum">
+          <div class="check-box" id="cb67"></div>
+          <div class="ach-icon">💿</div>
+          <div class="ach-body">
+            <div class="ach-name">Tudo Que Eu Sempre Precisei</div>
+            <div class="ach-orig">All I Ever Needed</div>
+            <div class="ach-desc">Complete a quest de Meredith — encontre o disco e derrote o Rei de Lugar Nenhum.</div>
+            <div class="ach-meta"><span class="ach-num">#67</span><span class="rb rb-r">Raro · 31%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="68" data-cat="parceiro" data-name="não quer você pt6 felix quest completa kuneko brilhante">
+          <div class="check-box" id="cb68"></div>
+          <div class="ach-icon">🌟</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Quer Você, Pt. VI</div>
+            <div class="ach-orig">Don't You Want Me, pt. VI</div>
+            <div class="ach-desc">Complete a quest de Felix — enfrente Kuneko Brilhante.</div>
+            <div class="ach-meta"><span class="ach-num">#68</span><span class="rb rb-r">Raro · 28%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="69" data-cat="parceiro" data-name="volte e fique barkley doginho quest completa lamento mori">
+          <div class="check-box" id="cb69"></div>
+          <div class="ach-icon">🐾</div>
+          <div class="ach-body">
+            <div class="ach-name">Volte e Fique</div>
+            <div class="ach-orig">Come Back and Stay</div>
+            <div class="ach-desc">Complete a quest de Doginho — suba os penhascos e derrote o Averevoir.</div>
+            <div class="ach-meta"><span class="ach-num">#69</span><span class="rb rb-r">Raro · 29%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="70" data-cat="parceiro" data-name="todo mundo procura algo viola quest completa babelite">
+          <div class="check-box" id="cb70"></div>
+          <div class="ach-icon">🌊</div>
+          <div class="ach-body">
+            <div class="ach-name">Todo Mundo Procura Algo</div>
+            <div class="ach-orig">Everybody's Looking for Something</div>
+            <div class="ach-desc">Complete a quest de Viola — encontre Sebastian e derrote Babelite.</div>
+            <div class="ach-meta"><span class="ach-num">#70</span><span class="rb rb-r">Raro · 26%</span><span class="cb cb-parceiro">Quest Parceiro</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 11 — RELACIONAMENTOS (5 corações)
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>❤️ Relacionamentos (5 Corações)</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="71" data-cat="parceiro" data-name="deixa eu te serenatar kayleigh 5 corações romance">
+          <div class="check-box" id="cb71"></div>
+          <div class="ach-icon">🎤</div>
+          <div class="ach-body">
+            <div class="ach-name">Deixa Eu Te Serenatar</div>
+            <div class="ach-orig">Let Me Serenade You</div>
+            <div class="ach-desc">Chegue ao nível 5 de relacionamento com Kayleigh.</div>
+            <div class="ach-meta"><span class="ach-num">#71</span><span class="rb rb-r">Raro · 22%</span><span class="cb cb-parceiro">Relacionamento</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="72" data-cat="parceiro" data-name="grande abertura eugene 5 corações romance horta">
+          <div class="check-box" id="cb72"></div>
+          <div class="ach-icon">🏡</div>
+          <div class="ach-body">
+            <div class="ach-name">Grande Abertura</div>
+            <div class="ach-orig">Grand Opening</div>
+            <div class="ach-desc">Chegue ao nível 5 de relacionamento com Eugene.</div>
+            <div class="ach-meta"><span class="ach-num">#72</span><span class="rb rb-r">Raro · 20%</span><span class="cb cb-parceiro">Relacionamento</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="73" data-cat="parceiro" data-name="noite de cinema meredith 5 corações romance">
+          <div class="check-box" id="cb73"></div>
+          <div class="ach-icon">🎬</div>
+          <div class="ach-body">
+            <div class="ach-name">Noite de Cinema</div>
+            <div class="ach-orig">Movie Night</div>
+            <div class="ach-desc">Chegue ao nível 5 de relacionamento com Meredith.</div>
+            <div class="ach-meta"><span class="ach-num">#73</span><span class="rb rb-r">Raro · 18%</span><span class="cb cb-parceiro">Relacionamento</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="74" data-cat="parceiro" data-name="retrato do artista felix 5 corações romance">
+          <div class="check-box" id="cb74"></div>
+          <div class="ach-icon">🎨</div>
+          <div class="ach-body">
+            <div class="ach-name">Um Retrato do Artista</div>
+            <div class="ach-orig">A Portrait of the Artist</div>
+            <div class="ach-desc">Chegue ao nível 5 de relacionamento com Felix.</div>
+            <div class="ach-meta"><span class="ach-num">#74</span><span class="rb rb-r">Raro · 17%</span><span class="cb cb-parceiro">Relacionamento</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="75" data-cat="parceiro" data-name="melhor amigo cachorro doginho barkley 5 corações">
+          <div class="check-box" id="cb75"></div>
+          <div class="ach-icon">🦴</div>
+          <div class="ach-body">
+            <div class="ach-name">Melhor Amigo do Cachorro</div>
+            <div class="ach-orig">Dog's Best Friend</div>
+            <div class="ach-desc">Chegue ao nível 5 de relacionamento com Doginho.</div>
+            <div class="ach-meta"><span class="ach-num">#75</span><span class="rb rb-r">Raro · 19%</span><span class="cb cb-parceiro">Relacionamento</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="76" data-cat="parceiro" data-name="como você quiser viola 5 corações as you like it">
+          <div class="check-box" id="cb76"></div>
+          <div class="ach-icon">🌹</div>
+          <div class="ach-body">
+            <div class="ach-name">Como Você Quiser</div>
+            <div class="ach-orig">As You Like It</div>
+            <div class="ach-desc">Chegue ao nível 5 de relacionamento com Viola.</div>
+            <div class="ach-meta"><span class="ach-num">#76</span><span class="rb rb-r">Raro · 16%</span><span class="cb cb-parceiro">Relacionamento</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="77" data-cat="parceiro" data-name="dois corações batem como um romance two hearts beat as one">
+          <div class="check-box" id="cb77"></div>
+          <div class="ach-icon">💞</div>
+          <div class="ach-body">
+            <div class="ach-name">Dois Corações Batem Como Um</div>
+            <div class="ach-orig">Two Hearts Beat as One</div>
+            <div class="ach-desc">Entre em um relacionamento romântico com qualquer parceiro.</div>
+            <div class="ach-meta"><span class="ach-num">#77</span><span class="rb rb-e">Épico · 14%</span><span class="cb cb-parceiro">Romance</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 12 — HISTÓRIA PRINCIPAL (Arcanjos)
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>👁️ Arcanjos e Eventos da História Principal</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="78" data-cat="historia" data-name="atenda minhas palavras resolva enigma música morgana heed my words">
+          <div class="check-box" id="cb78"></div>
+          <div class="ach-icon">🎵</div>
+          <div class="ach-body">
+            <div class="ach-name">Atenda Minhas Palavras</div>
+            <div class="ach-orig">Heed My Words</div>
+            <div class="ach-desc">Resolva o enigma da música de Morgana e encontre a saída de Nova Murta.</div>
+            <div class="ach-meta"><span class="ach-num">#78</span><span class="rb rb-r">Raro · 28%</span><span class="cb cb-historia">História</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="79" data-cat="historia" data-name="ticket to ride reabra todas as estações mer-line">
+          <div class="check-box" id="cb79"></div>
+          <div class="ach-icon">🚉</div>
+          <div class="ach-body">
+            <div class="ach-name">Passagem para Viajar</div>
+            <div class="ach-orig">Ticket to Ride</div>
+            <div class="ach-desc">Reabra todas as estações do Mer-Line espalhadas por Nova Murta.</div>
+            <div class="ach-meta"><span class="ach-num">#79</span><span class="rb rb-u">Incomum · 38%</span><span class="cb cb-historia">História</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="80" data-cat="historia" data-name="flecha do tempo arrow of time desafie aleph nulo mundo morto">
+          <div class="check-box" id="cb80"></div>
+          <div class="ach-icon">⚔️</div>
+          <div class="ach-body">
+            <div class="ach-name">Flecha do Tempo</div>
+            <div class="ach-orig">Arrow of Time</div>
+            <div class="ach-desc">Desafie todas as probabilidades num lugar entre mundos — derrote Aleph Nulo.</div>
+            <div class="ach-meta"><span class="ach-num">#80</span><span class="rb rb-e">Épico · 22%</span><span class="cb cb-historia">Clímax</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="81" data-cat="historia" data-name="rebelião rebellion derrota morgana gestalt pós-jogo">
+          <div class="check-box" id="cb81"></div>
+          <div class="ach-icon">🌌</div>
+          <div class="ach-body">
+            <div class="ach-name">Rebelião</div>
+            <div class="ach-orig">Rebellion</div>
+            <div class="ach-desc">Derrote uma força ancestral em sua forma mais poderosa — Morgante ressurgida no pós-jogo.</div>
+            <div class="ach-meta"><span class="ach-num">#81</span><span class="rb rb-l">Lendário · 13%</span><span class="cb cb-historia">Pós-Jogo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="82" data-cat="historia" data-name="anjo da morte angel of death lamento mori derrote">
+          <div class="check-box" id="cb82"></div>
+          <div class="ach-icon">💀</div>
+          <div class="ach-body">
+            <div class="ach-name">Anjo da Morte</div>
+            <div class="ach-orig">Angel of Death</div>
+            <div class="ach-desc">Derrote Lamento Mori — Arcanjo do Medo da Morte.</div>
+            <div class="ach-meta"><span class="ach-num">#82</span><span class="rb rb-r">Raro · 31%</span><span class="cb cb-historia">Arcanjo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="83" data-cat="historia" data-name="sólido neoplatônico neoplatonic solid hexaerebos geometria derrote">
+          <div class="check-box" id="cb83"></div>
+          <div class="ach-icon">🔷</div>
+          <div class="ach-body">
+            <div class="ach-name">Sólido Neoplatônico</div>
+            <div class="ach-orig">Neoplatonic Solid</div>
+            <div class="ach-desc">Derrote Hexaerebos — Arcanjo da Geometria/Matemática.</div>
+            <div class="ach-meta"><span class="ach-num">#83</span><span class="rb rb-r">Raro · 26%</span><span class="cb cb-historia">Arcanjo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="84" data-cat="historia" data-name="filho do ego child of ego alice arcanjo derrote">
+          <div class="check-box" id="cb84"></div>
+          <div class="ach-icon">👸</div>
+          <div class="ach-body">
+            <div class="ach-name">Filho do Ego</div>
+            <div class="ach-orig">Child of Ego</div>
+            <div class="ach-desc">Derrote Alice — Arcanjo do Ego.</div>
+            <div class="ach-meta"><span class="ach-num">#84</span><span class="rb rb-r">Raro · 28%</span><span class="cb cb-historia">Arcanjo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="85" data-cat="historia" data-name="mestre dos bonecos master of puppets poppetox marionex derrote eugene">
+          <div class="check-box" id="cb85"></div>
+          <div class="ach-icon">🎭</div>
+          <div class="ach-body">
+            <div class="ach-name">Mestre dos Bonecos</div>
+            <div class="ach-orig">Master of Puppets</div>
+            <div class="ach-desc">Derrote Marionex (Poppetox) — Arcanjo da Arte de Criar Bonecos.</div>
+            <div class="ach-meta"><span class="ach-num">#85</span><span class="rb rb-r">Raro · 35%</span><span class="cb cb-historia">Arcanjo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="86" data-cat="historia" data-name="torre da ignorância tower of ignorance babelite derrote viola">
+          <div class="check-box" id="cb86"></div>
+          <div class="ach-icon">🗼</div>
+          <div class="ach-body">
+            <div class="ach-name">Torre da Ignorância</div>
+            <div class="ach-orig">Tower of Ignorance</div>
+            <div class="ach-desc">Derrote Babelite — Arcanjo da Ignorância no naufrágio.</div>
+            <div class="ach-meta"><span class="ach-num">#86</span><span class="rb rb-r">Raro · 29%</span><span class="cb cb-historia">Arcanjo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="87" data-cat="historia" data-name="terra da confusão land of confusion música morgana completa">
+          <div class="check-box" id="cb87"></div>
+          <div class="ach-icon">🎶</div>
+          <div class="ach-body">
+            <div class="ach-name">Terra da Confusão</div>
+            <div class="ach-orig">Land of Confusion</div>
+            <div class="ach-desc">Complete a música de Morgana derrotando todos os Arcanjos necessários.</div>
+            <div class="ach-meta"><span class="ach-num">#87</span><span class="rb rb-r">Raro · 25%</span><span class="cb cb-historia">História</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="88" data-cat="historia" data-name="aqui vem o sol here comes the sun hélia essência fusão derrote">
+          <div class="check-box" id="cb88"></div>
+          <div class="ach-icon">☀️</div>
+          <div class="ach-body">
+            <div class="ach-name">Aqui Vem o Sol</div>
+            <div class="ach-orig">Here Comes the Sun</div>
+            <div class="ach-desc">Supere a essência da fusão — derrote Hélia na Estação de Energia.</div>
+            <div class="ach-meta"><span class="ach-num">#88</span><span class="rb rb-r">Raro · 20%</span><span class="cb cb-historia">Pós-Jogo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="89" data-cat="historia" data-name="atendente da estação station attendant magikaranguejo mer-line">
+          <div class="check-box" id="cb89"></div>
+          <div class="ach-icon">🦀</div>
+          <div class="ach-body">
+            <div class="ach-name">O Atendente da Estação</div>
+            <div class="ach-orig">The Station Attendant</div>
+            <div class="ach-desc">Conheça o ser que atende fielmente as estações — o Magikaranguejo.</div>
+            <div class="ach-meta"><span class="ach-num">#89</span><span class="rb rb-u">Incomum · 45%</span><span class="cb cb-historia">História</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="90" data-cat="historia" data-name="longe de casa a long way from home srta amber salão âmbar">
+          <div class="check-box" id="cb90"></div>
+          <div class="ach-icon">🍸</div>
+          <div class="ach-body">
+            <div class="ach-name">Longe de Casa</div>
+            <div class="ach-orig">A Long Way from Home</div>
+            <div class="ach-desc">Encontre ajuda num lugar distante — conheça a Srta. Âmbar no Mundo Morto.</div>
+            <div class="ach-meta"><span class="ach-num">#90</span><span class="rb rb-r">Raro · 24%</span><span class="cb cb-historia">História</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="91" data-cat="historia" data-name="o que jaz embaixo one who lies beneath merlinha ser sem rosto">
+          <div class="check-box" id="cb91"></div>
+          <div class="ach-icon">🚂</div>
+          <div class="ach-body">
+            <div class="ach-name">O Que Jaz Embaixo</div>
+            <div class="ach-orig">The One Who Lies Beneath</div>
+            <div class="ach-desc">Fique cara a cara com um ser sem rosto — descubra a verdade sobre a Merlinha.</div>
+            <div class="ach-meta"><span class="ach-num">#91</span><span class="rb rb-r">Raro · 19%</span><span class="cb cb-historia">Pós-Jogo</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 13 — COMANDANTES (#92–#103 aprox.)
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>🏅 Os 12 Comandantes Vigilantes</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="92" data-cat="comandante" data-name="derrote murilo comandante 1 parque paredes elementais">
+          <div class="check-box" id="cb92"></div>
+          <div class="ach-icon">🧱</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Murilo</div>
+            <div class="ach-orig">Defeat Ranger Captain Wallace</div>
+            <div class="ach-desc">Derrote o Comandante Nº1 no Parque de Nova Murta — especialista em Paredes Elementais.</div>
+            <div class="ach-meta"><span class="ach-num">#92</span><span class="rb rb-u">Incomum · 42%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="93" data-cat="comandante" data-name="derrote cisco comandante 2 vilancoradouro oeste">
+          <div class="check-box" id="cb93"></div>
+          <div class="ach-icon">💨</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Cisco</div>
+            <div class="ach-orig">Defeat Ranger Captain Skip</div>
+            <div class="ach-desc">Derrote o Comandante Nº2 em Vilancoradouro Oeste.</div>
+            <div class="ach-meta"><span class="ach-num">#93</span><span class="rb rb-u">Incomum · 40%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="94" data-cat="comandante" data-name="derrote siesta comandante 3 colina outono dormindo disparo disperso">
+          <div class="check-box" id="cb94"></div>
+          <div class="ach-icon">💤</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Siesta</div>
+            <div class="ach-orig">Defeat Ranger Captain Zedd</div>
+            <div class="ach-desc">Derrote o sonolento Comandante Nº3 na Colina do Outono (requer quest Disparo Disperso).</div>
+            <div class="ach-meta"><span class="ach-num">#94</span><span class="rb rb-u">Incomum · 37%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="95" data-cat="comandante" data-name="derrote judas comandante 4 ilhas sul terras mortas nivel 30">
+          <div class="check-box" id="cb95"></div>
+          <div class="ach-icon">🏝️</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Judas</div>
+            <div class="ach-orig">Defeat Ranger Captain Judas</div>
+            <div class="ach-desc">Derrote o Comandante Nº4 nas Ilhas do Sul — nível recomendado 30+.</div>
+            <div class="ach-meta"><span class="ach-num">#95</span><span class="rb rb-r">Raro · 28%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="96" data-cat="comandante" data-name="derrote clee-o comandante 5 robô garçonete floresta eastham moeda">
+          <div class="check-box" id="cb96"></div>
+          <div class="ach-icon">🤖</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Clee-O</div>
+            <div class="ach-orig">Defeat Ranger Captain Clee-0</div>
+            <div class="ach-desc">Reative e derrote a robô-garçonete Comandante Nº5 na Floresta de Eastham.</div>
+            <div class="ach-meta"><span class="ach-num">#96</span><span class="rb rb-r">Raro · 25%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="97" data-cat="comandante" data-name="derrote levi magneticus comandante 6 raio ham vale meandro">
+          <div class="check-box" id="cb97"></div>
+          <div class="ach-icon">⚡</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Magneticus</div>
+            <div class="ach-orig">Defeat Ranger Captain Lodestein</div>
+            <div class="ach-desc">Derrote o especialista em Raios, Comandante Nº6, no vale de Ham.</div>
+            <div class="ach-meta"><span class="ach-num">#97</span><span class="rb rb-r">Raro · 23%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="98" data-cat="comandante" data-name="derrote vitória frankenstein comandante 7 terras mortas penny dreadful">
+          <div class="check-box" id="cb98"></div>
+          <div class="ach-icon">🪦</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Vitória Frankenstein</div>
+            <div class="ach-orig">Defeat Ranger Captain Penny Dreadful</div>
+            <div class="ach-desc">Derrote a Comandante Nº7 nas sombrias Terras Mortas.</div>
+            <div class="ach-meta"><span class="ach-num">#98</span><span class="rb rb-r">Raro · 21%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="99" data-cat="comandante" data-name="derrote bellona comandante 8 mar pântano gladiola norte">
+          <div class="check-box" id="cb99"></div>
+          <div class="ach-icon">🌿</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Bellona</div>
+            <div class="ach-orig">Defeat Ranger Captain Gladiola</div>
+            <div class="ach-desc">Derrote a Comandante Nº8 no norte do Mar do Pântano.</div>
+            <div class="ach-meta"><span class="ach-num">#99</span><span class="rb rb-r">Raro · 19%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="100" data-cat="comandante" data-name="derrote celestina comandante 9 pântano extremo norte heather">
+          <div class="check-box" id="cb100"></div>
+          <div class="ach-icon">🌙</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Celestina</div>
+            <div class="ach-orig">Defeat Ranger Captain Heather</div>
+            <div class="ach-desc">Derrote a Comandante Nº9 no extremo norte do Mar do Pântano.</div>
+            <div class="ach-meta"><span class="ach-num">#100</span><span class="rb rb-r">Raro · 17%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="101" data-cat="comandante" data-name="derrote barbie comandante 10 prado cerejeira dendileo vitoré buffy">
+          <div class="check-box" id="cb101"></div>
+          <div class="ach-icon">🌸</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Barbie</div>
+            <div class="ach-orig">Defeat Ranger Captain Buffy</div>
+            <div class="ach-desc">Derrote a especialista em Plantas, Comandante Nº10, no leste do Prado da Cerejeira.</div>
+            <div class="ach-meta"><span class="ach-num">#101</span><span class="rb rb-r">Raro · 16%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="102" data-cat="comandante" data-name="derrote sibila comandante 11 pântano monte wirral cybil">
+          <div class="check-box" id="cb102"></div>
+          <div class="ach-icon">🏔️</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Sibila</div>
+            <div class="ach-orig">Defeat Ranger Captain Cybil</div>
+            <div class="ach-desc">Derrote a Comandante Nº11 nas encostas do Pântano.</div>
+            <div class="ach-meta"><span class="ach-num">#102</span><span class="rb rb-r">Raro · 15%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="103" data-cat="comandante" data-name="derrote codi comandante 12 monte murta embuste codey mestre">
+          <div class="check-box" id="cb103"></div>
+          <div class="ach-icon">🃏</div>
+          <div class="ach-body">
+            <div class="ach-name">Derrote Comandante Codi</div>
+            <div class="ach-orig">Defeat Ranger Captain Codey</div>
+            <div class="ach-desc">Derrote o mestre dos Embustes, Comandante Nº12, no Monte Murta — requer Bola de Cipó de Abóbora.</div>
+            <div class="ach-meta"><span class="ach-num">#103</span><span class="rb rb-e">Épico · 13%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="104" data-cat="comandante" data-name="leve-me pt2 take me on ranger captain comandante ianthe wilma desafio final">
+          <div class="check-box" id="cb104"></div>
+          <div class="ach-icon">🎖️</div>
+          <div class="ach-body">
+            <div class="ach-name">Leve-Me, Pt. II</div>
+            <div class="ach-orig">Take Me On, pt. II</div>
+            <div class="ach-desc">Vença o desafio final de Ianthe e Wilma — torne-se Comandante Vigilante.</div>
+            <div class="ach-meta"><span class="ach-num">#104</span><span class="rb rb-e">Épico · 11%</span><span class="cb cb-comandante">Comandante</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 14 — SIDE QUESTS SECUNDÁRIAS
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>📜 Side Quests Secundárias e Miscelânea</h3></div>
+      <div class="ach-grid">
+
+        <div class="ach-card" data-id="105" data-cat="missao" data-name="na caça on the hunt hoylake pesquisa beasts macabra stardigrade">
+          <div class="check-box" id="cb105"></div>
+          <div class="ach-icon">🔍</div>
+          <div class="ach-body">
+            <div class="ach-name">Na Caça</div>
+            <div class="ach-orig">On the Hunt</div>
+            <div class="ach-desc">Ajude Hoylake com sua pesquisa sobre espécies raras de Nova Murta.</div>
+            <div class="ach-meta"><span class="ach-num">#105</span><span class="rb rb-u">Incomum · 31%</span><span class="cb cb-missao">Side Quest</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="106" data-cat="missao" data-name="trabalhando hora extra working overtime placa vilancoradouro madeira design">
+          <div class="check-box" id="cb106"></div>
+          <div class="ach-icon">🪵</div>
+          <div class="ach-body">
+            <div class="ach-name">Trabalhando Horas Extras</div>
+            <div class="ach-orig">Working Overtime</div>
+            <div class="ach-desc">Entregue 300 unidades de madeira e escolha um design para a placa de Vilancoradouro.</div>
+            <div class="ach-meta"><span class="ach-num">#106</span><span class="rb rb-u">Incomum · 29%</span><span class="cb cb-missao">Side Quest</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="107" data-cat="missao" data-name="pessoas são pessoas allegra sunny quest pós-jogo ex-corretora">
+          <div class="check-box" id="cb107"></div>
+          <div class="ach-icon">🤝</div>
+          <div class="ach-body">
+            <div class="ach-name">Pessoas São Pessoas</div>
+            <div class="ach-orig">People Are People</div>
+            <div class="ach-desc">Complete a quest de Allegra — a reabilitação da ex-Corretora (pós-jogo, requer derrotar Aleph Nulo).</div>
+            <div class="ach-meta"><span class="ach-num">#107</span><span class="rb rb-e">Épico · 10%</span><span class="cb cb-missao">Pós-Jogo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="108" data-cat="missao" data-name="dormindo no trabalho siesta sleeping on the job conquista">
+          <div class="check-box" id="cb108"></div>
+          <div class="ach-icon">😴</div>
+          <div class="ach-body">
+            <div class="ach-name">Dormindo no Trabalho</div>
+            <div class="ach-orig">Sleeping on the Job</div>
+            <div class="ach-desc">Derrote o Comandante Siesta — ele estava dormindo quando você chegou.</div>
+            <div class="ach-meta"><span class="ach-num">#108</span><span class="rb rb-u">Incomum · 37%</span><span class="cb cb-missao">Conquista Especial</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="109" data-cat="missao" data-name="encontre comerciante itinerante travelling merchant npc raro">
+          <div class="check-box" id="cb109"></div>
+          <div class="ach-icon">🧳</div>
+          <div class="ach-body">
+            <div class="ach-name">Encontre o Comerciante Itinerante</div>
+            <div class="ach-orig">Find the Travelling Merchant</div>
+            <div class="ach-desc">Localize o misterioso comerciante ambulante escondido em Nova Murta.</div>
+            <div class="ach-meta"><span class="ach-num">#109</span><span class="rb rb-r">Raro · 21%</span><span class="cb cb-missao">Segredo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card" data-id="110" data-cat="missao" data-name="se encontre num lugar distante find yourself somewhere far away mundo morto">
+          <div class="check-box" id="cb110"></div>
+          <div class="ach-icon">🌍</div>
+          <div class="ach-body">
+            <div class="ach-name">Se Encontre Num Lugar Distante</div>
+            <div class="ach-orig">Find Yourself Somewhere Far Away</div>
+            <div class="ach-desc">Seja jogado no Mundo Morto por Aleph — descubra o que há lá.</div>
+            <div class="ach-meta"><span class="ach-num">#110</span><span class="rb rb-r">Raro · 26%</span><span class="cb cb-missao">História</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══════════════════════════════════════════
+           SEÇÃO 15 — CONQUISTAS OCULTAS RARAS
+      ══════════════════════════════════════════ -->
+      <div class="sec-div"><h3>🔒 Conquistas Ocultas / Especiais Raras</h3></div>
+      <p style="color:#666;font-size:0.82rem;margin-bottom:1rem;">Estas conquistas ficam ocultas no Steam (aparecem como <strong style="color:#9b6cd3;">???</strong>) até serem desbloqueadas. As descrições abaixo contêm <em style="color:#9b6cd3;">spoilers</em>.</p>
+      <div class="ach-grid">
+
+        <div class="ach-card hidden-ach" data-id="111" data-cat="segredo" data-name="isto não é a lua orb fusion esférica oculta rara">
+          <div class="check-box" id="cb111"></div>
+          <div class="ach-icon">❓</div>
+          <div class="ach-body">
+            <div class="ach-name">Isso Não É a Lua <em style="font-size:0.65rem;color:#9b6cd3">[OCULTA]</em></div>
+            <div class="ach-orig">That's No Moon</div>
+            <div class="ach-desc">Derrote uma Fusão Esférica — apenas 6% dos jogadores conseguiram. Extremamente raro.</div>
+            <div class="ach-meta"><span class="rb rb-l">Lendário · 6%</span><span class="cb cb-segredo">Oculta</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card hidden-ach" data-id="112" data-cat="segredo" data-name="não alimente meia noite unstable fusion instável oculta rara">
+          <div class="check-box" id="cb112"></div>
+          <div class="ach-icon">❓</div>
+          <div class="ach-body">
+            <div class="ach-name">Não Alimente Depois da Meia-Noite <em style="font-size:0.65rem;color:#9b6cd3">[OCULTA]</em></div>
+            <div class="ach-orig">Don't Feed After Midnight</div>
+            <div class="ach-desc">Derrote uma Fusão Instável — formada quando monstros de Fusão Instável se juntam. Muito difícil de encontrar.</div>
+            <div class="ach-meta"><span class="rb rb-e">Épico · 13%</span><span class="cb cb-segredo">Oculta</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card hidden-ach" data-id="113" data-cat="segredo" data-name="pináculo evolução magikaranguejo forma impossível remaster trafeguejo astral oculta">
+          <div class="check-box" id="cb113"></div>
+          <div class="ach-icon">❓</div>
+          <div class="ach-body">
+            <div class="ach-name">Pináculo da Evolução <em style="font-size:0.65rem;color:#9b6cd3">[OCULTA]</em></div>
+            <div class="ach-orig">Pinnacle of Evolution</div>
+            <div class="ach-desc">Obtenha o Magikaranguejo (#000) — remaster de um Trafeguejo Embuste Astral. A criatura que se acreditava impossível de capturar.</div>
+            <div class="ach-meta"><span class="rb rb-l">Lendário · 4%</span><span class="cb cb-segredo">Oculta</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card hidden-ach" data-id="114" data-cat="segredo" data-name="rebelião rebellion morgante gestalt pós-jogo oculta">
+          <div class="check-box" id="cb114"></div>
+          <div class="ach-icon">❓</div>
+          <div class="ach-body">
+            <div class="ach-name">Rebelião <em style="font-size:0.65rem;color:#9b6cd3">[OCULTA · SPOILER]</em></div>
+            <div class="ach-orig">Rebellion</div>
+            <div class="ach-desc">Derrote Morgante em sua forma mais poderosa no pós-jogo — sua natureza rebelde a leva a se voltar contra o jogador.</div>
+            <div class="ach-meta"><span class="rb rb-l">Lendário · 13%</span><span class="cb cb-segredo">Pós-Jogo</span></div>
+          </div>
+        </div>
+
+        <div class="ach-card hidden-ach" data-id="115" data-cat="segredo" data-name="cassette beasts master bestiário completo 120 espécies platina oculta">
+          <div class="check-box" id="cb115"></div>
+          <div class="ach-icon">❓</div>
+          <div class="ach-body">
+            <div class="ach-name">Cassette Beasts Master <em style="font-size:0.65rem;color:#9b6cd3">[MAIS DIFÍCIL]</em></div>
+            <div class="ach-orig">Cassette Beasts Master</div>
+            <div class="ach-desc">Preencha os dados adicionais de todas as 120+ espécies do bestiário. A conquista mais trabalhosa do jogo — leva dezenas de horas extras.</div>
+            <div class="ach-meta"><span class="rb rb-l">Lendário · 5%</span><span class="cb cb-segredo">Platina</span></div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const TOTAL = 123;
+    let activeFilter = 'all';
+
+    // ── Carregar estado salvo ──
+    function loadState() {
+      try { return JSON.parse(localStorage.getItem('cb_ach') || '{}'); } catch { return {}; }
+    }
+    function saveState(state) {
+      try { localStorage.setItem('cb_ach', JSON.stringify(state)); } catch {}
+    }
+
+    let state = loadState();
+
+    function updateProgress() {
+      const done = Object.values(state).filter(Boolean).length;
+      const pct  = Math.round((done / TOTAL) * 100);
+      document.getElementById('statDone').textContent    = done;
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressPct').textContent  = pct + '%';
+      document.getElementById('progressCount').textContent = done + ' / ' + TOTAL;
+    }
+
+    function applyState() {
+      document.querySelectorAll('.ach-card[data-id]').forEach(card => {
+        const id = card.getAttribute('data-id');
+        const cb = document.getElementById('cb' + id);
+        if (state[id]) {
+          card.classList.add('done');
+          if (cb) cb.textContent = '✓';
+        } else {
+          card.classList.remove('done');
+          if (cb) cb.textContent = '';
+        }
+      });
+      updateProgress();
+    }
+
+    // ── Toggle ao clicar ──
+    document.addEventListener('click', e => {
+      const card = e.target.closest('.ach-card[data-id]');
+      if (!card) return;
+      const id = card.getAttribute('data-id');
+      state[id] = !state[id];
+      if (!state[id]) delete state[id];
+      saveState(state);
+      applyState();
+    });
+
+    // ── Filtros ──
+    function setFilter(cat, btn) {
+      activeFilter = cat;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      doFilter();
+    }
+
+    function doFilter() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      document.querySelectorAll('.ach-card').forEach(card => {
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const cat  = card.getAttribute('data-cat') || '';
+        const matchCat  = activeFilter === 'all' || cat === activeFilter;
+        const matchQ    = !q || name.includes(q);
+        card.classList.toggle('filtered-out', !(matchCat && matchQ));
+      });
+    }
+
+    // ── Init ──
+    applyState();
+  </script>
+</body>
+</html>

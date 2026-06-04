@@ -9,8 +9,22 @@
   
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="colors.css" />
+  <style>
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+  </style>
 </head>
 <body>
+
+  <div id="bg-overlay"></div>
+
   <header>
     <div class="logo">Hub de Wikis</div>
     <nav>
@@ -81,7 +95,7 @@
       </a>
 	  
 	  <!--CARTÃO PATHOLOGIC 2 -->
-      <a href="#" class="game-card-link">
+      <a href="pathologic.html" class="game-card-link">
         <article class="game-card" id="pathologic-2">
           <div class="img-container">
             <img src="https://pathologic-game.com/i/next-pathologic-logo-en.png" alt="Logo do Pathologic 2" />
@@ -99,5 +113,50 @@
   <footer>
     © 2026 Hub de Wikis de Jogos.
   </footer>
+
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target); // dispara só uma vez
+    }
+  });
+}, { threshold: 0.08 }); // 8% do elemento visível já dispara
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const bgOverlay = document.getElementById('bg-overlay');
+    const cards = document.querySelectorAll('.game-card');
+
+
+    const backgrounds = {
+        'slime-rancher': 'url("slime-banner.webp")',
+        'cassette-beasts': 'url("banner_cass.png")',
+        'gta-v': 'url("banner_gta-v.jpg")',
+        'hogwarts-legacy': 'url("banner_hogwarts-legacy.jpg")',
+        'pathologic-2': 'url("pathologic-banner.jpg")'
+    };
+
+    cards.forEach(card => {
+        // Quando o mouse entra no card
+        card.addEventListener('mouseenter', () => {
+            const bgImage = backgrounds[card.id];
+            if (bgImage) {
+                bgOverlay.style.backgroundImage = bgImage;
+            }
+        });
+
+        // Quando o mouse sai do card, volta para o fundo escuro
+        card.addEventListener('mouseleave', () => {
+            bgOverlay.style.backgroundImage = 'none'; 
+        });
+    });
+});
+
+  </script>
+
 </body>
 </html>

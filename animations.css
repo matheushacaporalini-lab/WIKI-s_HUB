@@ -1,0 +1,46 @@
+/* ══════════════════════════════════════════
+   animations.css
+   Importar em todas as páginas do hub.
+   Uso: adicione .reveal, .reveal-left ou
+   .reveal-scale nos elementos desejados.
+══════════════════════════════════════════ */
+
+/* ── Estado inicial: invisível ── */
+.reveal,
+.reveal-left,
+.reveal-scale {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+/* ── Sobe de baixo (padrão) ── */
+.reveal {
+  transform: translateY(36px);
+  transition:
+    opacity  0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Entra da esquerda ── */
+.reveal-left {
+  transform: translateX(-30px);
+  transition:
+    opacity  0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Escala do centro ── */
+.reveal-scale {
+  transform: scale(0.93);
+  transition:
+    opacity  0.4s  cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Estado final: visível ── */
+.reveal.visible,
+.reveal-left.visible,
+.reveal-scale.visible {
+  opacity: 1;
+  transform: none;
+}

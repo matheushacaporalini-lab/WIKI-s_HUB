@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movimentos - Cassette Beasts Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style_especies.css" />
+  <link rel="stylesheet" href="movimentos.js" />
+  <link rel="stylesheet" href="cassstyle9.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" style="color:inherit;text-decoration:none;">Hub de Wikis</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="CasseteBeast.html">Wiki CB</a></li>
+        <li><a href="cass_table.html">Tipos</a></li>
+        <li><a href="especies.html">Espécies</a></li>
+        <li><a href="personagenscb.html">Personagens</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="intro-box">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a> &rsaquo;
+        <a href="CasseteBeast.html">Wiki Cassette Beasts</a> &rsaquo;
+        <span>Movimentos</span>
+      </div>
+
+      <h1 class="page-title">Movimentos</h1>
+      <p class="page-subtitle">Lista completa de todos os golpes e habilidades de Nova Murta — Stickers que definem cada batalha</p>
+
+      <div class="stats-bar">
+        Movimentos são usados via <strong>Stickers</strong> equipados nas fitas. Clique nos cabeçalhos para ordenar, use os filtros para refinar por categoria ou tipo, e a busca para encontrar um golpe específico.
+        <div class="stat-chip">Total de movimentos: <strong id="moveCount">—</strong></div>
+      </div>
+    </div>
+
+    <!-- Cards informativos sobre stickers -->
+    <div class="sticker-info">
+      <div class="sticker-card">
+        <h4>⚔ Ataque Corpo a Corpo</h4>
+        <p>Golpes físicos diretos. Usam o stat de Ataque Físico (M.Atk) do atacante contra a Defesa Física (M.Def) do alvo.</p>
+      </div>
+      <div class="sticker-card">
+        <h4>🎯 Ataque à Distância</h4>
+        <p>Projéteis e ataques remotos. Usam o stat de Ataque Especial (R.Atk) contra a Defesa Especial (R.Def) do alvo.</p>
+      </div>
+      <div class="sticker-card">
+        <h4>✨ Efeito de Status</h4>
+        <p>Movimentos que aplicam condições — buffs, debuffs, estados alterados. Não causam dano diretamente.</p>
+      </div>
+      <div class="sticker-card">
+        <h4>🔧 Miscelânia</h4>
+        <p>Movimentos com efeitos únicos no campo de batalha que não se encaixam nas outras categorias.</p>
+      </div>
+    </div>
+
+
+
+    </div>
+
+    <!-- Tabela -->
+    <div class="table-wrap">
+      <table class="species-table" id="movesTable">
+        <thead>
+          <tr>
+            <th onclick="sortTable(0)" title="Nome" style="text-align:left;min-width:160px">Nome</th>
+            <th onclick="sortTable(1)">Tipo</th>
+            <th onclick="sortTable(2)">Categoria</th>
+            <th onclick="sortTable(3)" title="Poder do ataque">Poder</th>
+            <th onclick="sortTable(4)" title="Taxa de acerto">Acurácia</th>
+            <th onclick="sortTable(5)" title="Custo em AP">Custo AP</th>
+            <th style="text-align:left;min-width:200px;cursor:default">Efeito</th>
+          </tr>
+        </thead>
+        <tbody id="movesTbody"></tbody>
+      </table>
+
+      <!-- Legenda de categorias -->
+      <div class="cat-legend">
+        <div class="cat-legend-title">Legenda de Categorias</div>
+        <div class="cat-legend-item"><div class="cat-legend-dot" style="background:#e07070"></div>Ataque Corpo a Corpo — usa M.Atk vs M.Def</div>
+        <div class="cat-legend-item"><div class="cat-legend-dot" style="background:#f09070"></div>Ataque à Distância — usa R.Atk vs R.Def</div>
+        <div class="cat-legend-item"><div class="cat-legend-dot" style="background:#c090f0"></div>Efeito de Status — aplica condições</div>
+        <div class="cat-legend-item"><div class="cat-legend-dot" style="background:#70cc80"></div>Miscelânia — efeitos especiais de campo</div>
+        <div class="cat-legend-item"><div class="cat-legend-dot" style="background:#e0b860"></div>Passivo — ativa automaticamente em eventos</div>
+      </div>
+
+      <!-- Legenda de tipos -->
+      <div class="legend">
+        <div class="legend-title">Legenda de Tipos</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e0a050"></div>Besta</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#c070e0"></div>Veneno</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#70d8d4"></div>Ar</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e07070"></div>Plástico</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#a8c4e0"></div>Metal</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f08050"></div>Fogo</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#60a8f0"></div>Água</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#70cc80"></div>Planta</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#c09858"></div>Terra</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e8cc50"></div>Raio</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#90ddf0"></div>Gelo</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#a090f0"></div>Astral</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#b0e0e0"></div>Vidro</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#666"></div>S/ Tipo</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos. Cassette Beasts © Bytten Studio. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    // ── Dados ─────────────────────────────────────────────────────────────────
+    // [nome, tipo, categoria, poder, acurácia, custo, efeito_pt]
+    // Categoria: Melee | Ranged | Status | Misc | Passive
+    // Custo: número de AP ou "Passive"
+    const MOVES = [
+      ["Abramacabra",         "Beast",     "Status",  null,  "100%",        3, "Aplica o efeito Abraçada no alvo."],
+      ["Reflexo Ácido",       "Poison",    "Passive",  null, "Inevitável",  0, "Quando atingido, há chance de aplicar Envenenado no atacante."],
+      ["Morteiro de Bolota",  "Plant",     "Ranged",   100,  "75%",         3, "Lança uma bolota explosiva no alvo."],
+      ["Camuflagem Aérea",    "Air",       "Status",   null, "100%",        2, "Aumenta a Evasão do usuário."],
+      ["Revestimento Aéreo",  "Air",       "Status",   null, "100%",        2, "Cobre o alvo aliado no tipo Ar, mudando suas resistências."],
+      ["Resistência Aérea",   "Air",       "Passive",  null, "100%",        0, "Reduz passivamente o dano recebido do tipo Ar."],
+      ["Parede Aérea",        "Air",       "Status",   null, "100%",        2, "Cria uma parede de Ar que absorve dano até ser destruída."],
+      ["Impulso de PA",       "Astral",    "Status",   null, "100%",        1, "Concede PA extra ao alvo aliado."],
+      ["Doação de PA",        "Typeless",  "Misc",     null, "Inevitável",  1, "Transfere PA do usuário para um aliado."],
+      ["Dreno de PA",         "Astral",    "Status",   null, "100%",        1, "Reduz o PA do alvo inimigo."],
+      ["Fábrica de PA",       "Typeless",  "Passive",  null, "Inevitável",  0, "Gera PA extra no início de cada turno."],
+      ["Reembolso de PA",     "Typeless",  "Passive",  null, "100%",        0, "Reembolsa o custo de PA ao usar movimentos que erram."],
+      ["PA Inicial",          "Typeless",  "Passive",  null, "100%",        0, "O usuário começa a batalha com PA extra."],
+      ["Roubo de PA",         "Poison",    "Misc",     null, "70%",         0, "Rouba PA do alvo inimigo."],
+      ["Camuflagem Astral",   "Astral",    "Status",   null, "100%",        2, "Aumenta a Evasão com campo Astral."],
+      ["Revestimento Astral", "Astral",    "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Astral."],
+      ["Resistência Astral",  "Astral",    "Passive",  null, "100%",        0, "Reduz passivamente o dano Astral recebido."],
+      ["Parede Astral",       "Astral",    "Status",   null, "100%",        2, "Cria parede Astral que absorve dano."],
+      ["Automação",           "Typeless",  "Passive",  null, "100%",        0, "Repete automaticamente o último movimento usado."],
+      ["Avalanche",           "Ice",       "Status",   null, "Inevitável",  2, "Causa lentidão e acúmulo de neve no alvo."],
+      ["Mau Presságio",       "Poison",    "Status",   null, "50%",         1, "Aplica Amaldiçoado no alvo."],
+      ["Piada Ruim",          "Typeless",  "Misc",     null, "Inevitável",  0, "Reduz o moral do oponente — efeito aleatório."],
+      ["Aríete",              "Typeless",  "Melee",     70,  "85%",         3, "Golpe físico poderoso que pode empurrar o alvo."],
+      ["Bateria",             "Lightning", "Melee",     40,  "100%",        3, "Ataca todos os inimigos com descarga elétrica."],
+      ["Ser Aleatório!!",     "Astral",    "Misc",     null, "100%",        0, "Usa um movimento aleatório da lista do usuário."],
+      ["Abraço de Urso",      "Beast",     "Melee",     30,  "100%",        1, "Abraço que causa dano e pode Prender o alvo."],
+      ["Camuflagem Bestial",  "Beast",     "Status",   null, "100%",        2, "Aumenta Evasão com campo Besta."],
+      ["Revestimento Bestial","Beast",     "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Besta."],
+      ["Resistência Bestial", "Beast",     "Passive",  null, "100%",        0, "Reduz passivamente o dano do tipo Besta."],
+      ["Parede Bestial",      "Beast",     "Status",   null, "100%",        2, "Cria parede Besta que absorve dano."],
+      ["Furioso",             "Beast",     "Passive",  null, "100%",        0, "Ao ficar com pouco HP, aumenta o Ataque massivamente."],
+      ["Invasão de Lixo",     "Fire",      "Ranged",    30,  "100%",        3, "Lança lixo incandescente em todos os inimigos."],
+      ["Convite de Lixo",     "Metal",     "Misc",     null, "50%",         4, "Convoca mais lixeiras-robô para o combate."],
+      ["Bish Bash Bosh",      "Typeless",  "Melee",     60,  "100%",        3, "Série de três golpes rápidos."],
+      ["Mordida",             "Beast",     "Melee",     80,  "100%",        3, "Mordida poderosa que pode Envenenar o alvo."],
+      ["Nevasca",             "Ice",       "Ranged",    60,  "100%",        5, "Tempestade de gelo que atinge todos os inimigos."],
+      ["Doação de Sangue",    "Beast",     "Misc",     null, "Inevitável",  2, "Sacrifica HP do usuário para curar um aliado."],
+      ["Sede de Sangue",      "Beast",     "Passive",  null, "Inevitável",  0, "Ao derrotar um inimigo, cura HP do usuário."],
+      ["Ebulição",            "Water",     "Melee",     90,  "100%",        3, "Golpe de água fervente que pode Queimar o alvo."],
+      ["Raio do Nada",        "Lightning", "Misc",     null, "50%",         4, "Raio caído do céu que pode paralisar todos."],
+      ["Rajada de Bombons",   "Typeless",  "Ranged",    70,  "85%",         3, "Lança doces explosivos no alvo."],
+      ["Canhão de Osso",      "Beast",     "Ranged",    40,  "100%",        3, "Dispara projéteis de osso."],
+      ["Armadilha",           "Typeless",  "Misc",      30,  "100%",        0, "Coloca armadilha no campo que dana inimigos ao pisar."],
+      ["Saraivada de Garrafas","Glass",    "Ranged",    40,  "100%",        3, "Lança várias garrafas de vidro no alvo."],
+      ["Aguenta o Impacto",   "Metal",     "Melee",    120,  "100%",        4, "Golpe brutal de Metal — quanto mais dano recebeu, mais forte."],
+      ["Técnica de Respiração","Astral",   "Passive",  null, "50%",         0, "Chance de recuperar PA ao final de cada turno."],
+      ["Rajada de Tijolos",   "Plastic",   "Ranged",    40,  "100%",        4, "Lança tijolos de plástico no alvo."],
+      ["Transmissão",         "Air",       "Status",   null, "100%",        2, "Copia os buffs do alvo para o usuário ou aliados."],
+      ["Paixão Ardente",      "Fire",      "Passive",  null, "100%",        0, "Ao ser atingido, aumenta o Ataque Especial."],
+      ["Incêndio na Floresta", "Plant",    "Status",   null, "Inevitável",  2, "Cria campo de fogo que queima todos ao longo dos turnos."],
+      ["Efeito Borboleta",    "Air",       "Ranged",    30,  "100%",        0, "Ataque fraco, mas com custo zero de PA."],
+      ["Pede Reforço",        "Typeless",  "Misc",     null, "50%",         2, "Convoca um monstro aliado adicional para o combate."],
+      ["Carnívoro",           "Beast",     "Passive",  null, "100%",        0, "Cura HP ao atacar inimigos com golpes físicos."],
+      ["Troca de Fita",       "Typeless",  "Misc",     null, "Inevitável",  2, "Troca o monstro ativo por outro da equipe."],
+      ["Carga",               "Lightning", "Melee",     60,  "100%",        2, "Golpe de choque que pode Paralizar o alvo."],
+      ["Desequilíbrio Químico","Poison",   "Passive",  null, "100%",        0, "Efeitos de veneno causam dano extra por turno."],
+      ["Queimado pela Argila","Earth",     "Passive",  null, "Inevitável",  0, "Ao ser atingido fisicamente, aplica Endurecido em si mesmo."],
+      ["Pancadaria",          "Typeless",  "Melee",     60,  "100%",        4, "Golpe pesado e lento com dano garantido."],
+      ["Rato Mecânico",       "Plastic",   "Melee",    120,  "100%",        5, "Solta rato mecânico que explode no alvo."],
+      ["Encontro Próximo",    "Astral",    "Status",   null, "100%",        1, "Aplica Atraído no alvo (puxa para perto)."],
+      ["Carvão de Rodá",      "Earth",     "Ranged",    30,  "100%",        1, "Disparo de carvão com custo baixo."],
+      ["Fusão a Frio",        "Ice",       "Passive",  null, "Inevitável",  0, "Ao ser Congelado, cria uma parede de Gelo."],
+      ["Elogio",              "Typeless",  "Status",   null, "100%",        1, "Aumenta um stat aleatório do alvo aliado."],
+      ["Machadada de Cobre",  "Metal",     "Melee",     60,  "100%",        3, "Golpe cortante de metal com boa precisão."],
+      ["Copiar Isso",         "Air",       "Misc",     null, "Inevitável",  2, "Copia o último movimento usado pelo inimigo."],
+      ["Imitador",            "Beast",     "Misc",     null, "100%",        0, "Usa imediatamente o mesmo movimento que o inimigo usou."],
+      ["Kunai Cósmico",       "Astral",    "Ranged",   150,  "100%",       10, "O mais poderoso ataque à distância do jogo — custo altíssimo."],
+      ["Aderir ao Algodão",   "Plant",     "Status",   null, "Inevitável",  4, "Aplica Enredado no alvo, impedindo ataques por turnos."],
+      ["PA Crítico",          "Typeless",  "Passive",  null, "100%",        0, "Acertos críticos geram PA extra."],
+      ["Massa Crítica",       "Fire",      "Passive",  null, "100%",        0, "Cada ataque de Fogo acumula calor — ao estourar, explosão em área."],
+      ["Criticar",            "Typeless",  "Status",   null, "100%",        1, "Reduz um stat do alvo inimigo."],
+      ["Crossfade",           "Typeless",  "Misc",     null, "100%",        1, "Troca as resistências de tipo do usuário temporariamente."],
+      ["Desmoronar",          "Earth",     "Ranged",    30,  "Inevitável",  2, "Atinge o alvo com pedras — não pode ser esquivado."],
+      ["Lente de Cristal",    "Glass",     "Ranged",    60,  "100%",        2, "Feixe de luz refratada que pode Cegar o alvo."],
+      ["Iniciador Custom",    "Typeless",  "Passive",  null, "100%",        0, "Permite iniciar o combate com uma configuração específica de PA."],
+      ["Rolagem de Dano",     "Typeless",  "Ranged",    9,   "100%",        3, "Dano aleatório multiplicado por dados — pode surpreender."],
+      ["Congelamento Profundo","Ice",      "Status",   null, "100%",        3, "Aplica Congelado no alvo — impede ações por 2 turnos."],
+      ["Defender",            "Typeless",  "Status",   null, "100%",        1, "Aumenta a Defesa Física do usuário por 1 turno."],
+      ["Delegar",             "Typeless",  "Misc",     null, "100%",        3, "Permite que um aliado use seu próximo movimento com bônus."],
+      ["Desespero",           "Typeless",  "Melee",     20,  "100%",        1, "Fraco, mas sempre disponível — o último recurso."],
+      ["Djinntoxicar",        "Astral",    "Ranged",    90,  "100%",        4, "Ataque mágico que Envenena o alvo."],
+      ["Folha Curativa",      "Plant",     "Status",   null, "100%",        1, "Cura o alvo aliado de um efeito de status negativo."],
+      ["Esquivar",            "Typeless",  "Status",   null, "100%",        1, "Garante que o próximo ataque recebido vai errar."],
+      ["Anos de Cão",         "Beast",     "Misc",     null, "100%",        4, "Estende a duração dos efeitos de status ativos no alvo."],
+      ["Corte Duplo",         "Typeless",  "Melee",     30,  "100%",        4, "Dois golpes simultâneos — cada um causa 30 de dano."],
+      ["Tapa Duplo",          "Typeless",  "Melee",     30,  "100%",        2, "Dois golpes rápidos e baratos."],
+      ["Dual Wield",          "Typeless",  "Misc",     null, "100%",        2, "O próximo ataque do usuário acerta duas vezes."],
+      ["Déjà Vu",             "Astral",    "Status",   null, "100%",        2, "Faz o alvo repetir o mesmo movimento no próximo turno."],
+      ["Camuflagem Terrestre","Earth",     "Status",   null, "100%",        2, "Aumenta Evasão com campo Terra."],
+      ["Revestimento Terrestre","Earth",   "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Terra."],
+      ["Resistência Terrestre","Earth",    "Passive",  null, "100%",        0, "Reduz passivamente o dano do tipo Terra."],
+      ["Parede Terrestre",    "Earth",     "Status",   null, "100%",        2, "Cria parede Terra que absorve dano."],
+      ["Ecolocalização",      "Air",       "Ranged",    40,  "100%",        4, "Atinge TODOS os inimigos por 3 turnos — bônus exclusivo do Robingun."],
+      ["Eletrochoque",        "Lightning", "Melee",     80,  "100%",        3, "Golpe elétrico que pode Paralisar."],
+      ["Camuflagem Elétrica", "Lightning", "Status",   null, "100%",        2, "Aumenta Evasão com campo Elétrico."],
+      ["Revestimento Elétrico","Lightning","Status",   null, "100%",        2, "Muda resistências do aliado para tipo Elétrico."],
+      ["Resistência Elétrica","Lightning", "Passive",  null, "100%",        0, "Reduz passivamente o dano Elétrico."],
+      ["Parede Elétrica",     "Lightning", "Status",   null, "100%",        2, "Cria parede Elétrica que absorve dano."],
+      ["Abraçamento Fatal",   "Beast",     "Melee",     60,  "85%",         4, "Dano alto com chance de Prender o alvo."],
+      ["Camuflagem de Fogo",  "Fire",      "Status",   null, "100%",        2, "Aumenta Evasão com campo Fogo."],
+      ["Revestimento de Fogo","Fire",      "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Fogo."],
+      ["Resistência ao Fogo", "Fire",      "Passive",  null, "100%",        0, "Reduz passivamente o dano de Fogo."],
+      ["Parede de Fogo",      "Fire",      "Status",   null, "100%",        2, "Cria parede de Fogo que queima quem a atravessa."],
+      ["Rajada de Chamas",    "Fire",      "Ranged",    80,  "90%",         3, "Disparador de fogo com boa precisão e poder."],
+      ["Lança-chamas",        "Fire",      "Ranged",    50,  "100%",        2, "Fluxo de fogo de custo baixo, cobre vários turnos."],
+      ["Voo",                 "Air",       "Status",   null, "100%",        2, "O usuário fica no ar — imune a ataques terrestres por 1 turno."],
+      ["Congelado",           "Ice",       "Status",   null, "85%",         2, "Aplica o estado Congelado no alvo."],
+      ["Camuflagem de Gelo",  "Ice",       "Status",   null, "100%",        2, "Aumenta Evasão com campo Gelo."],
+      ["Revestimento de Gelo","Ice",       "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Gelo."],
+      ["Resistência ao Gelo", "Ice",       "Passive",  null, "100%",        0, "Reduz passivamente o dano de Gelo."],
+      ["Parede de Gelo",      "Ice",       "Status",   null, "100%",        2, "Cria parede de Gelo que absorve e desacelera."],
+      ["Punho de Gelo",       "Ice",       "Melee",     70,  "100%",        3, "Soco de gelo que pode Congelar o alvo."],
+      ["Lança de Gelo",       "Ice",       "Ranged",    60,  "90%",         2, "Projétil de gelo de custo moderado."],
+      ["Absorver Golpe",      "Typeless",  "Passive",  null, "100%",        0, "Ao receber dano crítico, regenera HP."],
+      ["Megasoco",            "Typeless",  "Melee",    140,  "80%",         5, "Pancada devastadora com alto poder mas baixa precisão."],
+      ["Camuflagem Metálica", "Metal",     "Status",   null, "100%",        2, "Aumenta Evasão com campo Metálico."],
+      ["Revestimento Metálico","Metal",    "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Metal."],
+      ["Resistência Metálica","Metal",     "Passive",  null, "100%",        0, "Reduz passivamente o dano de Metal."],
+      ["Parede Metálica",     "Metal",     "Status",   null, "100%",        2, "Cria parede Metálica de alta durabilidade."],
+      ["Nova Folha",          "Plant",     "Ranged",    60,  "100%",        2, "Projétil de planta que ignora paredes elementais."],
+      ["Camuflagem de Planta","Plant",     "Status",   null, "100%",        2, "Aumenta Evasão com campo Planta."],
+      ["Revestimento de Planta","Plant",   "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Planta."],
+      ["Resistência à Planta","Plant",     "Passive",  null, "100%",        0, "Reduz passivamente o dano de Planta."],
+      ["Parede de Planta",    "Plant",     "Status",   null, "100%",        2, "Cria parede de Planta que absorve dano."],
+      ["Camuflagem Plástica", "Plastic",   "Status",   null, "100%",        2, "Aumenta Evasão com campo Plástico."],
+      ["Revestimento Plástico","Plastic",  "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Plástico."],
+      ["Resistência ao Plástico","Plastic","Passive",  null, "100%",        0, "Reduz passivamente o dano de Plástico."],
+      ["Parede Plástica",     "Plastic",   "Status",   null, "100%",        2, "Cria parede Plástica que absorve dano."],
+      ["Camuflagem Venenosa", "Poison",    "Status",   null, "100%",        2, "Aumenta Evasão com campo Veneno."],
+      ["Revestimento Venenoso","Poison",   "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Veneno."],
+      ["Resistência ao Veneno","Poison",   "Passive",  null, "100%",        0, "Reduz passivamente o dano de Veneno."],
+      ["Parede Venenosa",     "Poison",    "Status",   null, "100%",        2, "Cria parede Venenosa que Envenena quem a atravessa."],
+      ["Cuspir Veneno",       "Poison",    "Ranged",    60,  "90%",         2, "Cuspida ácida que pode Envenenar."],
+      ["Purpurinagem",        "Typeless",  "Misc",     null, "100%",        2, "Converte o tipo do alvo para Purpurina (tipo especial de embuste)."],
+      ["Ricochete",           "Typeless",  "Ranged",    50,  "100%",        2, "Atinge o alvo, ignora paredes e rebate para outro inimigo."],
+      ["Últimos Ritos",       "Plant",     "Misc",     null, "100%",        0, "Elimina um alvo com 1 golpe — requer barra de PA cheia."],
+      ["Ressurgir",           "Beast",     "Passive",  null, "100%",        0, "Ao ser derrotado, ressuscita com HP mínimo uma vez por batalha."],
+      ["Camuflagem de Rocha", "Earth",     "Status",   null, "100%",        2, "Aumenta Evasão com campo Rocha."],
+      ["Meteorito",           "Earth",     "Ranged",    80,  "85%",         3, "Pedra lançada do alto com dano médio-alto."],
+      ["Arremessar",          "Typeless",  "Misc",     null, "100%",        2, "Arremessa uma parede elemental contra todos os inimigos causando dano extra."],
+      ["Roubar",              "Poison",    "Misc",     null, "70%",         1, "Rouba o Sticker ativo do alvo por 1 turno."],
+      ["Intercetar",          "Astral",    "Passive",  null, "Inevitável",  0, "Absorve automaticamente ataques destinados a aliados adjacentes."],
+      ["Golpe de Acerto",     "Typeless",  "Melee",     50,  "100%",        2, "Golpe simples e confiável — jamais erra."],
+      ["Camuflagem de Água",  "Water",     "Status",   null, "100%",        2, "Aumenta Evasão com campo Água."],
+      ["Revestimento Aquoso", "Water",     "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Água."],
+      ["Resistência à Água",  "Water",     "Passive",  null, "100%",        0, "Reduz passivamente o dano de Água."],
+      ["Parede de Água",      "Water",     "Status",   null, "100%",        2, "Cria parede de Água que absorve dano."],
+      ["Jato d'Água",         "Water",     "Ranged",    70,  "100%",        3, "Disparo de água potente com boa precisão."],
+      ["Camuflagem de Vidro", "Glass",     "Status",   null, "100%",        2, "Aumenta Evasão com campo Vidro."],
+      ["Revestimento de Vidro","Glass",    "Status",   null, "100%",        2, "Muda resistências do aliado para tipo Vidro."],
+      ["Resistência ao Vidro","Glass",     "Passive",  null, "100%",        0, "Reduz passivamente o dano de Vidro."],
+      ["Parede de Vidro",     "Glass",     "Status",   null, "100%",        2, "Cria parede de Vidro que reflete parte do dano."],
+      ["Ressonância",         "Glass",     "Misc",     null, "100%",        3, "Elimina alvos com tipo Vidro de uma vez — devastador."],
+      ["Bomba de Purpurina",  "Typeless",  "Ranged",    40,  "100%",        2, "Muda o tipo do alvo para Purpurina."],
+      ["Apostas",             "Plastic",   "Status",   null, "100%",        3, "Aumenta massivamente todos os stats por 3 turnos — depois o usuário é eliminado."],
+      ["Interceptado",        "Astral",    "Passive",  null, "Inevitável",  0, "Absorve ataques destinados a aliados próximos automaticamente."],
+      ["Fantasma",            "Astral",    "Status",   null, "100%",        2, "Torna-se invencível por 3 turnos, depois se autodestrói."],
+      ["Berserker",           "Beast",     "Status",   null, "100%",        2, "Aplica Furioso no alvo — aumenta Ataque mas perde controle."],
+      ["Berserk",             "Beast",     "Status",   null, "100%",        2, "Cancela buffs positivos do alvo e aplica confusão."],
+      ["Remastering",         "Typeless",  "Misc",     null, "Inevitável",  0, "Evolui o monstro para sua forma avançada durante a batalha."],
+    ];
+
+    // Tradução de tipos
+    const TYPE_PT = {
+      Beast:"Besta", Poison:"Veneno", Air:"Ar", Plastic:"Plástico",
+      Metal:"Metal", Fire:"Fogo", Water:"Água", Plant:"Planta",
+      Earth:"Terra", Lightning:"Raio", Ice:"Gelo", Astral:"Astral",
+      Glass:"Vidro", Typeless:"Sem Tipo"
+    };
+
+    const CAT_PT = {
+      Melee:"Corpo a Corpo", Ranged:"Distância", Status:"Status", Misc:"Miscelânia", Passive:"Passivo"
+    };
+
+    const CAT_CLASS = {
+      Melee:"Melee", Ranged:"Ranged", Status:"Status", Misc:"Misc", Passive:"Status"
+    };
+
+    // ── Estado de filtros ──────────────────────────────────────────────────
+    let activeCat  = "all";
+    let activeType = "all";
+    let sortCol    = -1;
+    let sortDir    = 1;
+
+    // ── Construção da tabela ───────────────────────────────────────────────
+    function buildRows(data) {
+      const tbody = document.getElementById('movesTbody');
+      tbody.innerHTML = '';
+      let visible = 0;
+
+
+      data.forEach(d => {
+        const [name, type, cat, power, accuracy, cost, effect] = d;
+        const isPassive = (cat === "Passive");
+        const catKey = isPassive ? "Misc" : CAT_CLASS[cat] ?? cat;
+
+        // Filtros
+        if (activeCat !== "all") {
+          if (activeCat === "Passive" && !isPassive) return;
+          if (activeCat !== "Passive" && (isPassive || cat !== activeCat)) return;
+        }
+        if (activeType !== "all" && type !== activeType) return;
+
+
+        visible++;
+
+        const powerStr  = power    != null ? power    : '<span class="dash">—</span>';
+        const costStr   = isPassive ? '<span class="col-passive-badge">Passivo</span>' : `${cost} AP`;
+        const catLabel  = CAT_PT[cat] ?? cat;
+        const typeLabel = TYPE_PT[type] ?? type;
+
+        const tr = document.createElement('tr');
+        tr.dataset.cat  = cat;
+        tr.dataset.type = type;
+        tr.innerHTML = `
+          <td class="col-name-move">${name}</td>
+          <td><span class="type-badge type-${type}">${typeLabel}</span></td>
+          <td><span class="cat-badge cat-${catKey}">${catLabel}</span></td>
+          <td class="col-power">${powerStr}</td>
+          <td class="col-accuracy">${accuracy}</td>
+          <td class="col-cost">${costStr}</td>
+          <td class="col-desc">${effect}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('moveCount').textContent = MOVES.length;
+      document.getElementById('filteredCount').textContent = visible;
+    }
+
+
+    // ── Ordenação ──────────────────────────────────────────────────────────
+    function sortTable(col) {
+      const ths = document.querySelectorAll('#movesTable th');
+      ths.forEach((th, i) => {
+        th.classList.remove('sort-asc', 'sort-desc');
+        if (i === col) th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+      });
+
+      if (sortCol === col) sortDir *= -1;
+      else { sortCol = col; sortDir = 1; }
+
+      const sorted = [...MOVES].sort((a, b) => {
+        let aVal = a[col];
+        let bVal = b[col];
+        if (aVal == null) aVal = -1;
+        if (bVal == null) bVal = -1;
+        if (typeof aVal === 'string' && typeof bVal === 'string')
+          return aVal.localeCompare(bVal, 'pt') * sortDir;
+        return (aVal - bVal) * sortDir;
+      });
+
+      buildRows(sorted);
+    }
+
+    // ── Init ───────────────────────────────────────────────────────────────
+    buildRows(MOVES);
+  </script>
+</body>
+</html>
