@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- ═══ HEADER ═══ -->
+   <!-- ═══ HEADER ═══ -->
   <header>
     <a href="index.html" class="logo">Hub de Wikis</a>
     <nav>
@@ -24,7 +24,23 @@
 
   <!-- ═══ HERO ═══ -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <img
+      class="hero-bg"
+      src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/505230/ss_f7b5c04ff6b5c04a0f4c7a0f4c7b5c04.jpg"
+      onerror="this.src='banner-pathologic.jpg';"
+      alt=""
+      aria-hidden="true"
+      style="
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+        filter: brightness(0.55) saturate(0.7);
+        z-index: 0;
+      "
+    />
     <div class="hero-skyline"></div>
 
     <!-- Decorações -->
@@ -44,12 +60,19 @@
       <div class="tally-mark"></div>
     </div>
 
-    <div class="hero-content">
+    <div class="hero-content" style="
+      position: relative;
+      z-index: 10;
+      background: radial-gradient(ellipse 80% 90% at 50% 50%, rgba(0,0,0,0.65) 40%, transparent 100%);
+      padding: 2.5rem 3rem;
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    ">
       <div class="hero-eyebrow">Wiki · Guia de Sobrevivência</div>
-      <h1 class="hero-title">
+      <h1 class="hero-title" style="text-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 0 40px rgba(0,0,0,0.7);">
         Pathologic2<br>
       </h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" style="text-shadow: 0 1px 8px rgba(0,0,0,0.95);">
         A Cidade está enferma. Doze dias. Você não pode salvar todos.
       </p>
     </div>
@@ -73,6 +96,8 @@
 
   <!-- ═══ MAIN CONTENT ═══ -->
   <main>
+
+    <div class="main-container">
 
     <!-- Seção: Artigos principais -->
     <div class="section-label reveal">Artigos e Guias</div>
@@ -118,7 +143,7 @@
         </div>
       </a>
 
-      <a href="#">
+      <a href="enredo_patho.html">
         <div class="card">
           <div class="card-num">Narrativa</div>
           <div class="card-title">Enredo e Personagens</div>
@@ -192,7 +217,7 @@
         <a href="#">
           <div class="char-item">
             <div class="char-role">O Médico</div>
-            <div class="char-name">Artêmia Burakh</div>
+            <div class="char-name">Artêmi Burakh</div>
             <div class="char-aka">"O Haruéspice"</div>
             <div class="char-desc">
               Cirurgião que retorna à sua cidade natal após a morte do pai. Filho de um mestre açougueiro, busca a cura na linguagem corporal do próprio solo e nas ervas que crescem sobre os ossos.
@@ -257,11 +282,14 @@
       </a>
     </div>
 
+    </div><!-- /.main-container -->
+
   </main>
 
   <!-- ═══ FOOTER ═══ -->
   <footer>
     <span>© 2026 Hub de Wikis de Jogos</span>
+  </footer>
 
   <!-- ═══ SCROLL REVEAL ═══ -->
   <script>

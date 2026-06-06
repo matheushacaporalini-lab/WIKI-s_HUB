@@ -21,11 +21,11 @@ header {
 }
 
 nav ul li a:hover {
-  background-color: #1a73e8;
+  background-color: #9b6cd3;
 }
 
 .hero h1 {
-  background: rgba(26, 115, 232, 0.8);
+  background: rgba(155, 108, 211, 0.8);
 }
 
 .game-card {

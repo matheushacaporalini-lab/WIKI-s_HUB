@@ -11,12 +11,12 @@
       padding: 1.2rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.4);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border-left: 4px solid #1a73e8;
+      border-left: 4px solid #9b6cd3;
     }
     
     .resource-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(26, 115, 232, 0.5);
+      box-shadow: 0 4px 12px rgba(155, 108, 211, 0.5);
     }
     
     .resource-card img {
@@ -59,7 +59,7 @@
     
     .tip-box {
       background-color: #1f3a4d;
-      border-left: 4px solid #66c0f4;
+      border-left: 4px solid #cf95e8;
       padding: 1rem;
       margin: 1rem 0;
       border-radius: 0 8px 8px 0;
@@ -82,7 +82,7 @@
     }
     
     th {
-      background-color: #1a73e8;
+      background-color: #9b6cd3;
       color: #fff;
       font-family: 'Orbitron', sans-serif;
     }

@@ -8,13 +8,13 @@
   overflow-x: auto; /* Ativa o scroll horizontal */
   margin-top: 1.5rem;
   border-radius: 8px;
-  border: 1px solid rgba(26, 115, 232, 0.25);
+  border: 1px solid rgba(155, 108, 211, 0.25);
   background-color: #141414;
   padding-bottom: 5px; /* Espaço para a barra não cobrir o conteúdo */
 
   /* Estilização para o Firefox */
   scrollbar-width: thin;
-  scrollbar-color: #1a73e8 #1a1a1a;
+  scrollbar-color: #9b6cd3 #1a1a1a;
 }
 
 /* --- Customização da Barra de Rolagem (Chrome, Edge, Safari, Opera) --- */
@@ -31,7 +31,7 @@
 
 /* O botão que o usuário arrasta (cursor da barra) */
 .table-responsive::-webkit-scrollbar-thumb {
-  background: rgba(26, 115, 232, 0.6); /* Azul do tema com transparência */
+  background: rgba(155, 108, 211, 0.6); /* Roxo do tema com transparência */
   border-radius: 20px;
   border: 2px solid #1a1a1a; /* Cria um espaçamento elegante em volta do cursor */
   transition: background 0.3s ease;
@@ -39,8 +39,8 @@
 
 /* Quando o usuário passa o mouse ou arrasta a barra */
 .table-responsive::-webkit-scrollbar-thumb:hover {
-  background: #1a73e8; /* Azul neon sólido brilhante */
-  box-shadow: 0 0 10px #1a73e8; /* Leve efeito de brilho */
+  background: #9b6cd3; /* Roxo neon sólido brilhante */
+  box-shadow: 0 0 10px #9b6cd3; /* Leve efeito de brilho */
 }
 
 /* ==========================================================================
@@ -106,7 +106,7 @@
 
 /* Efeito visual nas linhas ao passar o mouse */
 .type-matrix tbody tr:hover {
-  background-color: rgba(26, 115, 232, 0.08);
+  background-color: rgba(155, 108, 211, 0.08);
 }
 
 /* ==========================================================================

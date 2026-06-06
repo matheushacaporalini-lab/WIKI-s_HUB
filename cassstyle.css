@@ -18,7 +18,7 @@ body {
 }
 
 a {
-  color: #66c0f4;
+  color: #9b6cd3;
   text-decoration: none;
 }
 
@@ -36,7 +36,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   z-index: 100;
-  border-bottom: 2px solid rgba(26, 115, 232, 0.5);
+  border-bottom: 2px solid #9b6cd3;
   
 
 }
@@ -46,10 +46,10 @@ header .logo {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
   font-weight: 500px;
-  color: #1a73e8;
+  color: #9b6cd3;
   letter-spacing: 0px;
   padding: 0.8rem 0.5rem; /* Espaçamento interno da moldura */
-  border: 2px solid rgba(26, 115, 232, 0.8); /* Moldura quadrada */
+  border: 2px solid rgba(155, 108, 211, 0.8); /* Moldura quadrada */
   display: inline-block;
   clip-path: polygon(0% 0%, calc(100% - 40px) 0%, 100% 40px, 100% 100%, 0% 100%);
 }
@@ -66,7 +66,7 @@ nav ul li a {
   text-transform: uppercase;
   font-size: 0.85rem;
   padding: 0.8rem 1.5rem; /* Aumentado para criar o formato de botão */
-  border: 1px solid rgba(26, 115, 232, 0.5); /* Moldura quadrada */
+  border: 1px solid rgba(155, 108, 211, 0.5); /* Moldura quadrada */
   border-radius: 0; /* Removido arredondamento */
   transition: all 0.3s ease;
   display: inline-block;
@@ -82,7 +82,7 @@ nav ul li a {
   display: grid;
   align-items: center;
   justify-content: center;
-  text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
+  text-shadow: 2px 2px 15px rgba(255, 0, 0, 0.9);
   margin-top: 60px; /* Começa logo após o header */
   margin-bottom: 10px;
   
@@ -95,7 +95,6 @@ nav ul li a {
   font-size: 3.5rem;
   padding: 1rem 2rem;
   border-radius: 8px;
-  color: #fff;
   text-align: center;
 }
 
@@ -114,15 +113,15 @@ main {
 }
 
 /* Seções Internas */
-section {
+section { 
   margin-bottom: 3rem;
 }
 
 section h2 {
   font-family: 'Orbitron', sans-serif;
-  color: #1a73e8;
+  color: #9b6cd3;
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(26, 115, 232, 0.3);
+  border-bottom: 1px solid rgba(155, 108, 211, 0.3);
   padding-bottom: 0.5rem;
 }
 
@@ -139,7 +138,7 @@ section h2 {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  border: 1px solid rgba(26, 115, 232, 0.4);
+  border: 1px solid rgba(155, 108, 211, 0.4);
   transition: transform 0.3s ease;
   clip-path: polygon(0% 0%, calc(100% - 20px) 0%, 100% 20px, 100% 100%, 0% 100%);
 }
@@ -158,7 +157,7 @@ ul li {
 }
 
 ul li a {
-  color: #66c0f4;
+  color: #9b6cd3;
   transition: color 0.2s;
 }
 

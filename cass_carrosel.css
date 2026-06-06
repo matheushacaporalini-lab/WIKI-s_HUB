@@ -21,7 +21,7 @@
   
   /* Configuração para a barra de rolagem no Firefox */
   scrollbar-width: thin;
-  scrollbar-color: #1a73e8 #1f1f1f;
+  scrollbar-color: #9b6cd3 #1f1f1f;
 }
 
 /* Customização da barra de rolagem horizontal (Chrome, Edge e Safari) */
@@ -35,13 +35,13 @@
 }
 
 .carousel-track::-webkit-scrollbar-thumb {
-  background: #1a73e8;
+  background: #9b6cd3;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
 .carousel-track::-webkit-scrollbar-thumb:hover {
-  background: #155bbb;
+  background: #7a54a3;
 }
 
 /* Cada slide individual do carrossel */
@@ -52,8 +52,9 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 8px rgba(26, 115, 232, 0.5);
+  box-shadow: 0 0 8px rgba(155, 108, 211, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  clip-path: polygon(0% 0%, calc(100% - 60px) 0%, 100% 60px, 100% 100%, 0% 100%);
 }
 
 /* Configuração para as imagens não distorcerem */
@@ -67,7 +68,7 @@
 /* Efeito hover idêntico ao que você já usava nas imagens antigas */
 .carousel-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 16px #1a73e8;
+  box-shadow: 0 0 16px #9b6cd3;
   cursor: pointer;
 }
 
@@ -83,7 +84,7 @@
   text-align: center;
   font-family: 'Orbitron', sans-serif;
   font-size: 0.9rem;
-  border-top: 1px solid rgba(26, 115, 232, 0.4);
+  border-top: 1px solid rgba(155, 108, 211, 0.4);
 }
 
 .carousel-btn {
@@ -92,7 +93,7 @@
   transform: translateY(-50%); /* Centraliza verticalmente perfeitamente */
   background: rgba(0, 0, 0, 0.3); /* Fundo preto bem transparente */
   color: rgba(255, 255, 255, 0.7); /* Seta branca semi-transparente */
-  border: 1px solid rgba(26, 115, 232, 0.3); /* Borda azul sutil */
+  border: 1px solid rgba(155, 108, 211, 0.3); /* Borda azul sutil */
   font-size: 2rem;
   padding: 1rem 0.6rem;
   cursor: pointer;
@@ -113,10 +114,10 @@
 
 /* Efeito ao passar o mouse por cima (Hover) */
 .carousel-btn:hover {
-  background: rgba(26, 115, 232, 0.8); /* Fundo ganha a cor azul do seu site */
+  background: rgba(155, 108, 211, 0.8); /* Fundo ganha a cor azul do seu site */
   color: #fff; /* Seta fica totalmente branca */
-  border-color: #1a73e8;
-  box-shadow: 0 0 10px #1a73e8; /* Brilho neon idêntico ao resto do layout */
+  border-color: #9b6cd3;
+  box-shadow: 0 0 10px #9b6cd3; /* Brilho neon idêntico ao resto do layout */
 }
 
 /* Esconder os botões em telas pequenas (Celulares) pois o Touch nativo é melhor */

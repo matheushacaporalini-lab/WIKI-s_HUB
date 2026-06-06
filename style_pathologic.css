@@ -4,13 +4,8 @@
     */
     /*root é a pré definição das variáveis de cor, tipo eu não preciso definir cada cor de uma vez, ela cria um atalho para eu colocar a cor*/
     :root {
-      --ink:      #1a130a;
       --paper:    #e8ddc8;
       --sepia:    #c4aa7a;
-      --rust:     #8b3a1a;
-      --rust2:    #b84a22;
-      --plague:   #4a6b3a;
-      --plague2:  #6b9a52;
       --ash:      #6b5f52;
       --bone:     #d4c4a0;
       --black:    #0d0a07;
@@ -42,7 +37,6 @@
       inset: 0;
       z-index: 9999;
       pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
       background-repeat: repeat;
       background-size: 200px 200px;
       opacity: 0.5;
@@ -397,6 +391,52 @@
       gap: 2rem;
       padding: 3rem;
     }
+    .main-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: rgba(10, 8, 6, 0.92);
+      border: 1px solid rgba(180, 130, 80, 0.15);
+      padding: 0 2.5rem 3rem;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .game-banner {
+      width: calc(100% + 5rem);
+      margin-left: -2.5rem;
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+      max-height: 360px;
+      position: relative;
+    }
+
+    .game-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.75) saturate(0.85);
+    }
+
+    .game-banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60%;
+      background: linear-gradient(to bottom, transparent, rgba(10, 8, 6, 0.92));
+      pointer-events: none;
+    }
+
+        .main-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: rgba(10, 8, 6, 0.92);
+      border: 1px solid rgba(180, 130, 80, 0.15);
+      padding: 2.5rem 2.5rem 3rem;
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.7);
+    }
+    
     .card--featured .card-body { flex: 1; display: flex; flex-direction: column; gap: 0.8rem; }
     .card--featured .card-glyph {
       flex-shrink: 0;

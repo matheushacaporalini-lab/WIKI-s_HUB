@@ -13,7 +13,7 @@ body {
 main {
   background-color: rgba(10, 10, 10, 0.9); /* Um pouco mais escuro para contraste */
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(26, 115, 232, 0.2);
+  border: 1px solid rgba(155, 108, 211, 0.2);
 }
 
 /* Cabeçalho Transparente */
@@ -29,19 +29,19 @@ header {
 
 nav ul li a {
   background-color: rgba(10, 10, 10, 0.4); /* Fundo semi-transparente para os botões */
-  border-color: rgba(26, 115, 232, 0.6);
+  border-color: rgba(155, 108, 211, 0.6);
 }
 
 nav ul li a:hover {
-  background-color: #1a73e8;
+  background-color: #9b6cd3;
   color: #fff;
   border-color: #fff;
-  box-shadow: 0 0 15px rgba(26, 115, 232, 0.8);
+  box-shadow: 0 0 15px rgba(155, 108, 211, 0.8);
 }
 
 /* Cores das Seções */
 section h2 {
-  color: #1a73e8;
+  color: #9b6cd3;
 }
 
 section p {

@@ -14,7 +14,7 @@
     font-family: 'Orbitron', sans-serif;
     font-size: 2.8rem;
     border-radius: 6px;
-    background: rgba(26, 115, 232, 0.8);
+    background: rgba(155, 108, 211, 0.8);
     color: #fff;
 }
 
@@ -27,8 +27,8 @@ section h2 {
     padding-bottom: 0.3rem;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.8rem;
-    border-bottom: 2px solid #1a73e8;
-    color: #1a73e8;
+    border-bottom: 2px solid #9b6cd3;
+    color: #9b6cd3;
 }
 
 section p {
@@ -47,13 +47,13 @@ section p {
     width: 100%;
     border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 0 8px rgba(26, 115, 232, 0.7);
+    box-shadow: 0 0 8px rgba(155, 108, 211, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 14px #1a73e8;
+    box-shadow: 0 0 14px #9b6cd3;
 }
 
 .guides ul,
@@ -75,13 +75,13 @@ section p {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-radius: 6px;
-    background-color: #1a73e8;
+    background-color: #9b6cd3;
     color: #fff;
     transition: background-color 0.3s ease;
 }
 
 .forum-link a:hover {
-    background-color: #155bbb;
+    background-color: #7a54a3;
     color: #fff;
     text-decoration: none;
 }
@@ -91,14 +91,14 @@ section p {
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 2rem;
-  border-left: 4px solid #1a73e8;
+  border-left: 4px solid #9b6cd3;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .location-card h3 {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.6rem;
-  color: #66c0f4; /* Cor azul claro para o título */
+  color: #cf95e8; /* Cor roxo claro para o título */
   margin-bottom: 1rem;
 }
 

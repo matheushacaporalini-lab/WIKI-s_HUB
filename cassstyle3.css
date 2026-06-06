@@ -5,7 +5,7 @@
       margin-bottom: 3rem;
       padding: 1.5rem;
       background-color: rgba(20, 20, 30, 0.85);
-      border-left: 4px solid #1a73e8;
+      border-left: 4px solid #9b6cd3;
       border-radius: 8px;
     }
     .char-entry.reversed {
@@ -76,8 +76,7 @@
     .char-info h3 {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.4rem;
-      color: #1a73e8;
-      margin-bottom: 0.4rem;
+      color: #9b6cd3;
     }
     .char-info .subtitle {
       font-size: 0.82rem;
@@ -106,7 +105,7 @@
       font-weight: bold;
       text-transform: uppercase;
     }
-    .tag-partner    { background: #1a73e8; color: #fff; }
+    .tag-partner    { background: #9b6cd3; color: #fff; }
     .tag-arcanjo    { background: #8b0000; color: #fff; }
     .tag-capitao    { background: #1a6e1a; color: #fff; }
     .tag-npc        { background: #555; color: #fff; }
@@ -126,8 +125,8 @@
     section h2 {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.5rem;
-      color: #1a73e8;
-      border-bottom: 2px solid rgba(26,115,232,0.4);
+      color: #9b6cd3;
+      border-bottom: 2px solid rgba(155,108,211,0.4);
       padding-bottom: 0.5rem;
       margin-bottom: 2rem;
     }

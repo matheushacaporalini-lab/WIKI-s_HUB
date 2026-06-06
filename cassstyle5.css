@@ -5,14 +5,14 @@
       color: #666;
       margin-bottom: 2rem;
     }
-    .breadcrumb a { color: #66c0f4; }
+    .breadcrumb a { color: #9b6cd3; }
     .breadcrumb a:hover { color: #fff; }
 
     /* ── Bloco de introdução com borda lateral ── */
     .intro-block {
-      border-left: 4px solid #1a73e8;
+      border-left: 4px solid #9b6cd3;
       padding: 1.2rem 1.5rem;
-      background: rgba(26, 115, 232, 0.06);
+      background: rgba(155, 108, 211, 0.06);
       margin-bottom: 2.5rem;
       clip-path: polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);
     }
@@ -45,7 +45,18 @@
     .story-section h3 {
       font-family: 'Orbitron', sans-serif;
       font-size: 1.1rem;
-      color: #1a73e8;
+      color: #9b6cd3;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    /* não por que mais ele tem que tá aqui*/
+    .story-section h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: #9b6cd3;
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -59,7 +70,7 @@
       justify-content: center;
       width: 28px;
       height: 28px;
-      background: #1a73e8;
+      background: #9b6cd3;
       color: #fff;
       font-size: 0.75rem;
       font-family: 'Orbitron', sans-serif;
@@ -78,14 +89,14 @@
     .divider {
       border: none;
       height: 1px;
-      background: linear-gradient(to right, rgba(26,115,232,0.4), transparent);
+      background: linear-gradient(to right, rgba(155, 108, 211, 0.4), transparent);
       margin: 3rem 0;
     }
 
     /* ── Card de conceito central ── */
     .concept-card {
       background: rgba(20, 20, 30, 0.9);
-      border: 1px solid rgba(26, 115, 232, 0.3);
+      border: 1px solid rgba(155, 108, 211, 0.3);
       border-left: 4px solid #9b6cd3;
       padding: 1.5rem;
       margin: 2rem 0;
@@ -115,13 +126,13 @@
     }
     .theme-item {
       background: rgba(20, 20, 30, 0.85);
-      border: 1px solid rgba(26, 115, 232, 0.25);
+      border: 1px solid rgba(155, 108, 211, 0.25);
       padding: 1rem 1.2rem;
       clip-path: polygon(0% 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, 0% 100%);
     }
     .theme-item h5 {
       font-family: 'Orbitron', sans-serif;
-      color: #1a73e8;
+      color: #9b6cd3;
       font-size: 0.75rem;
       margin-bottom: 0.5rem;
       text-transform: uppercase;
@@ -183,7 +194,7 @@
 .spoiler-button {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -214,7 +225,7 @@
 .spoiler-button2 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -246,7 +257,7 @@
 .spoiler-button3 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -279,7 +290,7 @@
 .spoiler-button4 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -312,7 +323,7 @@
 .spoiler-button5 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -344,7 +355,7 @@
 .spoiler-button6 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -376,7 +387,7 @@
 .spoiler-button7 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -408,7 +419,7 @@
 .spoiler-button8 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -440,7 +451,7 @@
 .spoiler-button9 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -472,7 +483,7 @@
 .spoiler-button10 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -504,7 +515,7 @@
 .spoiler-button11 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -536,7 +547,7 @@
 .spoiler-button12 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -568,7 +579,7 @@
 .spoiler-button13 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -600,7 +611,7 @@
 .spoiler-button14 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -632,7 +643,7 @@
 .spoiler-button15 {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #9b6cd3;
   color: white;
   border-radius: 5px;
   cursor: pointer;
