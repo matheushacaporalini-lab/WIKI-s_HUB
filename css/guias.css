@@ -1,0 +1,289 @@
+/* guias.html - Inazuma Eleven
+   Complementa inazuma_style.css. Regra do grupo: valores diretos, sem variáveis CSS.
+   Todas as classes usam prefixo "guias-" para não colidir com o CSS compartilhado. */
+
+.guias-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  color: #d8e4f5;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.guias-breadcrumb {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.guias-breadcrumb a {
+  color: #ffdd33;
+  text-decoration: none;
+}
+
+.guias-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ── Cabeçalho da página ── */
+.guias-hero {
+  background: linear-gradient(135deg, #0f1f3a 0%, #1e3a8a 100%);
+  border-left: 6px solid #2563eb;
+  padding: 2rem 2rem 1.8rem;
+  margin-bottom: 2rem;
+  clip-path: polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);
+}
+
+.guias-hero h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin: 0 0 0.6rem;
+  letter-spacing: 1px;
+}
+
+.guias-hero h1 span {
+  color: #ffdd33;
+}
+
+.guias-hero p {
+  margin: 0;
+  max-width: 720px;
+  color: #cbd5e1;
+}
+
+/* ── Índice rápido ── */
+.guias-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.guias-index a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #172554;
+  border: 1px solid #2563eb;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  clip-path: polygon(0% 0%, calc(100% - 12px) 0%, 100% 12px, 100% 100%, 0% 100%);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.guias-index a:hover {
+  background: #2563eb;
+  color: #07111f;
+}
+
+/* ── Seções de guia ── */
+.guias-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.guias-section h2 {
+  font-size: 1.5rem;
+  color: #ffdd33;
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #2563eb;
+}
+
+.guias-lead {
+  color: #a9b6cb;
+  margin: 0.6rem 0 1.4rem;
+}
+
+.guias-num {
+  display: inline-block;
+  min-width: 2rem;
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.6rem;
+  background: #2563eb;
+  color: #07111f;
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-align: center;
+  clip-path: polygon(0% 0%, calc(100% - 8px) 0%, 100% 8px, 100% 100%, 0% 100%);
+}
+
+/* ── Grade de cartões ── */
+.guias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.guias-card {
+  background: #0f172a;
+  border: 1px solid #1e3a8a;
+  border-top: 4px solid #2563eb;
+  padding: 1.2rem 1.3rem;
+  clip-path: polygon(0% 0%, calc(100% - 22px) 0%, 100% 22px, 100% 100%, 0% 100%);
+}
+
+.guias-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.guias-card p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: #cbd5e1;
+}
+
+.guias-card a {
+  color: #ffdd33;
+}
+
+/* ── Passo a passo ── */
+.guias-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: guias-passo;
+}
+
+.guias-steps li {
+  position: relative;
+  counter-increment: guias-passo;
+  margin-bottom: 0.9rem;
+  padding: 0.9rem 1rem 0.9rem 3.4rem;
+  background: #0f172a;
+  border-left: 4px solid #ffdd33;
+}
+
+.guias-steps li::before {
+  content: counter(guias-passo);
+  position: absolute;
+  left: 0.9rem;
+  top: 0.8rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  text-align: center;
+  background: #ffdd33;
+  color: #07111f;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.guias-steps strong {
+  color: #ffffff;
+}
+
+/* ── Tabela de equipamentos ── */
+.guias-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #1e3a8a;
+}
+
+.guias-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+}
+
+.guias-table th {
+  padding: 0.8rem 1rem;
+  background: #1e3a8a;
+  color: #ffdd33;
+  font-size: 0.8rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.guias-table td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #1e3a8a;
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  vertical-align: top;
+}
+
+.guias-table tr:hover td {
+  background: #172554;
+}
+
+/* ── Caixas de destaque ── */
+.guias-tip,
+.guias-warn {
+  margin: 1.4rem 0 0;
+  padding: 1rem 1.2rem;
+  font-size: 0.93rem;
+}
+
+.guias-tip {
+  background: #0f274b;
+  border-left: 5px solid #2563eb;
+  color: #cbd5e1;
+}
+
+.guias-warn {
+  background: #2e2a0c;
+  border-left: 5px solid #ffdd33;
+  color: #f3e9b0;
+}
+
+.guias-tip strong,
+.guias-warn strong {
+  color: #ffffff;
+}
+
+/* ── Checklist ── */
+.guias-check {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guias-check li {
+  padding: 0.55rem 0 0.55rem 2rem;
+  position: relative;
+  border-bottom: 1px dashed #1e3a8a;
+}
+
+.guias-check li::before {
+  content: "\2714";
+  position: absolute;
+  left: 0.2rem;
+  color: #38bdf8;
+  font-weight: 900;
+}
+
+/* ── Rodapé da página ── */
+.guias-note {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #1e3a8a;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .guias-page {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .guias-hero {
+    padding: 1.4rem 1.2rem;
+    clip-path: none;
+  }
+
+  .guias-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .guias-card {
+    clip-path: none;
+  }
+}

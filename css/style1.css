@@ -1,0 +1,91 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    margin-bottom: 2.5rem;
+    border-radius: 12px;
+    background: url('https://img2.storyblok.com/fit-in/1920x1080/f/164147/1232x706/439f41bc61/steam-main-capsule_1232x706.png') no-repeat center/cover;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 {
+    padding: 0.5rem 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    border-radius: 6px;
+    background: rgba(155, 108, 211, 0.8);
+    color: #fff;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #9b6cd3;
+    color: #9b6cd3;
+}
+
+section p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(155, 108, 211, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px #9b6cd3;
+}
+
+.guides ul,
+.articles ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: #ccc;
+}
+
+.guides ul li,
+.articles ul li {
+    margin-bottom: 0.5rem;
+}
+
+.location-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #9b6cd3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.location-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #9b6cd3; /* Cor roxa para o título */
+  margin-bottom: 1rem;
+}
+
+.location-card p {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.7;
+}

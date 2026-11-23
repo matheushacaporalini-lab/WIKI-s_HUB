@@ -1,0 +1,510 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #120e0a;
+  font-family: 'IM Fell English', Georgia, serif;
+  color: #c8b89a;
+  min-height: 100vh;
+}
+
+a { color: #c8b89a; text-decoration: none; }
+a:hover { color: #fff; }
+
+/* ══════════════════════════════════════════
+   LABEL MONOESPAÇADO — base compartilhada
+══════════════════════════════════════════ */
+nav ul li a, .hero-eyebrow, .breadcrumb, .section-label,
+.intro-block .subtitle, .pull-quote cite, .map-note, .district-tag, footer {
+  font-family: 'Courier Prime', monospace;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+nav ul li a, .hero-eyebrow, .breadcrumb, .section-label,
+.intro-block .subtitle, .pull-quote cite, .map-note, footer {
+  color: #8a7d6e;
+}
+
+/* ══════════════════════════════════════════
+   HEADER
+══════════════════════════════════════════ */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2.5rem;
+  background: rgba(18, 14, 10, 0.95);
+  border-bottom: 1px solid rgba(200,184,154,0.18);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e2d5c0;
+}
+
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav ul li a {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+nav ul li a:hover { color: #e2d5c0; }
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  margin-top: 52px;
+  overflow: hidden;
+  background-color: #0d0a07;
+}
+
+.hero-placeholder {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, #1a1208 0%, #0d0807 70%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SVG do mapa esquemático como placeholder */
+.hero-map-deco {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.07;
+}
+
+.hero-map-deco svg {
+  width: 600px;
+  height: 360px;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 220px;
+  background: linear-gradient(to bottom, transparent, #120e0a);
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 960px;
+  padding: 0 2rem;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #e2d5c0;
+  line-height: 1.1;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.9);
+}
+
+/* ══════════════════════════════════════════
+   WARNING BAND
+══════════════════════════════════════════ */
+.warning-band {
+  overflow: hidden;
+  background: #7a1a1a;
+  border-top: 1px solid #9e2020;
+  border-bottom: 1px solid #9e2020;
+  padding: 0.55rem 0;
+  white-space: nowrap;
+}
+
+.warning-band-inner {
+  display: inline-block;
+  animation: marquee 32s linear infinite;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f0d8d8;
+}
+
+.warning-band-inner span { margin-right: 0.5rem; }
+.warning-sep { color: #f0a0a0; margin: 0 1.2rem; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════
+   BREADCRUMB
+══════════════════════════════════════════ */
+.breadcrumb-wrap {
+  max-width: 960px;
+  margin: 2.5rem auto 0;
+  padding: 0 2rem;
+}
+
+.breadcrumb {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+}
+
+.breadcrumb a { color: #8a7d6e; border-bottom: 1px dotted #8a7d6e; }
+.breadcrumb a:hover { color: #e2d5c0; border-color: #e2d5c0; }
+.breadcrumb .sep { margin: 0 0.6rem; opacity: 0.5; }
+
+/* ══════════════════════════════════════════
+   PAGE WRAP
+══════════════════════════════════════════ */
+.page-wrap {
+  max-width: 960px;
+  margin: 2.5rem auto 5rem;
+  padding: 0 2rem;
+}
+
+/* ══════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════════
+   SECTION LABEL — simplificado (sem linhas decorativas)
+══════════════════════════════════════════ */
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 4px;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(200,184,154,0.15);
+}
+
+/* ══════════════════════════════════════════
+   INTRO
+══════════════════════════════════════════ */
+.intro-block { margin-bottom: 3.5rem; }
+
+.intro-block h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #e2d5c0;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.intro-block .subtitle {
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.8rem;
+}
+
+.intro-block p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #c8b89a;
+  margin-bottom: 1rem;
+}
+
+.pull-quote {
+  border-left: 3px solid #7a1a1a;
+  padding: 0.8rem 1.4rem;
+  margin: 2rem 0;
+  background: rgba(122,26,26,0.08);
+}
+.pull-quote p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #e2d5c0;
+  line-height: 1.6;
+}
+.pull-quote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+/* ══════════════════════════════════════════
+   TÍTULOS DE SEÇÃO — base compartilhada
+   (mapa, bairros, pontos de interesse, dicas)
+══════════════════════════════════════════ */
+.map-section h2, .districts-section h2, .poi-section h2, .nav-tips h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #e2d5c0;
+  margin-bottom: 1.4rem;
+}
+.districts-section h2 { margin-bottom: 1.8rem; }
+
+/* ══════════════════════════════════════════
+   MAPA ESQUEMÁTICO SVG interativo
+══════════════════════════════════════════ */
+.map-section { margin-bottom: 3.5rem; }
+
+.map-container {
+  position: relative;
+  width: 100%;
+  
+  background: rgba(18,14,10,0.9);
+  border: 1px solid rgba(200,184,154,0.15);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.map-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.map-note {
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+/* ══════════════════════════════════════════
+   BAIRROS — cards em grid
+   (sem faixa lateral colorida — a cor já está na tag)
+══════════════════════════════════════════ */
+.districts-section { margin-bottom: 3.5rem; }
+
+.district-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1.5rem;
+  margin-bottom: 1.6rem;
+  background: rgba(22,17,12,0.8);
+  border: 1px solid rgba(200,184,154,0.08);
+}
+
+.district-index {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.4rem 0 1.4rem 1.6rem;
+}
+
+.district-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(200,184,154,0.12);
+  line-height: 1;
+  min-width: 36px;
+  text-align: center;
+}
+
+.district-body {
+  padding: 1.4rem 1.4rem 1.4rem 0;
+}
+
+.district-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.district-name, .poi-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #e2d5c0;
+}
+.district-name { font-size: 1.15rem; }
+.poi-name { font-size: 0.92rem; margin-bottom: 0.2rem; }
+
+.district-tag {
+  font-size: 0.63rem;
+  letter-spacing: 2px;
+  padding: 2px 7px;
+  border: 1px solid;
+}
+
+.tag-poder   { color: #c07070; border-color: #8b3a3a; background: rgba(139,58,58,0.12); }
+.tag-povo    { color: #90b070; border-color: #5a6e3a; background: rgba(90,110,58,0.12); }
+.tag-terra   { color: #c0a060; border-color: #7a6030; background: rgba(122,96,48,0.12); }
+.tag-neutro  { color: #70a0c0; border-color: #3a5a6e; background: rgba(58,90,110,0.12); }
+.tag-sagrado { color: #b090d0; border-color: #6e5a8b; background: rgba(110,90,139,0.12); }
+
+.district-desc, .tip-text { color: #c8b89a; }
+.district-desc { font-size: 0.9rem; line-height: 1.75; margin-bottom: 0.8rem; }
+
+.district-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.meta-item {
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.72rem;
+  color: #8a7d6e;
+}
+
+.meta-item strong {
+  color: #c8b89a;
+  font-weight: 400;
+}
+
+.meta-item::before {
+  content: '· ';
+  color: #7a1a1a;
+}
+
+/* ══════════════════════════════════════════
+   PONTOS DE INTERESSE — lista compacta
+══════════════════════════════════════════ */
+.poi-section { margin-bottom: 3.5rem; }
+
+.poi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+@media (max-width: 580px) {
+  .poi-grid { grid-template-columns: 1fr; }
+  .district-card { grid-template-columns: 1fr; }
+  .district-index { padding: 1rem 1.4rem 0; }
+}
+
+.poi-item {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 0.85rem 1rem;
+  background: rgba(22,17,12,0.7);
+  border: 1px solid rgba(200,184,154,0.07);
+}
+
+.poi-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  opacity: 0.75;
+}
+
+.poi-desc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #8a7d6e;
+}
+
+/* ══════════════════════════════════════════
+   DICAS DE NAVEGAÇÃO
+══════════════════════════════════════════ */
+.nav-tips { margin-bottom: 3.5rem; }
+
+.tip-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(200,184,154,0.06);
+}
+
+.tip-glyph {
+  flex-shrink: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  color: #7a1a1a;
+  margin-top: 0.1rem;
+  min-width: 16px;
+}
+
+.tip-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.tip-text strong {
+  color: #e2d5c0;
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════════
+   NOTA FINAL — simplificada (sem símbolo flutuante)
+══════════════════════════════════════════ */
+.closing-note {
+  background: rgba(26,20,16,0.8);
+  border: 1px solid rgba(200,184,154,0.12);
+  padding: 1.8rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.closing-note p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #c8b89a;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  border-top: 1px solid rgba(200,184,154,0.1);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+}
+
+.footer-nav { display: flex; gap: 2rem; }
+.footer-nav a { transition: color 0.2s; }
+.footer-nav a:hover { color: #e2d5c0; }

@@ -1,0 +1,197 @@
+main {
+  max-width: 900px;
+  color: #ddd;
+}
+
+/* Estilos para o cabeçalho do artigo (título grande) */
+.article-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.article-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.8rem;
+  color: #fff;
+  text-shadow: 0 0 10px #1a73e8;
+}
+
+/* Estilo para a navegação "breadcrumb" (Home > Page > etc.) */
+.breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Títulos de seção dentro dos artigos */
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #9b6cd3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #9b6cd3;
+  padding-bottom: 0.3rem;
+}
+
+/* Parágrafos dentro dos artigos */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+/* Estilo de lista com checkmark para artigos */
+
+
+
+ul {
+  list-style-type: '✔ ';
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.7rem;
+  padding-left: 0.5rem;
+}
+
+/* Grade de Alimentos (exclusivo da página 'slime-care') */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.food-item {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(26, 115, 232, 0.5);
+}
+
+.food-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.food-item p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  color: #ddd;
+  margin: 0;
+  background-color: transparent;
+}
+.icon {
+  display: inline-block; /* Permite que o ícone fique na mesma linha do texto */
+  width: 28px;           /* Largura do ícone */
+  height: 28px;          /* Altura do ícone */
+  margin-right: 10px;    /* Espaço entre o ícone e o texto */
+  vertical-align: middle;/* Alinha o ícone verticalmente com o texto */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+ /* Estilos para a Grade de Slimes (Slimes Overview)*/
+
+.slime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.slime-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #2a2a2a;
+}
+
+.slime-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(26, 115, 232, 0.5);
+  border-color: #9b6cd3;
+}
+
+.slime-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  background-color: rgba(10, 10, 10, 0.5);
+  border-radius: 50%;
+}
+
+.slime-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  color: #1a73e8;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.slime-card .details {
+  font-size: 0.9rem;
+  color: #bbb;
+  text-align: left;
+}
+
+.slime-card .details p {
+  margin-bottom: 0.4rem;
+  background-color: transparent;
+}
+
+.slime-card .details strong {
+  color: #ddd;
+}
+
+.location-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-left: 4px solid #1a73e8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  position: relative; /* Essencial para posicionar o logo dentro do cartão */
+  overflow: hidden;   /* Garante que o logo não vaze para fora do cartão */
+}
+
+.location-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #66c0f4;
+  margin-bottom: 1rem;
+  position: relative; /* Garante que o texto fique na frente do logo */
+  z-index: 2;
+}
+
+.location-card p {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.7;
+  z-index: 2;
+}
+
+.Logo-mapa { 
+  top: 50%;           
+  right: 10px;        
+  width: 120px;       
+  height: 120px;      
+  opacity: 1;    
+  z-index: 1;       
+}

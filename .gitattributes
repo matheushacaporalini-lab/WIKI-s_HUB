@@ -1,0 +1,2 @@
+assets/images/vinilcbFi.png filter=lfs diff=lfs merge=lfs -text
+assets/videos/inazum_video.webm filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,669 @@
+
+    /* ── Breadcrumb ── */
+    .breadcrumb {
+      font-size: 0.82rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+    .breadcrumb a { color: #9b6cd3; }
+    .breadcrumb a:hover { color: #fff; }
+
+    /* ── Bloco de introdução com borda lateral ── */
+    .intro-block {
+      border-left: 4px solid #9b6cd3;
+      padding: 1.2rem 1.5rem;
+      background: rgba(155, 108, 211, 0.06);
+      margin-bottom: 2.5rem;
+      clip-path: polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);
+    }
+    .intro-block p {
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* ── Aviso de spoiler ── */
+    .spoiler-warning {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(155, 108, 211, 0.15);
+      border: 1px solid #9b6cd3;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.78rem;
+      color: #ce9aff;
+      margin-bottom: 2.5rem;
+      clip-path: polygon(0% 0%, calc(100% - 14px) 0%, 100% 14px, 100% 100%, 0% 100%);
+    }
+
+    /* ── Capítulos da história ── */
+    .story-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .story-section h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: #9b6cd3;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    /* não por que mais ele tem que tá aqui*/
+    .story-section h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: #9b6cd3;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    /* Numeração do capítulo */
+    .chapter-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #9b6cd3;
+      color: #fff;
+      font-size: 0.75rem;
+      font-family: 'Orbitron', sans-serif;
+      flex-shrink: 0;
+      clip-path: polygon(0% 0%, calc(100% - 8px) 0%, 100% 8px, 100% 100%, 0% 100%);
+    }
+
+    .story-section p {
+      color: #bbb;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Divisor entre capítulos ── */
+    .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right, rgba(155, 108, 211, 0.4), transparent);
+      margin: 3rem 0;
+    }
+
+    /* ── Card de conceito central ── */
+    .concept-card {
+      background: rgba(20, 20, 30, 0.9);
+      border: 1px solid rgba(155, 108, 211, 0.3);
+      border-left: 4px solid #9b6cd3;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      clip-path: polygon(0% 0%, calc(100% - 25px) 0%, 100% 25px, 100% 100%, 0% 100%);
+    }
+    .concept-card h4 {
+      font-family: 'Orbitron', sans-serif;
+      color: #9b6cd3;
+      font-size: 0.85rem;
+      margin-bottom: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .concept-card p {
+      color: #bbb;
+      font-size: 0.92rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* ── Grid de temas narrativos ── */
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .theme-item {
+      background: rgba(20, 20, 30, 0.85);
+      border: 1px solid rgba(155, 108, 211, 0.25);
+      padding: 1rem 1.2rem;
+      clip-path: polygon(0% 0%, calc(100% - 16px) 0%, 100% 16px, 100% 100%, 0% 100%);
+    }
+    .theme-item h5 {
+      font-family: 'Orbitron', sans-serif;
+      color: #9b6cd3;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .theme-item p {
+      color: #999;
+      font-size: 0.83rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── Linha do tempo dos Arcanjos ── */
+    .arcanjos-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 1.2rem;
+    }
+    .arcanjos-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.9rem 1rem;
+      margin-bottom: 0.6rem;
+      background: rgba(20, 20, 30, 0.8);
+      border: 1px solid rgba(155, 108, 211, 0.2);
+      clip-path: polygon(0% 0%, calc(100% - 18px) 0%, 100% 18px, 100% 100%, 0% 100%);
+    }
+    .arcanjo-dot {
+      width: 10px;
+      height: 10px;
+      background: #9b6cd3;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+    .arcanjos-list li .arcanjo-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.82rem;
+      color: #ce9aff;
+      margin-bottom: 0.2rem;
+    }
+    .arcanjos-list li .arcanjo-desc {
+      font-size: 0.85rem;
+      color: #999;
+      line-height: 1.5;
+    }
+
+    /* ── Nota de rodapé da página ── */
+    .page-note {
+      font-size: 0.8rem;
+      color: #555;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+.spoiler-toggle {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle:checked ~ .spoiler-content {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle:checked ~ .spoiler-button {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+.spoiler-toggle2 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button2 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+
+.spoiler-toggle2:checked ~ .spoiler-content2 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle2:checked ~ .spoiler-button2 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+.spoiler-toggle3 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button3 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content3 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+
+.spoiler-toggle3:checked ~ .spoiler-content3 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle3:checked ~ .spoiler-button3 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle4 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button4 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content4 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+
+.spoiler-toggle4:checked ~ .spoiler-content4 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle4:checked ~ .spoiler-button4 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle5 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button5 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content5 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle5:checked ~ .spoiler-content5 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle5:checked ~ .spoiler-button5 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle6 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button6 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content6 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle6:checked ~ .spoiler-content6 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle6:checked ~ .spoiler-button6 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle7 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button7 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content7 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle7:checked ~ .spoiler-content7 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle7:checked ~ .spoiler-button7 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle8 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button8 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content8 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle8:checked ~ .spoiler-content8 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle8:checked ~ .spoiler-button8 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle9 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button9 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content9 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle9:checked ~ .spoiler-content9 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle9:checked ~ .spoiler-button9 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle10 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button10 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content10 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle10:checked ~ .spoiler-content10 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle10:checked ~ .spoiler-button10 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle11 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button11 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content11 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle11:checked ~ .spoiler-content11 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle11:checked ~ .spoiler-button11 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle12 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button12 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content12 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle12:checked ~ .spoiler-content12 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle12:checked ~ .spoiler-button12 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle13 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button13 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content13 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle13:checked ~ .spoiler-content13 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle13:checked ~ .spoiler-button13 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle14 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button14 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content14 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle14:checked ~ .spoiler-content14 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle14:checked ~ .spoiler-button14 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}
+
+.spoiler-toggle15 {
+  display: none; /* Esconde o checkbox original */
+}
+
+.spoiler-button15 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #9b6cd3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none; /* Impede a seleção de texto ao clicar */
+}
+
+.spoiler-content15 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Adicionado padding à transição */
+  background-color: #111111;
+  padding: 0 15px; /* Padding inicial zero */
+}
+
+.spoiler-toggle15:checked ~ .spoiler-content15 {
+  max-height: 1500px; /* Altura máxima para o conteúdo expandido. Ajuste conforme necessário. */
+  padding: 15px; /* Padding quando expandido */
+}
+
+.spoiler-toggle15:checked ~ .spoiler-button15 {
+  background-color: #77218d; /* Cor diferente quando expandido */
+  /* A alteração do texto do label via CSS não é diretamente possível. */
+}

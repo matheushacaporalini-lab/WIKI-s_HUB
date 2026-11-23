@@ -1,0 +1,93 @@
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      align-items: center;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 250px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #fff;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      font-family: 'Roboto', sans-serif;
+      border-radius: 8px;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: #facc15;
+      box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+    }
+    .cat-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .cat-tab {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: #cbd5e1;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+    .cat-tab.active,
+    .cat-tab:hover {
+      background: #2563eb;
+      color: #fff;
+      border-color: #facc15;
+    }
+    .stat-chip {
+      background: rgba(37, 99, 235, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      border-radius: 20px;
+    }
+    .stat-chip strong { color: #facc15; font-family:'Orbitron',sans-serif; }
+    
+    .items-table-wrap {
+      overflow-x: auto;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .items-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    .items-table thead tr {
+      background: rgba(30, 41, 59, 1);
+      border-bottom: 2px solid #2563eb;
+    }
+    .items-table th {
+      padding: 1rem 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #38bdf8;
+      text-align: left;
+    }
+    .items-table td {
+      padding: 1rem 1.5rem;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+    }
+    .items-table tbody tr:hover {
+      background: rgba(37, 99, 235, 0.05);
+    }
+    .en-name { color: #94a3b8; font-size: 0.85rem; font-style: italic; }

@@ -1,0 +1,56 @@
+.team-entry {
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.team-entry h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.team-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.team-meta div strong {
+  color: #ffdd33;
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.roster-table th {
+  background: rgba(58, 168, 74, 0.15);
+  color: #6fe08a;
+  text-align: left;
+  padding: 0.6rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.roster-table td {
+  padding: 0.6rem;
+  border-bottom: 1px solid rgba(58, 168, 74, 0.15);
+  color: #c0d4c4;
+}
+
+.team-match-note {
+  margin-top: 1rem;
+}
+
+.team-match-note strong {
+  color: #ffdd33;
+}

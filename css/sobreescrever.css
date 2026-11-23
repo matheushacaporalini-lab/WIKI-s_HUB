@@ -1,0 +1,64 @@
+/* ═══════════════════════════════════════════════════
+   cass_theme_override.css
+   Sobrescreve o azul (#1a73e8) do tema padrão
+   por roxo/violeta (#9b6cd3) no CasseteBeast.html
+═══════════════════════════════════════════════════ */
+
+/* ── Header e nav ── */
+header {
+  border-bottom-color: #9b6cd3;
+}
+
+header .logo {
+  color: #9b6cd3;
+  border-color: rgba(155, 108, 211, 0.8);
+}
+
+nav ul li a {
+  border-color: rgba(155, 108, 211, 0.5);
+}
+
+nav ul li a:hover {
+  background-color: #9b6cd3;
+  box-shadow: 0 0 15px rgba(155, 108, 211, 0.8);
+}
+
+/* ── Sections ── */
+section h2 {
+  color: #9b6cd3;
+  border-bottom-color: #9b6cd3;
+}
+
+/* ── Gallery ── */
+.gallery-grid img {
+  box-shadow: 0 0 8px rgba(155, 108, 211, 0.7);
+  border-color: rgba(155, 108, 211, 0.4);
+}
+
+.gallery-grid img:hover {
+  box-shadow: 0 0 14px #9b6cd3;
+}
+
+/* ── Location cards ── */
+.location-card {
+  border-left-color: #9b6cd3;
+}
+
+.location-card h3 {
+  color: #ce9aff;
+}
+
+/* ── Links gerais ── */
+a {
+  color: #ce9aff;
+}
+
+/* ── Main clip-path glow ── */
+main {
+  border-color: rgba(155, 108, 211, 0.2);
+}
+
+/* ── Footer ── */
+footer {
+  border-top-color: #9b6cd3;
+}

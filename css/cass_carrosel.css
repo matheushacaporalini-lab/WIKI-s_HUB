@@ -1,0 +1,141 @@
+/* ==========================================================================
+   CSS Adicional: Carrossel de Imagens (CSS Scroll Snap)
+   ========================================================================== */
+
+/* Container principal que segura o carrossel */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
+  position: relative;
+}
+
+/* A trilha horizontal onde os itens ficam lado a lado */
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Ativa o efeito de "travar" na imagem ao rolar */
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+  
+  /* Configuração para a barra de rolagem no Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #9b6cd3 #1f1f1f;
+}
+
+/* Customização da barra de rolagem horizontal (Chrome, Edge e Safari) */
+.carousel-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel-track::-webkit-scrollbar-track {
+  background: #1f1f1f;
+  border-radius: 10px;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+  background: #9b6cd3;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-track::-webkit-scrollbar-thumb:hover {
+  background: #7a54a3;
+}
+
+/* Cada slide individual do carrossel */
+.carousel-item {
+  /* No computador, exibe 2 imagens por vez (subtraindo o gap) */
+  flex: 0 0 calc(50% - 0.75rem); 
+  scroll-snap-align: start; /* Define onde o slide vai travar ao parar a rolagem */
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(155, 108, 211, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  clip-path: polygon(0% 0%, calc(100% - 60px) 0%, 100% 60px, 100% 100%, 0% 100%);
+}
+
+/* Configuração para as imagens não distorcerem */
+.carousel-item img {
+  width: 100%;
+  height: 320px; /* Altura fixa para manter todas simétricas e alinhadas */
+  object-fit: cover; /* Faz a imagem preencher o espaço proporcionalmente */
+  display: block;
+}
+
+/* Efeito hover idêntico ao que você já usava nas imagens antigas */
+.carousel-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 16px #9b6cd3;
+  cursor: pointer;
+}
+
+/* Legenda estilizada na parte inferior de cada imagem */
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 0.6rem;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(155, 108, 211, 0.4);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente perfeitamente */
+  background: rgba(0, 0, 0, 0.3); /* Fundo preto bem transparente */
+  color: rgba(255, 255, 255, 0.7); /* Seta branca semi-transparente */
+  border: 1px solid rgba(155, 108, 211, 0.3); /* Borda azul sutil */
+  font-size: 2rem;
+  padding: 1rem 0.6rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+/* Posicionamento de cada botão nas pontas */
+.btn-prev {
+  left: 10px;
+}
+
+.btn-next {
+  right: 10px;
+}
+
+/* Efeito ao passar o mouse por cima (Hover) */
+.carousel-btn:hover {
+  background: rgba(155, 108, 211, 0.8); /* Fundo ganha a cor azul do seu site */
+  color: #fff; /* Seta fica totalmente branca */
+  border-color: #9b6cd3;
+  box-shadow: 0 0 10px #9b6cd3; /* Brilho neon idêntico ao resto do layout */
+}
+
+/* Esconder os botões em telas pequenas (Celulares) pois o Touch nativo é melhor */
+@media (max-width: 768px) {
+  .carousel-btn {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel-item {
+    /* Em telas de celular, mostra apenas 1 imagem inteira por vez */
+    flex: 0 0 100%;
+  }
+  
+  .carousel-item img {
+    height: 240px; /* Reduz um pouco a altura em telas menores */
+  }
+}

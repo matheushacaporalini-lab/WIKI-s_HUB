@@ -1,0 +1,474 @@
+/* ══════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #120e0a;
+  font-family: 'IM Fell English', Georgia, serif;
+  color: #c8b89a;
+  min-height: 100vh;
+}
+
+a { color: #c8b89a; text-decoration: none; }
+a:hover { color: #fff; }
+
+/* ══════════════════════════════════════════
+   LABEL MONOESPAÇADO — base compartilhada
+   (eyebrow, breadcrumb, section-label, tags, citações, footer, nav)
+══════════════════════════════════════════ */
+.hero-eyebrow, .breadcrumb, .section-label, .intro-block .subtitle,
+.theme-tag, .triad-role, .triad-philosophy, .philo-text strong,
+.pull-quote cite, .quote-card cite, footer, nav ul li a {
+  font-family: 'Courier Prime', monospace;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.hero-eyebrow, .breadcrumb, .section-label, .intro-block .subtitle,
+.theme-tag, .triad-role, .pull-quote cite, .quote-card cite, footer, nav ul li a {
+  color: #8a7d6e;
+}
+
+/* ══════════════════════════════════════════
+   HEADER
+══════════════════════════════════════════ */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2.5rem;
+  background: rgba(18, 14, 10, 0.95);
+  border-bottom: 1px solid rgba(200,184,154,0.18);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e2d5c0;
+}
+
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav ul li a {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+nav ul li a:hover { color: #e2d5c0; }
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  margin-top: 52px;
+  overflow: hidden;
+  background-color: #0d0a07;
+}
+
+.hero-placeholder {
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-placeholder-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(200,184,154,0.06);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 220px;
+  background: linear-gradient(to bottom, transparent, #120e0a);
+  pointer-events: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 860px;
+  padding: 0 2rem;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #e2d5c0;
+  line-height: 1.1;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.9);
+}
+
+/* ══════════════════════════════════════════
+   WARNING BAND
+══════════════════════════════════════════ */
+.warning-band {
+  overflow: hidden;
+  background: #7a1a1a;
+  border-top: 1px solid #9e2020;
+  border-bottom: 1px solid #9e2020;
+  padding: 0.55rem 0;
+  white-space: nowrap;
+}
+
+.warning-band-inner {
+  display: inline-block;
+  animation: marquee 32s linear infinite;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f0d8d8;
+}
+
+.warning-band-inner span { margin-right: 0.5rem; }
+.warning-sep { color: #f0a0a0; margin: 0 1.2rem; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════
+   BREADCRUMB
+══════════════════════════════════════════ */
+.breadcrumb-wrap {
+  max-width: 860px;
+  margin: 2.5rem auto 0;
+  padding: 0 2rem;
+}
+
+.breadcrumb {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+}
+
+.breadcrumb a { color: #8a7d6e; border-bottom: 1px dotted #8a7d6e; }
+.breadcrumb a:hover { color: #e2d5c0; border-color: #e2d5c0; }
+.breadcrumb .sep { margin: 0 0.6rem; opacity: 0.5; }
+
+/* ══════════════════════════════════════════
+   PAGE WRAP
+══════════════════════════════════════════ */
+.page-wrap {
+  max-width: 860px;
+  margin: 2.5rem auto 5rem;
+  padding: 0 2rem;
+}
+
+/* ══════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════════
+   SECTION LABEL — simplificado (sem linhas decorativas)
+══════════════════════════════════════════ */
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 4px;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(200,184,154,0.15);
+}
+
+/* ══════════════════════════════════════════
+   INTRO
+══════════════════════════════════════════ */
+.intro-block { margin-bottom: 3.5rem; }
+
+.intro-block h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #e2d5c0;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.intro-block .subtitle {
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.8rem;
+}
+
+.intro-block p, .theme-body p {
+  color: #c8b89a;
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+.intro-block p { font-size: 1.05rem; }
+
+/* ══════════════════════════════════════════
+   CITAÇÃO — base compartilhada (pull-quote + quote-card)
+══════════════════════════════════════════ */
+.pull-quote p, .quote-card p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #e2d5c0;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+.pull-quote p { font-size: 1.15rem; }
+.quote-card p { font-size: 1.08rem; }
+
+.pull-quote cite { display: block; margin-top: 0.5rem; font-size: 0.7rem; letter-spacing: 2px; }
+.quote-card cite { font-size: 0.68rem; letter-spacing: 1.5px; }
+
+.pull-quote {
+  border-left: 3px solid #7a1a1a;
+  padding: 0.8rem 1.4rem;
+  margin: 2rem 0;
+  background: rgba(122,26,26,0.08);
+}
+
+/* ══════════════════════════════════════════
+   TEMA — bloco grande de ensaio
+══════════════════════════════════════════ */
+.theme-block { margin-bottom: 3.8rem; }
+
+.theme-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.theme-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: rgba(122,26,26,0.5);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.theme-title,
+.triad-section h2,
+.symbols-section h2,
+.quotes-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #e2d5c0;
+}
+.theme-title        { font-size: 1.4rem; }
+.triad-section h2   { font-size: 1.5rem; margin-bottom: 0.6rem; }
+.symbols-section h2 { font-size: 1.5rem; margin-bottom: 1.4rem; }
+.quotes-section h2  { font-size: 1.5rem; margin-bottom: 1.6rem; }
+
+.theme-tag {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  margin-left: auto;
+  border: 1px solid rgba(200,184,154,0.2);
+  padding: 2px 8px;
+}
+
+.theme-body p { font-size: 0.98rem; }
+.theme-body p:last-child { margin-bottom: 0; }
+.theme-body em { color: #e2d5c0; font-style: italic; }
+.theme-body strong { color: #e2d5c0; font-weight: 600; }
+
+/* referência filosófica — simplificada (sem ícone/flex, aside com borda lateral) */
+.philo-ref {
+  margin: 1.4rem 0;
+  padding: 1rem 1.3rem;
+  background: rgba(26,20,16,0.7);
+  border-left: 3px solid #6e5a8b;
+}
+
+.philo-text {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: #8a7d6e;
+}
+
+.philo-text strong {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 2px;
+  color: #b090d0;
+  margin-bottom: 0.4rem;
+  font-weight: 400;
+}
+
+.theme-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, rgba(122,26,26,0.4), transparent);
+  margin: 3rem 0;
+}
+
+/* ══════════════════════════════════════════
+   TRÍADE — três protagonistas como lentes filosóficas
+══════════════════════════════════════════ */
+.triad-section { margin-bottom: 3.8rem; }
+
+.triad-section > p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #8a7d6e;
+  margin-bottom: 1.8rem;
+  max-width: 640px;
+}
+
+.triad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .triad-grid { grid-template-columns: 1fr; }
+}
+
+/* barra superior única (antes: 3 cores diferentes por personagem) */
+.triad-card {
+  background: rgba(22,17,12,0.85);
+  border: 1px solid rgba(200,184,154,0.1);
+  border-top: 3px solid #7a1a1a;
+  padding: 1.3rem 1.2rem;
+}
+
+.triad-role {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.3rem;
+}
+
+.triad-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #e2d5c0;
+  margin-bottom: 0.7rem;
+}
+
+.triad-philosophy {
+  font-size: 0.66rem;
+  letter-spacing: 1px;
+  color: #c07070;
+  margin-bottom: 0.7rem;
+}
+
+.triad-desc, .symbol-desc { color: #c8b89a; }
+.triad-desc { font-size: 0.85rem; line-height: 1.7; }
+
+/* ══════════════════════════════════════════
+   SÍMBOLOS — tabela de motivos recorrentes
+══════════════════════════════════════════ */
+.symbols-section { margin-bottom: 3.8rem; }
+
+.symbol-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(200,184,154,0.07);
+  align-items: baseline;
+}
+
+@media (max-width: 560px) {
+  .symbol-row { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+
+.symbol-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #e2d5c0;
+}
+
+.symbol-desc { font-size: 0.88rem; line-height: 1.75; }
+
+/* ══════════════════════════════════════════
+   CITAÇÕES FINAIS — galeria de frases
+══════════════════════════════════════════ */
+.quotes-section { margin-bottom: 3.8rem; }
+
+.quote-card {
+  padding: 1.4rem 0;
+  border-bottom: 1px dotted rgba(200,184,154,0.12);
+}
+.quote-card:last-child { border-bottom: none; }
+
+/* ══════════════════════════════════════════
+   NOTA FINAL — simplificada (sem símbolo flutuante)
+══════════════════════════════════════════ */
+.closing-note {
+  background: rgba(26,20,16,0.8);
+  border: 1px solid rgba(200,184,154,0.12);
+  padding: 1.8rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.closing-note p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #c8b89a;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  border-top: 1px solid rgba(200,184,154,0.1);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+}
+
+.footer-nav { display: flex; gap: 2rem; }
+.footer-nav a { transition: color 0.2s; }
+.footer-nav a:hover { color: #e2d5c0; }

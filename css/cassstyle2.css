@@ -1,0 +1,103 @@
+/* CARD PRINCIPAL */
+.wiki-card {
+  width: 260px;
+  background: #9b6cd3;
+  padding: 8px;
+
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 black, 8px 8px 15px rgba(0,0,0,0.3);
+  position: relative; /* Permite camadas de profundidade */
+}
+
+/* TOPO COM CORTE DIAGONAL */
+.wiki-header {
+  text-align: center;
+  padding: 18px 10px 14px;
+  background: #9b6cd3;
+
+  clip-path: polygon(
+    0% 0%, 
+    calc(100% - 25px) 0%, 
+    100% 25px, 
+    100% 100%, 
+    0% 100%
+  );
+}
+
+.wiki-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.wiki-header p {
+  margin: 4px 0 0;
+  font-size: 12px;
+}
+
+/* ÁREA DA IMAGEM */
+.wiki-image {
+  background: white;
+  padding: auto;
+  margin: 8px 0;
+
+  /* corte diagonal igual ao topo */
+  clip-path: polygon(
+    0% 0%, 
+    calc(100% - 20px) 0%, 
+    100% 20px, 
+    100% 100%, 
+    0% 100%
+  );
+}
+
+/* IMAGEM SEM CORTE ERRADO */
+.wiki-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ÁREA DE INFO */
+.wiki-info {
+  margin-top: 10px;
+}
+
+/* LINHAS */
+.wiki-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.hero-content {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.6rem 0.5rem;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* LABEL */
+.wiki-row span {
+  width: 90px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* CAIXA CINZA */
+.wiki-row div {
+  flex: 1;
+  background: #e6e6e6;
+  color: black;
+  padding: 7px;
+  font-size: 12px;
+
+  border: 1px solid #cfcfcf;
+}
+
+/* LINK */
+.wiki-row a {
+  color: #3b3bff;
+  text-decoration: none;

@@ -1,0 +1,11 @@
+.table_type {
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical (opcional) */
+}
+
+
+.table_type img {
+  max-width: 100%;
+  height: auto;
+}

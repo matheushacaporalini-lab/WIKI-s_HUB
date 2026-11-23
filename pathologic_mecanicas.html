@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mecânicas — Pathologic 2 Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/pathologic_mecanicas.css" />
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Hub de Wikis</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="pathologic.html">Pathologic 2</a></li>
+        <li><a href="pathologic_quests.html">Quests</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-band">
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> &rsaquo;
+      <a href="pathologic.html">Pathologic 2</a> &rsaquo;
+      <span>Mecânicas</span>
+    </div>
+    <div class="page-eyebrow">Sistemas · Sobrevivência · Recursos</div>
+    <h1 class="page-title">Mecânicas de Sobrevivência</h1>
+    <p class="page-subtitle">Artemy tem fome, cansa, adoece e morre. Nenhum desses sistemas é decorativo.</p>
+  </div>
+
+  <div class="warning-band" role="marquee">
+    <div class="warning-band-inner">
+      <span>✦ Fome drena imunidade passivamente</span><span class="warning-sep">·</span>
+      <span>Correr à noite aumenta exaustão</span><span class="warning-sep">·</span>
+      <span>Comida estragada causa infecção</span><span class="warning-sep">·</span>
+      <span>Reputação abaixo de zero fecha lojas</span><span class="warning-sep">·</span>
+      <span>O jogo não pausa enquanto você lê o inventário</span><span class="warning-sep">·</span>
+      <span>✦ Fome drena imunidade passivamente</span><span class="warning-sep">·</span>
+      <span>Correr à noite aumenta exaustão</span><span class="warning-sep">·</span>
+      <span>Comida estragada causa infecção</span><span class="warning-sep">·</span>
+      <span>Reputação abaixo de zero fecha lojas</span><span class="warning-sep">·</span>
+      <span>O jogo não pausa enquanto você lê o inventário</span><span class="warning-sep">·</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══ MEDIDORES CORPORAIS ══ -->
+    <div class="section-label reveal">Os Quatro Medidores · O Corpo de Artemy</div>
+
+    <div class="meters-grid reveal">
+
+      <div class="meter-card">
+        <span class="meter-icon">🩸</span>
+        <div class="meter-name">Saúde</div>
+        <div class="meter-bar-wrap">
+          <div class="meter-bar-fill" style="width:72%; background: #8a2010;"></div>
+        </div>
+        <div class="meter-desc">
+          Pontos de vida de Artemy. Cai ao levar dano em combate, ao entrar em zonas infectadas sem proteção e ao comer alimentos contaminados. <strong>Quando chega a zero, o jogo oferece uma continuação penalizada</strong> — não um game over imediato, mas cada morte cobra algo permanente.
+        </div>
+        <div class="meter-warning">⚠ Morte cobra Ações Boas acumuladas — moeda de narrativa permanente</div>
+      </div>
+
+      <div class="meter-card">
+        <span class="meter-icon">🍞</span>
+        <div class="meter-name">Fome</div>
+        <div class="meter-bar-wrap">
+          <div class="meter-bar-fill" style="width:40%; background: #8a6010;"></div>
+        </div>
+        <div class="meter-desc">
+          Drena continuamente enquanto Artemy se move. Com fome alta, a <strong>imunidade começa a cair passivamente</strong> mesmo sem exposição à praga. Comer custa dinheiro ou exige roubo — e roubar tem custo de reputação.
+        </div>
+        <div class="meter-warning">⚠ Fome crítica + zona infectada = infecção garantida em poucos minutos</div>
+      </div>
+
+      <div class="meter-card">
+        <span class="meter-icon">😴</span>
+        <div class="meter-name">Exaustão</div>
+        <div class="meter-bar-wrap">
+          <div class="meter-bar-fill" style="width:60%; background: #4a5a80;"></div>
+        </div>
+        <div class="meter-desc">
+          Sobe ao correr, ao lutar e ao passar noites sem dormir. Com exaustão alta, <strong>a mira piora, o movimento fica mais lento e os medidores se deterioram mais rápido</strong>. Dormir recupera exaustão mas consome horas — horas que têm custo real no cronômetro de doze dias.
+        </div>
+        <div class="meter-warning">⚠ Exaustão máxima força Artemy a dormir involuntariamente onde estiver</div>
+      </div>
+
+      <div class="meter-card">
+        <span class="meter-icon">🧪</span>
+        <div class="meter-name">Imunidade</div>
+        <div class="meter-bar-wrap">
+          <div class="meter-bar-fill" style="width:55%; background: #3a7a4a;"></div>
+        </div>
+        <div class="meter-desc">
+          O medidor mais crítico do jogo. Cai ao entrar em zonas infectadas, ao estar com fome alta e ao usar certos itens. Quando chega a zero, <strong>Artemy contrai a praga</strong>. Recuperar imunidade exige remédios — escassos, caros e necessários para curar os NPCs também.
+        </div>
+        <div class="meter-warning">⚠ Imunidade não se recupera sozinha. Requer consumo de itens ativos</div>
+      </div>
+
+      <div class="meter-card">
+        <span class="meter-icon">💰</span>
+        <div class="meter-name">Dinheiro</div>
+        <div class="meter-bar-wrap">
+          <div class="meter-bar-fill" style="width:30%; background: #7a6020;"></div>
+        </div>
+        <div class="meter-desc">
+          Não é um medidor visual, mas funciona como um. Artemy começa com quase nada e <strong>a economia da Cidade colapsa progressivamente</strong> — os preços sobem, os estoques somem e as trocas tornam-se a principal forma de conseguir itens nos dias finais.
+        </div>
+        <div class="meter-warning">⚠ Vender medicamentos para conseguir comida é uma das piores espirais do jogo</div>
+      </div>
+
+      <div class="meter-card">
+        <span class="meter-icon">🎭</span>
+        <div class="meter-name">Reputação</div>
+        <div class="meter-bar-wrap">
+          <div class="meter-bar-fill" style="width:50%; background: #7a5030;"></div>
+        </div>
+        <div class="meter-desc">
+          Medida global de como a Cidade percebe Artemy. Cai ao falhar quests, ao deixar personagens morrerem e ao ser visto roubando. <strong>Com reputação baixa, lojas fecham, NPCs recusam conversa e inimigos atacam com mais frequência.</strong>
+        </div>
+        <div class="meter-warning">⚠ Reputação não tem recuperação rápida — cada ponto é trabalho de um dia</div>
+      </div>
+
+    </div>
+
+    <div class="tip-box reveal">
+      <div class="tip-box-label">Princípio Central</div>
+      <p>
+        Os seis medidores competem entre si pelo mesmo recurso escasso: <strong>tempo</strong>. Dormir para recuperar exaustão significa não completar uma quest. Gastar dinheiro em comida significa não ter medicamento. O jogo não tem solução ótima — tem apenas trocas, cada uma com custo visível e custo oculto.
+      </p>
+    </div>
+
+    <!-- ══ CICLO DE DIA / NOITE ══ -->
+    <div class="section-label reveal" style="margin-top:3rem;">Tempo · O Cronômetro que Não Para</div>
+
+    <div class="clock-strip reveal">
+      <div class="clock-title">Ciclo de 24 Horas</div>
+      <div class="clock-track">
+        <div class="clock-segment seg-dawn">Amanhecer</div>
+        <div class="clock-segment seg-day">Dia — janelas abertas, lojas funcionando</div>
+        <div class="clock-segment seg-dusk">Anoitecer</div>
+        <div class="clock-segment seg-night">Noite — ruas perigosas</div>
+        <div class="clock-segment seg-late">Madrugada</div>
+      </div>
+      <div class="clock-legend">
+        <div class="clock-legend-item">🌅 <span>Amanhecer (6h–8h)</span> — novos infectados no mapa, quests do dia desbloqueiam</div>
+        <div class="clock-legend-item">☀ <span>Dia (8h–18h)</span> — lojas abertas, NPCs acessíveis, menor risco nas ruas</div>
+        <div class="clock-legend-item">🌆 <span>Anoitecer (18h–20h)</span> — última janela para quests com prazo diurno</div>
+        <div class="clock-legend-item">🌙 <span>Noite (20h–2h)</span> — ruas perigosas, inimigos mais agressivos, algumas quests só ocorrem aqui</div>
+        <div class="clock-legend-item">💀 <span>Madrugada (2h–6h)</span> — quests com prazo expiram, personagens podem morrer enquanto você dorme</div>
+      </div>
+    </div>
+
+    <div class="danger-box reveal">
+      <div class="danger-box-label">Atenção</div>
+      <p>
+        O jogo <strong>não pausa em nenhum momento</strong> — nem no inventário, nem nos diálogos, nem no mapa. Cada segundo gasto lendo uma descrição de item é um segundo real do relógio. NPCs têm rotinas e horários: chegar uma hora atrasado a um encontro pode significar encontrar a pessoa morta ou já ter partido.
+      </p>
+    </div>
+
+    <!-- ══ RECURSOS ══ -->
+    <div class="section-label reveal" style="margin-top:3rem;">Recursos · O Que Artemy Carrega</div>
+
+    <div class="resource-table-wrap reveal">
+      <table class="resource-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Efeito</th>
+            <th>Fonte Principal</th>
+            <th>Raridade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pão</td>
+            <td>Reduz fome moderadamente. Não cura nada.</td>
+            <td>Mercado, casas de moradores, troca</td>
+            <td><span class="res-tag common">Comum</span></td>
+          </tr>
+          <tr>
+            <td>Carne</td>
+            <td>Reduz fome significativamente. <em>Pode estar contaminada</em> — chance de baixar imunidade ao comer.</td>
+            <td>Bloco dos Açougueiros, carniças</td>
+            <td><span class="res-tag common">Comum</span></td>
+          </tr>
+          <tr>
+            <td>Erva Panaceia</td>
+            <td>Recupera imunidade. Principal defesa contra a praga.</td>
+            <td>Jardins Kin, troca com curandeiros, plantações secretas</td>
+            <td><span class="res-tag rare">Rara</span></td>
+          </tr>
+          <tr>
+            <td>Remédio Artesanal</td>
+            <td>Recupera saúde e imunidade em menor escala. Produzível no laboratório de Dankovsky.</td>
+            <td>Laboratório, farmacêuticos, troca</td>
+            <td><span class="res-tag rare">Rara</span></td>
+          </tr>
+          <tr>
+            <td>Pílulas de Exaustão</td>
+            <td>Suprime o medidor de exaustão temporariamente. <strong>Não o cura</strong> — ao efeito passar, cai de uma vez.</td>
+            <td>Farmácias, bolsos de inimigos</td>
+            <td><span class="res-tag">Incomum</span></td>
+          </tr>
+          <tr>
+            <td>Máscara</td>
+            <td>Reduz a velocidade de queda da imunidade em zonas infectadas. Dura tempo limitado.</td>
+            <td>Postos de saúde, troca, lojas especializadas</td>
+            <td><span class="res-tag">Incomum</span></td>
+          </tr>
+          <tr>
+            <td>Faca / Bastão</td>
+            <td>Armas de combate corpo-a-corpo. A faca é mais rápida; o bastão causa mais dano.</td>
+            <td>Inimigos derrotados, mercado, casas</td>
+            <td><span class="res-tag common">Comum</span></td>
+          </tr>
+          <tr>
+            <td>Revólver</td>
+            <td>Arma de fogo. Munição extremamente escassa. Reservar para situações críticas.</td>
+            <td>Saburov, inimigos específicos, dias avançados</td>
+            <td><span class="res-tag rare">Rara</span></td>
+          </tr>
+          <tr>
+            <td>Dinheiro da Cidade</td>
+            <td>Moeda local. Perde valor conforme a situação piora. Nos dias finais, troca é mais eficiente.</td>
+            <td>Quests, saques, vendas</td>
+            <td><span class="res-tag common">Variável</span></td>
+          </tr>
+          <tr>
+            <td>Carta de Recomendação</td>
+            <td>Item de reputação. Apresentar a NPCs específicos abre acesso a distritos ou informações fechadas.</td>
+            <td>Adherents, autoridades, recompensa de quest</td>
+            <td><span class="res-tag rare">Rara</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══ COMBATE ══ -->
+    <div class="section-label reveal" style="margin-top:3rem;">Combate · Um Sistema que Você Deveria Evitar</div>
+
+    <div class="combat-grid reveal">
+      <div class="combat-block">
+        <div class="combat-block-title">Como Funciona</div>
+        <ul class="combat-list">
+          <li>Combate em primeira pessoa com armas brancas e de fogo. A mira treme com exaustão alta.</li>
+          <li><strong>Bloqueio e esquiva</strong> são possíveis mas imprecisos — o sistema não é fluido por design.</li>
+          <li>Inimigos são rápidos. Na maioria das situações, <strong>fugir é mais eficiente do que lutar</strong>.</li>
+          <li>Matar NPCs pode ter consequências narrativas permanentes — verifique se o alvo é relevante antes.</li>
+          <li>A madrugada multiplica o número de inimigos nas ruas. Evite combate entre 2h e 6h.</li>
+        </ul>
+      </div>
+      <div class="combat-block">
+        <div class="combat-block-title">Por Que Evitar</div>
+        <ul class="combat-list">
+          <li>Cada luta consome <strong>saúde e exaustão</strong> — dois medidores que demoram a recuperar.</li>
+          <li>Munição de revólver é tão escassa que usá-la em inimigos comuns é desperdício estratégico.</li>
+          <li>Morrer cobra <strong>Ações Boas</strong> — a moeda narrativa usada para ressuscitar. Cada morte permanente é uma concessão ao jogo.</li>
+          <li>Vencer uma luta não dá reputação. <strong>Perder uma luta na frente de moradores baixa reputação</strong>.</li>
+          <li>O jogo foi construído para que combate seja a última opção, não a primeira.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ══ REPUTAÇÃO POR DISTRITO ══ -->
+    <div class="section-label reveal" style="margin-top:3rem;">Reputação · Como a Cidade Te Vê</div>
+
+    <div class="rep-grid reveal">
+
+      <div class="rep-block">
+        <div class="rep-header">
+          <div class="rep-district">Bloco dos Açougueiros</div>
+          <div class="rep-bar-mini"><div class="rep-bar-fill-mini" style="width:75%"></div></div>
+        </div>
+        <div class="rep-body">
+          <div class="rep-desc">
+            O território natal de Artemy. Os moradores Kin reconhecem seu sangue mas não confiam cegamente — <strong>ele passou anos fora e o pai está morto</strong>. A reputação aqui é ganhou com ações concretas, não com discurso.
+          </div>
+          <div class="rep-effects">
+            <div class="rep-effect good">✓ Alta: acesso a ervas medicinais e informação sobre os Menkhu</div>
+            <div class="rep-effect bad">✗ Baixa: Notkin e os garotos de rua param de ajudar</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rep-block">
+        <div class="rep-header">
+          <div class="rep-district">Distrito Administrativo</div>
+          <div class="rep-bar-mini"><div class="rep-bar-fill-mini" style="width:45%"></div></div>
+        </div>
+        <div class="rep-body">
+          <div class="rep-desc">
+            Saburov e as autoridades municipais. Respeitam quem respeita a ordem — mas a ordem que impõem <strong>frequentemente contradiz o que é moralmente correto</strong>. Manter reputação alta aqui exige concessões.
+          </div>
+          <div class="rep-effects">
+            <div class="rep-effect good">✓ Alta: acesso a cartas de passagem e proteção policial</div>
+            <div class="rep-effect bad">✗ Baixa: guardas hosils, checkpoints fechados</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rep-block">
+        <div class="rep-header">
+          <div class="rep-district">Casas dos Adherents</div>
+          <div class="rep-bar-mini"><div class="rep-bar-fill-mini" style="width:60%"></div></div>
+        </div>
+        <div class="rep-body">
+          <div class="rep-desc">
+            Cada Adherent tem sua própria métrica. <strong>Agradar um pode desagradar outro</strong> — Peter e Andrey Stamatin raramente querem a mesma coisa. A reputação aqui é fragmentada por definição.
+          </div>
+          <div class="rep-effects">
+            <div class="rep-effect good">✓ Alta: informações narrativas exclusivas e itens raros</div>
+            <div class="rep-effect bad">✗ Baixa: portas fechadas nos momentos mais críticos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rep-block">
+        <div class="rep-header">
+          <div class="rep-district">Distritos Populares</div>
+          <div class="rep-bar-mini"><div class="rep-bar-fill-mini" style="width:50%"></div></div>
+        </div>
+        <div class="rep-body">
+          <div class="rep-desc">
+            Os moradores comuns que não têm nome mas têm memória. <strong>Roubar de uma casa baixa a reputação no bairro inteiro</strong>, não apenas com a vítima. A Cidade observa.
+          </div>
+          <div class="rep-effects">
+            <div class="rep-effect good">✓ Alta: moradores trazem itens espontaneamente como doação</div>
+            <div class="rep-effect bad">✗ Baixa: ataques de civis, lojas fechadas, preços inflacionados</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tip-box reveal">
+      <div class="tip-box-label">Estratégia Geral</div>
+      <p>
+        Não tente maximizar todos os medidores ao mesmo tempo — é impossível por design. <strong>Escolha dois ou três distritos onde sua reputação importa para as quests que você está priorizando</strong> e aceite que os outros vão deteriorar. A Cidade de Pathologic 2 não foi feita para ser salva completamente. Foi feita para que você entenda o custo de tentar.
+      </p>
+    </div>
+
+    <p class="page-note reveal">
+      Pathologic 2 (Ice-Pick Lodge, 2019). Valores e comportamentos dos sistemas descritos nesta página correspondem à versão 1.5. Alguns parâmetros exatos de deterioração dos medidores variam com a dificuldade selecionada.
+    </p>
+
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos · Pathologic 2 © Ice-Pick Lodge
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

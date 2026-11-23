@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Itens e Recursos - Wiki Inazuma Eleven</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/inazuma_style.css"/>
+  <link rel="stylesheet" href="css/Inazuma_style_itens.css"/>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Hub de Wikis</a>
+    <nav>
+      <ul>
+        <li><a href="Inazuma.html">Início</a></li>
+        <li><a href="tecnicas.html">Técnicas</a></li>
+        <li><a href="guias.html">Guias</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> &gt; <a href="Inazuma.html">Wiki Inazuma Eleven</a> &gt; <span>Itens e Recursos</span>
+    </div>
+
+    <div class="content-flag">
+      🔍 <strong>Sistema de Busca:</strong> Esta lista é carregada dinamicamente a partir de uma base de dados externa. Digite abaixo para filtrar centenas de itens em tempo real.
+    </div>
+
+    <div class="section-label">Catálogo de Itens</div>
+
+    <div class="toolbar">
+      <input type="text" class="search-input" id="searchInput" placeholder="Buscar por nome do item (Ex: Raimon Boots)...">
+      <div class="stat-chip">Resultados: <strong id="visibleCount">0</strong> / <strong id="totalCount">0</strong></div>
+    </div>
+
+    <div class="cat-tabs" id="catTabs">
+      <button class="cat-tab active" data-cat="all">Todos</button>
+      <button class="cat-tab" data-cat="pendant">Pingentes</button>
+      <button class="cat-tab" data-cat="boots">Chuteiras</button>
+      <button class="cat-tab" data-cat="bracelet">Braceletes/Luvas</button>
+      <button class="cat-tab" data-cat="especial">Especiais</button>
+    </div>
+
+    <div class="items-table-wrap">
+      <table class="items-table">
+        <thead>
+          <tr>
+            <th style="width:60px">#</th>
+            <th>Nome do Item</th>
+            <th>Original (EN)</th>
+            <th style="width:180px">Categoria</th>
+          </tr>
+        </thead>
+        <tbody id="itemsBody">
+          <tr>
+            <td colspan="4" style="text-align:center; padding: 2rem; color: #94a3b8;">Carregando base de dados de itens...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  <footer>
+    © 2026 Hub de Wikis de Jogos. Inazuma Eleven © Level-5.
+  </footer>
+
+  <!-- Script de busca dinâmica -->
+  <script src="js/items_search.js?v=2"></script>
+</body>
+</html>

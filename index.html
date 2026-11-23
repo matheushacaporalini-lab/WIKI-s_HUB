@@ -7,32 +7,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   
   
-	<link rel="stylesheet" href="style_index.css" />
-	<link rel="stylesheet" href="colors.css" />
-  <style>
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: none;
-}
-  </style>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/colors.css" />
+  <link rel="stylesheet" href="css/global.css" />
 </head>
-<body>
-
-  <div id="bg-overlay"></div>
-
-  <header>
+<body class="home-page">
+  <div id="game-backgrounds" aria-hidden="true">
+    <div class="game-background-layer"></div>
+    <div class="game-background-layer"></div>
+  </div>
+  <header>  
     <div class="logo">Hub de Wikis</div>
     <nav>
       <ul>
         <li><a href="slime-rancher.html">Slime Rancher</a></li>
         <li><a href="CasseteBeast.html">Cassette Beasts</a></li>
-        <li><a href="#">GTA V</a></li>
-        <li><a href="#">Hogwarts Legacy</a></li>
+        <li><a href="index.html#gta-v">GTA V</a></li>
+        <li><a href="Inazuma.html">Inazuma Eleven</a></li>
+        <li><a href="pathologic.html">Pathologic 2</a></li>
       </ul>
     </nav>
   </header>
@@ -46,7 +38,7 @@
       <a href="slime-rancher.html" class="game-card-link">
         <article class="game-card" id="slime-rancher">
           <div class="img-container">
-            <img src="https://cdn2.steamgriddb.com/icon/3fe4e041db20eecbe3fedc2b61669dbe/32/256x256.png" alt="Logo do Slime Rancher" />
+            <img src="assets/images/logo_slime.webp" alt="Logo do Slime Rancher" />
           </div>
           <div class="content">
             <h2>Slime Rancher 2</h2>
@@ -59,7 +51,7 @@
       <a href="CasseteBeast.html" class="game-card-link">
         <article class="game-card" id="cassette-beasts">
           <div class="img-container">
-            <img src="CassetteBeasts_Logo.png" alt="Logo do Cassette Beasts" />
+            <img src="assets/images/CassetteBeasts_Logo.png" alt="Logo do Cassette Beasts" />
           </div>
           <div class="content">
             <h2>Cassette Beasts</h2>
@@ -69,10 +61,10 @@
       </a>
 
       <!-- Cartão GTA V -->
-      <a href="CasseteBeast.html" class="game-card-link">
+      <a href="#gta-v" class="game-card-link">
         <article class="game-card" id="gta-v">
           <div class="img-container">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="Logo do GTA V" />
+            <img src="assets/images/GTA5_logo.webp" alt="Logo do GTA V" />
           </div>
           <div class="content">
             <h2>GTA V</h2>
@@ -81,15 +73,15 @@
         </article>
       </a>
 
-      <!-- Cartão Hogwarts Legacy -->
-      <a href="#" class="game-card-link">
-        <article class="game-card" id="hogwarts-legacy">
+      <!-- Cartão Inazuma Eleven -->
+      <a href="Inazuma.html" class="game-card-link">
+        <article class="game-card" id="inazuma-eleven">
           <div class="img-container">
-            <img src="https://cdn-hogwartslegacy.warnerbrosgames.com/home/hero-logo.webp" alt="Logo do Hogwarts Legacy" />
+            <img src="assets/images/Inazuma_Eleven_logo.png" alt="Logo do Inazuma Eleven" />
           </div>
           <div class="content">
-            <h2>Hogwarts Legacy</h2>
-            <p>Explore o universo mágico com histórias, tutoriais e discussões da comunidade.</p>
+            <h2>Inazuma Eleven</h2>
+            <p>Descubra a história e as estratégias do jogo Inazuma Eleven.</p>
           </div>
         </article>
       </a>
@@ -98,7 +90,7 @@
       <a href="pathologic.html" class="game-card-link">
         <article class="game-card" id="pathologic-2">
           <div class="img-container">
-            <img src="https://pathologic-game.com/i/next-pathologic-logo-en.png" alt="Logo do Pathologic 2" />
+            <img src="assets/images/pathologic2_logo.png" alt="Logo do Pathologic 2" />
           </div>
           <div class="content">
             <h2>Pathologic 2</h2>
@@ -111,52 +103,8 @@
   </main>
 
   <footer>
-    © 2026 Hub de Wikis de Jogos.
+    © 2026 Hub de Wikis de Jogos. 
   </footer>
-
-
-  <script>
-    const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target); // dispara só uma vez
-    }
-  });
-}, { threshold: 0.08 }); // 8% do elemento visível já dispara
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    document.addEventListener('DOMContentLoaded', () => {
-    const bgOverlay = document.getElementById('bg-overlay');
-    const cards = document.querySelectorAll('.game-card');
-
-
-    const backgrounds = {
-        'slime-rancher': 'url("slime-banner.webp")',
-        'cassette-beasts': 'url("banner_cass.png")',
-        'gta-v': 'url("banner_gta-v.jpg")',
-        'hogwarts-legacy': 'url("banner_hogwarts-legacy.jpg")',
-        'pathologic-2': 'url("pathologic-banner.jpg")'
-    };
-
-    cards.forEach(card => {
-        // Quando o mouse entra no card
-        card.addEventListener('mouseenter', () => {
-            const bgImage = backgrounds[card.id];
-            if (bgImage) {
-                bgOverlay.style.backgroundImage = bgImage;
-            }
-        });
-
-        // Quando o mouse sai do card, volta para o fundo escuro
-        card.addEventListener('mouseleave', () => {
-            bgOverlay.style.backgroundImage = 'none'; 
-        });
-    });
-});
-
-  </script>
-
+  <script src="js/INDEX.JS"></script>
 </body>
 </html>

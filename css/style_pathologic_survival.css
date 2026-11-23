@@ -1,0 +1,486 @@
+/* ══════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #120e0a;
+  font-family: 'IM Fell English', Georgia, serif;
+  color: #c8b89a;
+  min-height: 100vh;
+}
+
+a { color: #c8b89a; text-decoration: none; }
+a:hover { color: #fff; }
+
+/* ══════════════════════════════════════════
+   LABEL MONOESPAÇADO — base compartilhada
+══════════════════════════════════════════ */
+nav ul li a, .breadcrumb, .intro-block .subtitle, .pull-quote cite,
+.section-label, .sys-tag, .resource-table th, .priority-badge, footer {
+  font-family: 'Courier Prime', monospace;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+nav ul li a, .breadcrumb, .intro-block .subtitle, .pull-quote cite,
+.section-label, .resource-table th, footer {
+  color: #8a7d6e;
+}
+
+/* ══════════════════════════════════════════
+   HEADER
+══════════════════════════════════════════ */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2.5rem;
+  background: rgba(18, 14, 10, 0.95);
+  border-bottom: 1px solid rgba(200,184,154,0.18);
+  backdrop-filter: blur(6px);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e2d5c0;
+}
+
+nav ul { list-style: none; display: flex; gap: 2rem; }
+nav ul li a {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  transition: color 0.2s;
+}
+nav ul li a:hover { color: #e2d5c0; }
+
+/* ══════════════════════════════════════════
+   HERO — espaço para imagem no topo
+══════════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 960px;
+  margin-top: 52px;
+  overflow: hidden;
+  background-color: #0d0a07;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* fallback visual quando a img não carrega */
+.hero-placeholder {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 860px;
+  padding: 0 2rem;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #e2d5c0;
+  line-height: 1.1;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.9);
+}
+
+/* ══════════════════════════════════════════
+   WARNING BAND — marquee
+══════════════════════════════════════════ */
+.warning-band {
+  overflow: hidden;
+  background: #7a1a1a;
+  border-top: 1px solid #9e2020;
+  border-bottom: 1px solid #9e2020;
+  padding: 0.55rem 0;
+  white-space: nowrap;
+}
+
+.warning-band-inner {
+  display: inline-block;
+  animation: marquee 28s linear infinite;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f0d8d8;
+}
+
+.warning-band-inner span { margin-right: 0.5rem; }
+.warning-sep { color: #f0a0a0; margin: 0 1.2rem; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════
+   BREADCRUMB
+══════════════════════════════════════════ */
+.breadcrumb-wrap {
+  max-width: 860px;
+  margin: 2.5rem auto 0;
+  padding: 0 2rem;
+}
+
+.breadcrumb {
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+}
+
+.breadcrumb a { color: #8a7d6e; border-bottom: 1px dotted #8a7d6e; }
+.breadcrumb a:hover { color: #e2d5c0; border-color: #e2d5c0; }
+.breadcrumb .sep { margin: 0 0.6rem; opacity: 0.5; }
+
+/* ══════════════════════════════════════════
+   PAGE WRAP — área restrita central
+══════════════════════════════════════════ */
+.page-wrap {
+  max-width: 860px;
+  margin: 2.5rem auto 5rem;
+  padding: 0 2rem;
+}
+
+/* ══════════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════════
+   SECTION LABEL — simplificado (sem linhas decorativas)
+══════════════════════════════════════════ */
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 4px;
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(200,184,154,0.15);
+}
+
+/* ══════════════════════════════════════════
+   INTRO BLOCK — abertura da página
+══════════════════════════════════════════ */
+.intro-block { margin-bottom: 3.5rem; }
+
+.intro-block h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  font-style: italic;
+  color: #e2d5c0;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.intro-block .subtitle {
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.8rem;
+}
+
+.intro-block p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #c8b89a;
+  margin-bottom: 1rem;
+}
+
+/* citação destacada */
+.pull-quote {
+  border-left: 3px solid #7a1a1a;
+  padding: 0.8rem 1.4rem;
+  margin: 2rem 0;
+  background: rgba(122,26,26,0.08);
+}
+.pull-quote p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #e2d5c0;
+  line-height: 1.6;
+}
+.pull-quote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+/* ══════════════════════════════════════════
+   TÍTULOS DE SEÇÃO — base compartilhada
+   (dias, prioridades, regras)
+══════════════════════════════════════════ */
+.days-section h2, .priorities-section h2, .rules-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #e2d5c0;
+  margin-bottom: 1.4rem;
+}
+.days-section h2 { margin-bottom: 1.8rem; }
+
+/* ══════════════════════════════════════════
+   PADRÕES DE CARD — base compartilhada
+   (nome/título, descrição e numeração entre
+   sistemas, dias e regras)
+══════════════════════════════════════════ */
+.sys-name, .day-title, .rule-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #e2d5c0;
+}
+.sys-name     { font-size: 1.05rem; margin-bottom: 0.3rem; }
+.day-title    { font-size: 1rem;    margin-bottom: 0.4rem; }
+.rule-heading { font-size: 0.98rem; margin-bottom: 0.3rem; }
+
+.sys-desc, .day-desc, .rule-body {
+  line-height: 1.7;
+  color: #c8b89a;
+}
+.sys-desc { font-size: 0.9rem; }
+.day-desc, .rule-body { font-size: 0.88rem; }
+
+.day-num, .rule-num {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+
+/* ══════════════════════════════════════════
+   SISTEMAS — cards de mecânica
+   (sem faixa lateral colorida — a cor já está na tag)
+══════════════════════════════════════════ */
+.systems-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (max-width: 640px) {
+  .systems-grid { grid-template-columns: 1fr; }
+}
+
+.sys-card {
+  background: rgba(26,20,16,0.85);
+  border: 1px solid rgba(200,184,154,0.12);
+  padding: 1.4rem 1.5rem;
+}
+
+.sys-icon {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+.sys-tag {
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: #7a1a1a;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+.sys-card--warn .sys-tag    { color: #c09030; }
+.sys-card--neutral .sys-tag { color: #8a7d6e; }
+
+/* ══════════════════════════════════════════
+   DIAS — linha do tempo vertical
+══════════════════════════════════════════ */
+.days-section { margin-bottom: 3.5rem; }
+
+.day-entry {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+/* linha vertical conectando os dias */
+.day-entry:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 44px;
+  bottom: -1.4rem;
+  width: 1px;
+  background: rgba(200,184,154,0.1);
+}
+
+.day-num {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(200,184,154,0.2);
+  background: rgba(26,20,16,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #7a1a1a;
+  position: relative;
+  z-index: 1;
+}
+
+.day-num.day-critical { border-color: rgba(122,26,26,0.5); background: rgba(122,26,26,0.15); }
+
+.day-body {
+  flex: 1;
+  padding: 0.8rem 1.1rem;
+  background: rgba(26,20,16,0.6);
+  border: 1px solid rgba(200,184,154,0.08);
+}
+
+.day-tip {
+  margin-top: 0.6rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.75rem;
+  color: #8a7d6e;
+  border-top: 1px dotted rgba(200,184,154,0.12);
+  padding-top: 0.5rem;
+}
+.day-tip::before { content: '⚕ '; color: #7a1a1a; }
+
+/* ══════════════════════════════════════════
+   PRIORIDADES — tabela de recursos
+══════════════════════════════════════════ */
+.priorities-section { margin-bottom: 3.5rem; }
+
+.resource-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.resource-table thead tr {
+  border-bottom: 1px solid rgba(200,184,154,0.2);
+}
+
+.resource-table th {
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+.resource-table td {
+  padding: 0.75rem 0.8rem;
+  border-bottom: 1px solid rgba(200,184,154,0.06);
+  color: #c8b89a;
+  vertical-align: middle;
+}
+
+.resource-table tbody tr:hover td {
+  background: rgba(200,184,154,0.04);
+}
+
+.res-name {
+  color: #e2d5c0;
+  font-weight: 600;
+}
+
+.priority-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border: 1px solid;
+}
+
+.priority-critical { color: #e05050; border-color: #7a1a1a; background: rgba(122,26,26,0.15); }
+.priority-high     { color: #d09040; border-color: #7a5010; background: rgba(120,80,16,0.15); }
+.priority-med      { color: #8a7d6e; border-color: rgba(138,125,110,0.3); background: rgba(138,125,110,0.08); }
+
+/* ══════════════════════════════════════════
+   REGRAS DE OURO — lista destacada
+══════════════════════════════════════════ */
+.rules-section { margin-bottom: 3.5rem; }
+
+.rule-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(200,184,154,0.07);
+}
+
+.rule-num {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  color: rgba(122,26,26,0.4);
+  line-height: 1;
+  min-width: 28px;
+  text-align: right;
+}
+
+.rule-text { flex: 1; }
+
+/* ══════════════════════════════════════════
+   NOTA FINAL — simplificada (sem símbolo flutuante)
+══════════════════════════════════════════ */
+.closing-note {
+  background: rgba(26,20,16,0.8);
+  border: 1px solid rgba(200,184,154,0.12);
+  padding: 1.8rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.closing-note p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #c8b89a;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+footer {
+  border-top: 1px solid rgba(200,184,154,0.1);
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+}
+
+.footer-nav { display: flex; gap: 2rem; }
+.footer-nav a { transition: color 0.2s; }
+.footer-nav a:hover { color: #e2d5c0; }

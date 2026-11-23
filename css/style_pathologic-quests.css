@@ -1,0 +1,484 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: #0e0c09;
+      color: #c8bfa8;
+      font-family: 'IM Fell English', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14, 12, 9, 0.97);
+      border-bottom: 1px solid rgba(180, 140, 80, 0.2);
+      padding: 1rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #b49050;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo:hover { color: #d4b070; }
+
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul li a {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #8a7a60;
+      transition: color 0.2s;
+    }
+    nav ul li a:hover { color: #c8bfa8; }
+
+    /* ── Page band ── */
+    .page-band {
+      background: linear-gradient(180deg, #140f08 0%, #0e0c09 100%);
+      border-bottom: 1px solid rgba(180, 140, 80, 0.15);
+      padding: 3.5rem 2.5rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-band::after {
+      content: 'МИССИИ';
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem;
+      font-weight: 900;
+      font-style: italic;
+      color: rgba(180, 140, 80, 0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .breadcrumb {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: #5a5040;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .breadcrumb a { color: #7a6a48; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #b49050; }
+    .breadcrumb span { color: #b49050; }
+
+    .page-eyebrow {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7a6040;
+      margin-bottom: 0.6rem;
+    }
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 900;
+      font-style: italic;
+      color: #e8dcc0;
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+    }
+    .page-subtitle {
+      font-family: 'IM Fell English', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: #6a5a40;
+      max-width: 560px;
+    }
+
+    /* ── Warning band ── */
+    .warning-band {
+      overflow: hidden;
+      background: #1a0f06;
+      border-top: 1px solid rgba(160, 60, 30, 0.4);
+      border-bottom: 1px solid rgba(160, 60, 30, 0.4);
+      padding: 0.55rem 0;
+    }
+    .warning-band-inner {
+      display: inline-flex;
+      gap: 2rem;
+      white-space: nowrap;
+      animation: marquee 32s linear infinite;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #803020;
+    }
+    .warning-sep { color: #502010; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ── Main ── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem 6rem;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #5a4a30;
+      border-bottom: 1px solid rgba(180, 140, 80, 0.15);
+      padding-bottom: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Aviso spoiler ── */
+    .spoiler-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(160, 60, 30, 0.05);
+      border: 1px solid rgba(160, 60, 30, 0.2);
+      padding: 1rem 1.4rem;
+      margin-bottom: 3rem;
+    }
+    .spoiler-notice-icon { font-size: 1rem; color: #803028; flex-shrink: 0; margin-top: 0.1rem; }
+    .spoiler-notice-text {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: #7a3825;
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════
+       TIMELINE DE DIAS
+    ══════════════════════════════════ */
+    .days-timeline {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    /* linha vertical */
+    .days-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0.85rem;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, rgba(180,140,80,0.4) 0%, rgba(180,140,80,0.05) 100%);
+    }
+
+    /* ── Bloco de dia ── */
+    .day-block {
+      position: relative;
+      margin-bottom: 3.5rem;
+    }
+
+    /* marcador do dia na linha */
+    .day-block::before {
+      content: '';
+      position: absolute;
+      left: -2.25rem;
+      top: 1.1rem;
+      width: 10px;
+      height: 10px;
+      background: #7a5020;
+      border: 1px solid rgba(180,140,80,0.5);
+      transform: rotate(45deg);
+    }
+
+    .day-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .day-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      font-style: italic;
+      color: #b49050;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .day-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #d8c898;
+    }
+
+    .day-meta {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5a4828;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* ── Quests dentro do dia ── */
+    .quest-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .quest-entry {
+      background: #100d08;
+      border: 1px solid rgba(180, 140, 80, 0.1);
+      border-left: 3px solid #5a3a10;
+      padding: 1.2rem 1.4rem;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .quest-entry:hover { border-left-color: #9a6030; }
+
+    .quest-entry.quest-critical { border-left-color: #8a2010; }
+    .quest-entry.quest-critical:hover { border-left-color: #c03020; }
+
+    .quest-entry.quest-optional { border-left-color: #2a4a2a; }
+    .quest-entry.quest-optional:hover { border-left-color: #4a8a4a; }
+
+    .quest-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #c8b070;
+      margin-bottom: 0.25rem;
+    }
+
+    .quest-giver {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #5a4828;
+      margin-bottom: 0.6rem;
+    }
+
+    .quest-desc {
+      font-family: 'IM Fell English', serif;
+      font-size: 0.88rem;
+      color: #8a7858;
+      line-height: 1.75;
+      margin-bottom: 0.8rem;
+    }
+    .quest-desc strong { color: #a89870; font-weight: normal; font-style: italic; }
+
+    /* Consequências */
+    .quest-consequences {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding-top: 0.7rem;
+      border-top: 1px solid rgba(180,140,80,0.08);
+    }
+
+    .consequence {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      color: #7a6848;
+      line-height: 1.5;
+    }
+    .consequence-icon { flex-shrink: 0; margin-top: 0.05rem; }
+    .consequence.con-bad { color: #8a3828; }
+    .consequence.con-good { color: #4a7a4a; }
+    .consequence.con-warn { color: #8a6828; }
+    .consequence.con-dead { color: #6a2828; }
+
+    /* Badge de tipo */
+    .quest-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.6rem;
+    }
+    .badge {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border: 1px solid rgba(180,140,80,0.2);
+      color: #6a5838;
+    }
+    .badge.bd-critical { border-color: rgba(160,60,30,0.4); color: #903028; }
+    .badge.bd-optional { border-color: rgba(60,100,60,0.4); color: #4a7a4a; }
+    .badge.bd-moral { border-color: rgba(120,80,160,0.3); color: #8060a0; }
+    .badge.bd-fatal { border-color: rgba(120,20,20,0.5); color: #803030; background: rgba(120,20,20,0.06); }
+
+    /* ── Caixa de decisão moral ── */
+    .decision-box {
+      background: rgba(80, 40, 10, 0.08);
+      border: 1px solid rgba(180, 140, 80, 0.12);
+      margin: 2.5rem 0;
+      overflow: hidden;
+    }
+
+    .decision-box-header {
+      background: rgba(80, 40, 10, 0.15);
+      border-bottom: 1px solid rgba(180, 140, 80, 0.1);
+      padding: 0.8rem 1.4rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #7a5828;
+    }
+
+    .decision-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .decision-option {
+      padding: 1.4rem 1.6rem;
+      border-right: 1px solid rgba(180,140,80,0.08);
+    }
+    .decision-option:last-child { border-right: none; }
+
+    .decision-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .decision-label.lbl-a { color: #6a8a6a; }
+    .decision-label.lbl-b { color: #8a4a3a; }
+
+    .decision-text {
+      font-family: 'IM Fell English', serif;
+      font-size: 0.85rem;
+      color: #8a7858;
+      line-height: 1.7;
+    }
+    .decision-text strong { color: #a89870; font-weight: normal; font-style: italic; }
+
+    .decision-cost {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      color: #5a4830;
+      margin-top: 0.7rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid rgba(180,140,80,0.08);
+    }
+
+    /* ── Barra de progresso de infecção ── */
+    .infection-band {
+      background: #0d0a06;
+      border: 1px solid rgba(160,60,30,0.2);
+      padding: 1rem 1.6rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
+    .infection-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #6a3020;
+      flex-shrink: 0;
+    }
+    .infection-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.04);
+      position: relative;
+    }
+    .infection-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #5a2010, #c03020);
+    }
+    .infection-days {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.4rem;
+    }
+    .infection-day-pip {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.55rem;
+      color: #3a2818;
+    }
+    .infection-day-pip.active { color: #8a4030; }
+
+    /* ── Nota de rodapé ── */
+    .page-note {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: #3a2e1a;
+      border-top: 1px solid rgba(180, 140, 80, 0.1);
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #080603;
+      border-top: 1px solid rgba(180, 140, 80, 0.12);
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: #3a3020;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      main { padding: 2.5rem 1.2rem 4rem; }
+      .days-timeline { padding-left: 2rem; }
+      .decision-options { grid-template-columns: 1fr; }
+      .decision-option { border-right: none; border-bottom: 1px solid rgba(180,140,80,0.08); }
+      .day-meta { display: none; }
+    }

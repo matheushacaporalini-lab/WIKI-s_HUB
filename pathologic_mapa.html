@@ -1,0 +1,403 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa da Cidade — Pathologic 2 Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/style_mapa_pathologic.css" />
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+
+  <!-- ═══ HEADER ═══ -->
+  <header>
+    <a href="index.html" class="logo">Hub de Wikis</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="pathologic.html">Pathologic 2</a></li>
+        <li><a href="pathologic_quests.html">Quests</a></li>
+        <li><a href="sobreviver_patholgic.html">Sobrevivência</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-placeholder">
+      <!-- Mapa esquemático decorativo no fundo do hero -->
+      <div class="hero-map-deco">
+        <svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#c8b89a" stroke-width="1">
+          <!-- Rio Gorkhon -->
+          <path d="M 30 200 Q 120 170 200 180 Q 290 195 380 160 Q 460 135 570 150" stroke-width="6" stroke="#c8b89a" opacity="0.4"/>
+          <!-- Blocos esquemáticos dos bairros -->
+          <rect x="80" y="80" width="90" height="70" rx="2"/>
+          <rect x="200" y="60" width="110" height="80" rx="2"/>
+          <rect x="340" y="70" width="80" height="65" rx="2"/>
+          <rect x="60" y="220" width="100" height="80" rx="2"/>
+          <rect x="200" y="220" width="95" height="75" rx="2"/>
+          <rect x="330" y="200" width="85" height="90" rx="2"/>
+          <rect x="450" y="80" width="100" height="130" rx="2"/>
+          <!-- Cruz central -->
+          <line x1="295" y1="10" x2="295" y2="330" stroke-width="0.5" opacity="0.3"/>
+          <line x1="10" y1="170" x2="590" y2="170" stroke-width="0.5" opacity="0.3"/>
+          <!-- Marcadores -->
+          <circle cx="125" cy="115" r="4" fill="#c8b89a"/>
+          <circle cx="255" cy="100" r="4" fill="#c8b89a"/>
+          <circle cx="380" cy="102" r="4" fill="#c8b89a"/>
+          <circle cx="110" cy="260" r="4" fill="#c8b89a"/>
+          <circle cx="247" cy="257" r="4" fill="#c8b89a"/>
+          <circle cx="372" cy="245" r="4" fill="#c8b89a"/>
+          <circle cx="500" cy="145" r="4" fill="#c8b89a"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero-overlay">
+      <div class="hero-eyebrow">Guia de Localização · Pathologic 2</div>
+      <h1 class="hero-title">A Cidade-no-Gorkhon</h1>
+    </div>
+  </section>
+
+  <!-- ═══ WARNING BAND ═══ -->
+  <div class="warning-band" role="marquee" aria-label="Alerta: blocos infectados">
+    <div class="warning-band-inner">
+      <span>⚕ Blocos do Leste interditados — acesso proibido</span><span class="warning-sep">✦</span>
+      <span>Não se aproxime dos poços nos bairros infectados</span><span class="warning-sep">✦</span>
+      <span>O Rio Gorkhon não é seguro como fonte de água</span><span class="warning-sep">✦</span>
+      <span>Quarentena em vigor nos Blocos dos Açougueiros</span><span class="warning-sep">✦</span>
+      <span>Toque de recolher ao anoitecer — permaneça em casa</span><span class="warning-sep">✦</span>
+      <span>⚕ Blocos do Leste interditados — acesso proibido</span><span class="warning-sep">✦</span>
+      <span>Não se aproxime dos poços nos bairros infectados</span><span class="warning-sep">✦</span>
+      <span>O Rio Gorkhon não é seguro como fonte de água</span><span class="warning-sep">✦</span>
+      <span>Quarentena em vigor nos Blocos dos Açougueiros</span><span class="warning-sep">✦</span>
+      <span>Toque de recolher ao anoitecer — permaneça em casa</span><span class="warning-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══ BREADCRUMB ═══ -->
+  <div class="breadcrumb-wrap">
+    <div class="breadcrumb">
+      <a href="index.html">Início</a>
+      <span class="sep">›</span>
+      <a href="pathologic.html">Pathologic 2</a>
+      <span class="sep">›</span>
+      <span>Mapa da Cidade</span>
+    </div>
+  </div>
+
+  <!-- ═══ PAGE WRAP ═══ -->
+  <div class="page-wrap">
+
+    <!-- INTRO -->
+    <div class="intro-block reveal">
+      <div class="section-label">Cartografia</div>
+      <h1>A Cidade Sem Nome</h1>
+      <p class="subtitle">Bairros · Distritos · Pontos de Referência</p>
+
+      <p>
+        A Cidade-no-Gorkhon não tem nome oficial. Existe nas margens do mundo — uma comunidade industrial encravada nas estepes russas, cortada ao meio pelo rio Gorkhon. À margem esquerda ficam os blocos de moradia, o comércio e as instituições. À margem direita, os Campos, onde a terra sangra e o Tauros é criado para o abate.
+      </p>
+      <p>
+        Para o Médico Artemy Burakh, cada bloco carrega uma memória da infância — e uma ameaça presente. Conhecer a geografia da Cidade não é curiosidade: é sobrevivência. Saber qual rota evita os infectados, onde estão os curandeiros, quem controla qual bairro — isso define quantas horas você tem no dia.
+      </p>
+
+      <div class="pull-quote">
+        <p>"A Cidade foi construída sobre os ossos da estepe. Cada rua é uma costela. O rio é sua veia principal. E algo, nas profundezas, ainda respira."</p>
+        <cite>— Pathologic 2</cite>
+      </div>
+    </div>
+
+    <!-- MAPA ESQUEMÁTICO -->
+    <div class="map-section reveal">
+      <div class="section-label">Orientação Espacial</div>
+      <h2>Esquema da Cidade</h2>
+
+      <div class="map-container">
+        <img src="assets/images/mapa_cidade_pathologic.png" class="map-image" style="display:block; width:100%; max-width:100%; height:auto; margin:0 auto;"/>
+      </div>
+      <p class="map-note">⚕ Esquema aproximado — a infecção altera os blocos acessíveis a cada dia</p>
+    </div>
+
+    <!-- BAIRROS DETALHADOS -->
+    <div class="districts-section reveal">
+      <div class="section-label">Descrição dos Distritos</div>
+      <h2>Os Bairros e Suas Hierarquias</h2>
+
+      <!-- 1. Sede do Poder -->
+      <div class="district-card tier-poder">
+        <div class="district-index">
+          <div class="district-num">I</div>
+        </div>
+        <div class="district-body">
+          <div class="district-header">
+            <div class="district-name">Sede do Poder — O Centro</div>
+            <span class="district-tag tag-poder">Poder</span>
+          </div>
+          <p class="district-desc">
+            O coração administrativo da Cidade: a Câmara Municipal, o Quartel Militar e o Hospital principal ficam aqui. É onde as decisões que afetam todos os outros bairros são tomadas — e onde as três famílias fundadoras se enfrentam em silêncio. Artemy terá que negociar nesse território com frequência, especialmente nos dias em que a Praga exige uma resposta oficial.
+          </p>
+          <div class="district-meta">
+            <span class="meta-item">Acesso: <strong>Livre (dias iniciais)</strong></span>
+            <span class="meta-item">Risco de Praga: <strong>Médio — aumenta com o tempo</strong></span>
+            <span class="meta-item">NPCs-chave: <strong>Autoridades militares · Médicos oficiais</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Bloco dos Açougueiros -->
+      <div class="district-card tier-terra">
+        <div class="district-index">
+          <div class="district-num">II</div>
+        </div>
+        <div class="district-body">
+          <div class="district-header">
+            <div class="district-name">Bloco dos Açougueiros</div>
+            <span class="district-tag tag-terra">Terra · Ofício</span>
+          </div>
+          <p class="district-desc">
+            Vladislav Olgimsky Sr., popularmente conhecido como Big Vlad, é um dos Bound. Ele comanda a família Olgimsky e controla o Abatedouro , a maior e mais importante fonte de recursos e carne da Cidade. Embora se apresente como um líder pragmático e protetor severo da comunidade, ele é guiado pelo medo constante da revolta popular e do contágio da Praga. O segredo de Big Vlad é esconder ações moralmente questionáveis, como o fechamento do Termitário , onde trancou centenas de trabalhadores Kin para conter o surto inicial da doença. Sua história termina em culpa profunda por decisões que muitas vezes culminam em sacrifício próprio ou na transferência de seu poder para o filho, Vlad, o Jovem.
+          </p>
+          <div class="district-meta">
+            <span class="meta-item">Poder local: <strong>Comanda a família Olgimsky e o Abatedouro</strong></span>
+            <span class="meta-item">Personalidade: <strong>Pragmático, protetor e dominado pelo medo da revolta e da Praga</strong></span>
+            <span class="meta-item">Segredo: <strong>Fechou o Termitário para conter a doença, aprisionando centenas de Kin</strong></span>
+            <span class="meta-item">Destino: <strong>Guilta, sacrificando-se ou entregando o poder ao filho</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Bairro do Povo -->
+      <div class="district-card tier-povo">
+        <div class="district-index">
+          <div class="district-num">III</div>
+        </div>
+        <div class="district-body">
+          <div class="district-header">
+            <div class="district-name">Bairro do Povo</div>
+            <span class="district-tag tag-povo">Povo</span>
+          </div>
+          <p class="district-desc">
+            O maior distrito em população, com o mercado informal, habitações coletivas e os Dogheads — as crianças que operam como rede de informação e troca da Cidade. É aqui que o jogador encontra comida barata, rumores e as missões secundárias que revelam o tecido social da Cidade. A comunidade é solidária internamente mas profundamente desconfiada das instituições.
+          </p>
+          <div class="district-meta">
+            <span class="meta-item">Acesso: <strong>Livre</strong></span>
+            <span class="meta-item">Risco de Praga: <strong>Variável — depende do progresso</strong></span>
+            <span class="meta-item">NPCs-chave: <strong>Dogheads · Comerciantes · Crianças dos bairros</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Os Campos -->
+      <div class="district-card tier-terra">
+        <div class="district-index">
+          <div class="district-num">IV</div>
+        </div>
+        <div class="district-body">
+          <div class="district-header">
+            <div class="district-name">Os Campos — Margem Sul do Gorkhon</div>
+            <span class="district-tag tag-terra">Terra</span>
+          </div>
+          <p class="district-desc">
+            A terra sagrada da estepe, onde os Tauros são criados e onde a substância misteriosa que permeia a narrativa tem origem. É o território do pai de Artemy — e do conhecimento que ele tentou transmitir. Para o Médico, os Campos são tanto herança quanto responsabilidade: a cura para a Praga pode estar aqui, nas ervas que crescem sobre os ossos da terra.
+          </p>
+          <div class="district-meta">
+            <span class="meta-item">Acesso: <strong>Requer atravessar o rio — habilidade de navegação</strong></span>
+            <span class="meta-item">Risco de Praga: <strong>Baixo (área externa)</strong></span>
+            <span class="meta-item">NPCs-chave: <strong>Isidor Burakh (memória) · Pastores · Nativos</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Cemitério e Periferia -->
+      <div class="district-card tier-sagrado">
+        <div class="district-index">
+          <div class="district-num">V</div>
+        </div>
+        <div class="district-body">
+          <div class="district-header">
+            <div class="district-name">Cemitério e Periferia</div>
+            <span class="district-tag tag-sagrado">Sagrado · Morte</span>
+          </div>
+          <p class="district-desc">
+            O limite sul da Cidade, onde os mortos se acumulam à medida que a Praga avança. O Cemitério não é apenas um lugar de sepultamento — é uma fronteira simbólica entre a Cidade e o que a Praga vai conquistando dia a dia. Conforme os blocos infectados se expandem, o cemitério torna-se ponto de encontro com personagens que só aparecem no limiar entre mundos.
+          </p>
+          <div class="district-meta">
+            <span class="meta-item">Acesso: <strong>Livre — mas perigoso à noite</strong></span>
+            <span class="meta-item">Risco de Praga: <strong>Alto nos dias finais</strong></span>
+            <span class="meta-item">NPCs-chave: <strong>Coveiros · Clara (avistamentos) · Mortos recentes</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Habitações do Sul -->
+      <div class="district-card tier-povo">
+        <div class="district-index">
+          <div class="district-num">VI</div>
+        </div>
+        <div class="district-body">
+          <div class="district-header">
+            <div class="district-name">Habitações do Sul</div>
+            <span class="district-tag tag-povo">Povo · Residencial</span>
+          </div>
+          <p class="district-desc">
+            Os blocos residenciais da margem sul abrigam famílias operárias e os personagens secundários que têm missões ligadas ao cotidiano da Cidade. É aqui que vivem muitos dos NPCs que o jogador pode salvar — ou perder — ao longo dos doze dias. A densidade residencial torna a progressão da Praga nessa área especialmente devastadora.
+          </p>
+          <div class="district-meta">
+            <span class="meta-item">Acesso: <strong>Livre nos primeiros dias</strong></span>
+            <span class="meta-item">Risco de Praga: <strong>Médio a alto — progressivo</strong></span>
+            <span class="meta-item">NPCs-chave: <strong>Famílias · Enfermos · Personagens de missões secundárias</strong></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- PONTOS DE INTERESSE -->
+    <div class="poi-section reveal">
+      <div class="section-label">Localizações Críticas</div>
+      <h2>Pontos de Interesse</h2>
+
+      <div class="poi-grid">
+
+        <div class="poi-item">
+          <span class="poi-icon">🏠</span>
+          <div class="poi-body">
+            <div class="poi-name">Casa de Artemy</div>
+            <div class="poi-desc">Base de operações do Médico. Ponto de descanso, armazenamento de itens e salvamento. Retorne aqui ao anoitecer.</div>
+          </div>
+        </div>
+
+        <div class="poi-item">
+          <span class="poi-icon">🏥</span>
+          <div class="poi-body">
+            <div class="poi-name">Hospital Central</div>
+            <div class="poi-desc">Fornece medicamentos básicos nos primeiros dias. Conforme a Praga avança, os recursos minguam e a fila de pacientes cresce.</div>
+          </div>
+        </div>
+
+        <div class="poi-item">
+          <span class="poi-icon">🔪</span>
+          <div class="poi-body">
+            <div class="poi-name">Abatedouro Burakh</div>
+            <div class="poi-desc">Local do assassinato do pai. Contém pistas sobre o passado de Isidor e é essencial na linha narrativa do Médico.</div>
+          </div>
+        </div>
+
+        <div class="poi-item">
+          <span class="poi-icon">🛒</span>
+          <div class="poi-body">
+            <div class="poi-name">Mercado Informal</div>
+            <div class="poi-desc">Principal fonte de comida e itens de troca. Os preços oscilam com a crise. Frequente-o de manhã — estoque esgota ao longo do dia.</div>
+          </div>
+        </div>
+
+        <div class="poi-item">
+          <span class="poi-icon">🚉</span>
+          <div class="poi-body">
+            <div class="poi-name">Estação Ferroviária</div>
+            <div class="poi-desc">Ponto de chegada e de possível partida. Referência geográfica central entre os dois lados da Cidade.</div>
+          </div>
+        </div>
+
+        <div class="poi-item">
+          <span class="poi-icon">⚗</span>
+          <div class="poi-body">
+            <div class="poi-name">Laboratório de Dankovsky</div>
+            <div class="poi-desc">O Bacharel trabalha aqui em sua busca por imortalidade. Missões de cooperação com Dankovsky passam por este espaço.</div>
+          </div>
+        </div>
+
+        <div class="poi-item">
+          <span class="poi-icon">🌿</span>
+          <div class="poi-body">
+            <div class="poi-name">Áreas de Ervas (Campos)</div>
+            <div class="poi-desc">Pontos fixos nos Campos do Sul onde ervas medicinais crescem. Mapeie esses locais no Dia 1 — serão sua fonte de remédios artesanais.</div>
+          </div>
+        </div>
+
+        <div class="poi-item">
+          <span class="poi-icon">🏛</span>
+          <div class="poi-body">
+            <div class="poi-name">Câmara Municipal</div>
+            <div class="poi-desc">Sede das decisões políticas e quartel-general das autoridades. Negociações críticas com o governo acontecem aqui nos dias de crise.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- DICAS DE NAVEGAÇÃO -->
+    <div class="nav-tips reveal">
+      <div class="section-label">Orientação Prática</div>
+      <h2>Como se Mover pela Cidade</h2>
+
+      <div class="tip-row">
+        <span class="tip-glyph">✦</span>
+        <p class="tip-text"><strong>O mapa muda a cada dia.</strong> Blocos infectados ficam vermelhos e causam dano de imunidade apenas por estar dentro deles. Planeje rotas antes de sair — um desvio de dois quarteirões pode custar meia hora.</p>
+      </div>
+
+      <div class="tip-row">
+        <span class="tip-glyph">✦</span>
+        <p class="tip-text"><strong>O rio divide estratégias.</strong> A margem norte tem o poder político e o comércio. A margem sul tem os recursos naturais e a origem da cura. Travessias frequentes entre os dois lados consomem tempo valioso.</p>
+      </div>
+
+      <div class="tip-row">
+        <span class="tip-glyph">✦</span>
+        <p class="tip-text"><strong>À noite, evite atalhos.</strong> Bandidos patrulham becos e áreas pouco iluminadas após o anoitecer. Use as ruas principais mesmo que sejam mais longas — confrontos custam saúde e tempo.</p>
+      </div>
+
+      <div class="tip-row">
+        <span class="tip-glyph">✦</span>
+        <p class="tip-text"><strong>NPCs revelam rotas seguras.</strong> Perguntar a moradores sobre o estado dos bairros nas conversas de missão fornece informação real sobre quais blocos estão infectados no momento. Use essa rede.</p>
+      </div>
+
+      <div class="tip-row">
+        <span class="tip-glyph">✦</span>
+        <p class="tip-text"><strong>O Cemitério é uma fronteira.</strong> Conforme os dias avançam, o limite sul da Cidade vai se tornando território da Praga. Não entre no Cemitério nos dias finais sem imunidade alta e remédios em mão.</p>
+      </div>
+
+      <div class="tip-row">
+        <span class="tip-glyph">✦</span>
+        <p class="tip-text"><strong>Conheça as casas dos personagens-chave.</strong> Artemy, Dankovsky e Clara têm bases distintas. Saber onde cada um mora permite calcular o tempo de deslocamento para missões de cooperação entre eles.</p>
+      </div>
+
+    </div>
+
+    <!-- FECHAMENTO -->
+    <div class="closing-note reveal">
+      <p>
+        A Cidade-no-Gorkhon não é um cenário. É um personagem. Ela adoece, resiste, se contrai. Aprender sua geografia é aprender sua linguagem — e quem não fala a língua de uma cidade morre perdido dentro dela.
+      </p>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <span>© 2026 Hub de Wikis de Jogos</span>
+    <nav class="footer-nav">
+      <a href="pathologic.html">← Voltar à Wiki</a>
+      <a href="sobreviver_patholgic.html">Sobrevivência</a>
+      <a href="pathologic_quests.html">Quests</a>
+    </nav>
+  </footer>
+
+  <!-- ═══ SCROLL REVEAL ═══ -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

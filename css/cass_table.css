@@ -1,0 +1,219 @@
+/* ==========================================================================
+   CSS Final: Tabela Reta, Caixas Expandidas e Barra de Scroll Estilizada
+   ========================================================================== */
+
+/* Contêiner da Tabela: Onde estilizamos a barra de rolagem */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Ativa o scroll horizontal */
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(155, 108, 211, 0.25);
+  background-color: #141414;
+  padding-bottom: 5px; /* Espaço para a barra não cobrir o conteúdo */
+
+  /* Estilização para o Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #9b6cd3 #1a1a1a;
+}
+
+/* --- Customização da Barra de Rolagem (Chrome, Edge, Safari, Opera) --- */
+.table-responsive::-webkit-scrollbar {
+  height: 10px; /* Altura da barra horizontal */
+}
+
+/* O fundo da barra (pista) */
+.table-responsive::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 0 0 8px 8px; /* Arredonda as pontas de baixo junto com o container */
+  border-top: 1px solid #252525;
+}
+
+/* O botão que o usuário arrasta (cursor da barra) */
+.table-responsive::-webkit-scrollbar-thumb {
+  background: rgba(155, 108, 211, 0.6); /* Roxo do tema com transparência */
+  border-radius: 20px;
+  border: 2px solid #1a1a1a; /* Cria um espaçamento elegante em volta do cursor */
+  transition: background 0.3s ease;
+}
+
+/* Quando o usuário passa o mouse ou arrasta a barra */
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #9b6cd3; /* Roxo neon sólido brilhante */
+  box-shadow: 0 0 10px #9b6cd3; /* Leve efeito de brilho */
+}
+
+/* ==========================================================================
+   Estrutura e Tamanhos da Tabela
+   ========================================================================== */
+.type-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #141414;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.85rem;
+}
+
+/* Configuração de todas as células */
+.type-matrix th, 
+.type-matrix td {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #252525;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+/* Cabeçalhos do Topo (Totalmente Retos e Espaçados) */
+.type-matrix th {
+  background-color: #1a1a1a;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  vertical-align: middle;
+  min-width: 145px; /* Espaço generoso para caber ÍCONE + PALAVRA INTEIRA (ex: PURPURINA) */
+}
+
+/* Força os badges do topo a ficarem retos */
+.type-matrix th .badge {
+  position: static;
+  transform: none !important;
+  width: 100%;
+}
+
+/* Célula superior esquerda (Atacante / Defensor) */
+.type-matrix th.corner-title {
+  font-size: 0.75rem;
+  background-color: #1f1f1f;
+  color: #888;
+  vertical-align: middle;
+  min-width: 160px;
+}
+
+/* Coluna Fixa da Esquerda (Atacantes) */
+.type-matrix td.row-header {
+  background-color: #1a1a1a;
+  text-align: left;
+  font-weight: bold;
+  min-width: 150px; /* Largura ideal para não esmagar os nomes na lateral */
+}
+
+.type-matrix td.row-header .badge {
+  transform: none;
+  width: 100%;
+  position: static;
+}
+
+/* Efeito visual nas linhas ao passar o mouse */
+.type-matrix tbody tr:hover {
+  background-color: rgba(155, 108, 211, 0.08);
+}
+
+/* ==========================================================================
+   Cores de Vantagem / Desvantagem das Células
+   ========================================================================== */
+.cell-green  { background-color: #1fb89a !important; }
+.cell-red    { background-color: #a80038 !important; }
+.cell-yellow { background-color: #e6b042 !important; }
+
+/* ==========================================================================
+   Badges e Injeção de Ícones (.png)
+   ========================================================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  gap: 8px; /* Espaço perfeito entre o ícone e a palavra */
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  box-sizing: border-box;
+  white-space: nowrap; /* Impede quebras de linha indesejadas */
+}
+
+.badge::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Mapeamento de cores de fundo e caminhos das imagens */
+.type-beast { background-color: #a3a175; }
+.type-beast::before { background-image: url('../assets/images/beast.png'); }
+
+.type-air { background-color: #60c9b3; }
+.type-air::before { background-image: url('../assets/images/air.png'); }
+
+.type-astral { background-color: #4a5c8c; }
+.type-astral::before { background-image: url('../assets/images/astral.png'); }
+
+.type-earth { background-color: #a66353; }
+.type-earth::before { background-image: url('../assets/images/earth.png'); }
+
+.type-fire { background-color: #e35d3b; }
+.type-fire::before { background-image: url('../assets/images/fire.png'); }
+
+.type-ice { background-color: #5bb3db; }
+.type-ice::before { background-image: url('../assets/images/ice.png'); }
+
+.type-lightning { background-color: #e3be44; color: #000; }
+.type-lightning::before { background-image: url('../assets/images/lightning.png'); }
+
+.type-metal { background-color: #83859c; }
+.type-metal::before { background-image: url('../assets/images/metal.png'); }
+
+.type-plant { background-color: #4da651; }
+.type-plant::before { background-image: url('../assets/images/plant.png'); }
+
+.type-plastic { background-color: #d13f50; }
+.type-plastic::before { background-image: url('../assets/images/plastic.png'); }
+
+.type-poison { background-color: #9d49b5; }
+.type-poison::before { background-image: url('../assets/images/poison.png'); }
+
+.type-water { background-color: #3b73de; }
+.type-water::before { background-image: url('../assets/images/water.png'); }
+
+.type-glass { background-color: #92a4b0; }
+.type-glass::before { background-image: url('../assets/images/glass.png'); }
+
+.type-glitter { background-color: #e65ec4; }
+.type-glitter::before { background-image: url('../assets/images/glitter.png'); }
+
+/* ==========================================================================
+   Legenda Superior da Tabela
+   ========================================================================== */
+.table-legend {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 2rem 0;
+  padding: 0.6rem;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  border: 1px solid #252525;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.legend-box {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  display: inline-block;
+}

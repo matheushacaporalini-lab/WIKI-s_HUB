@@ -1,0 +1,531 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quests & Decisões — Pathologic 2 Wiki</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style_pathologic-quests.css" />
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Hub de Wikis</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="pathologic.html">Pathologic 2</a></li>
+        <li><a href="pathologic_mapa.html">Mapa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-band">
+    <div class="breadcrumb">
+      <a href="index.html">Início</a> &rsaquo;
+      <a href="pathologic.html">Pathologic 2</a> &rsaquo;
+      <span>Quests & Decisões</span>
+    </div>
+    <div class="page-eyebrow">Guia · Missões · Consequências</div>
+    <h1 class="page-title">Quests & Decisões</h1>
+    <p class="page-subtitle">Cada tarefa é uma negociação moral. Salvar um pode condenar outro. Você não pode fazer tudo.</p>
+  </div>
+
+  <div class="warning-band" role="marquee">
+    <div class="warning-band-inner">
+      <span>✦ Algumas missões expiram ao amanhecer</span><span class="warning-sep">·</span>
+      <span>Deixar uma quest sem resposta tem consequências</span><span class="warning-sep">·</span>
+      <span>A reputação cai quando você falha com os distritos</span><span class="warning-sep">·</span>
+      <span>Não há missão sem custo</span><span class="warning-sep">·</span>
+      <span>O tempo não para enquanto você decide</span><span class="warning-sep">·</span>
+      <span>✦ Algumas missões expiram ao amanhecer</span><span class="warning-sep">·</span>
+      <span>Deixar uma quest sem resposta tem consequências</span><span class="warning-sep">·</span>
+      <span>A reputação cai quando você falha com os distritos</span><span class="warning-sep">·</span>
+      <span>Não há missão sem custo</span><span class="warning-sep">·</span>
+      <span>O tempo não para enquanto você decide</span><span class="warning-sep">·</span>
+    </div>
+  </div>
+
+  <main>
+
+    <div class="spoiler-notice reveal">
+      <span class="spoiler-notice-icon">⚠</span>
+      <span class="spoiler-notice-text">
+        Esta página documenta as missões principais e suas consequências, incluindo mortes de personagens e revelações dos dias finais. Spoilers completos a partir do Dia 7.
+      </span>
+    </div>
+
+    <!-- Barra de infecção -->
+    <div class="infection-band reveal">
+      <div class="infection-label">Avanço da Praga</div>
+      <div style="flex:1">
+        <div class="infection-track">
+          <div class="infection-fill" style="width: 100%"></div>
+        </div>
+        <div class="infection-days">
+          <span class="infection-day-pip active">D0</span>
+          <span class="infection-day-pip active">D1</span>
+          <span class="infection-day-pip active">D2</span>
+          <span class="infection-day-pip active">D3</span>
+          <span class="infection-day-pip active">D4</span>
+          <span class="infection-day-pip active">D5</span>
+          <span class="infection-day-pip active">D6</span>
+          <span class="infection-day-pip active">D7</span>
+          <span class="infection-day-pip active">D8</span>
+          <span class="infection-day-pip active">D9</span>
+          <span class="infection-day-pip active">D10</span>
+          <span class="infection-day-pip active">D11</span>
+          <span class="infection-day-pip active">D12</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ DIAS ══ -->
+    <div class="section-label reveal">Cronologia · Os Doze Dias</div>
+
+    <div class="days-timeline">
+
+      <!-- DIA 0 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">0</div>
+          <div class="day-title">Chegada · O Trem da Madrugada</div>
+          <div class="day-meta">Tutorial · Sem prazo de morte</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+            </div>
+            <div class="quest-name">Chegada à Cidade</div>
+            <div class="quest-giver">Automático — início do jogo</div>
+            <div class="quest-desc">
+              Artemy desembarca do trem e imediatamente enfrenta hostilidade: homens aguardam no cais com ordens de detê-lo. O jogo apresenta o sistema de combate e fuga. <strong>A acusação de matar o próprio pai é o ponto de partida</strong> — Artemy precisa chegar à casa de Isidor antes de qualquer outra coisa.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                Fuja dos perseguidores ou enfrente-os — a reputação no Bloco dos Açougueiros começa a se formar aqui.
+              </div>
+            </div>
+          </div>
+
+          <div class="quest-entry">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+            </div>
+            <div class="quest-name">A Casa do Pai</div>
+            <div class="quest-giver">Artemy — objetivo pessoal</div>
+            <div class="quest-desc">
+              Chegar à casa de Isidor Burakh para encontrar os primeiros indícios da situação: o pai está morto, a casa foi revirada, e três crianças — os <strong>Adherent Kids</strong> — estão escondidas lá dentro esperando pelo Harúspex. Elas são os primeiros aliados do jogador e precisarão de proteção durante os doze dias.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Os Adherent Kids passam a confiar em Artemy e funcionam como rede de informação pela Cidade.
+              </div>
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                A causa da morte de Isidor permanece obscura — investigar isso é um fio narrativo que percorre todos os doze dias.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIA 1 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">1</div>
+          <div class="day-title">Os Primeiros Mortos</div>
+          <div class="day-meta">Praga confirmada · Reputação crítica</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+              <span class="badge bd-fatal">Expira ao amanhecer</span>
+            </div>
+            <div class="quest-name">Encontre os Adherents</div>
+            <div class="quest-giver">Adherent Kids</div>
+            <div class="quest-desc">
+              As crianças fornecem uma lista de adultos que podem ajudar Artemy a limpar seu nome e entender o que matou Isidor. Os Adherents são os personagens centrais da narrativa — <strong>cada um representa uma visão diferente do que a Cidade é e do que ela precisa</strong>. Conhecê-los no Dia 1 abre a maioria das quests subsequentes.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Apresenta Lara Ravel, Alexander Saburov, Peter Stamatin e Maria Kain como contatos.
+              </div>
+              <div class="consequence con-bad">
+                <span class="consequence-icon">✗</span>
+                Não encontrar Lara no Dia 1 atrasa o acesso ao seu posto improvisado de saúde — recurso crítico nos dias seguintes.
+              </div>
+            </div>
+          </div>
+
+          <div class="quest-entry">
+            <div class="quest-badges">
+              <span class="badge bd-moral">Decisão Moral</span>
+            </div>
+            <div class="quest-name">O Suspeito do Bloco</div>
+            <div class="quest-giver">Morador do Bloco dos Açougueiros</div>
+            <div class="quest-desc">
+              Um morador acusa outro de esconder um infectado em casa para evitar quarentena. <strong>Denunciar significa quarentena imediata e possível morte do infectado</strong>. Não denunciar arrisca contaminação do bloco. A primeira grande escolha sem resposta correta.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-bad">
+                <span class="consequence-icon">✗</span>
+                Denunciar: o infectado é isolado, o bloco fica seguro, mas a reputação em Notkin cai.
+              </div>
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                Não denunciar: o bloco pode ter novos infectados no Dia 3. Notkin confia mais em você.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIA 2 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">2</div>
+          <div class="day-title">A Praga Tem Nome</div>
+          <div class="day-meta">Primeiros infectados visíveis no mapa</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+            </div>
+            <div class="quest-name">O Diagnóstico de Dankovsky</div>
+            <div class="quest-giver">Daniil Dankovsky</div>
+            <div class="quest-desc">
+              Dankovsky apresenta a Artemy sua análise clínica da doença: hemorrágica, de progressão rápida, sem precedente na literatura médica que ele conhece. Os dois chegam à mesma conclusão por caminhos opostos — <strong>a praga parece ter origem local, não externa</strong>. Dankovsky suspeita da água. Artemy suspeita da terra. Ambos podem estar certos.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Dankovsky torna-se aliado e seu laboratório fica acessível para produzir remédios básicos.
+              </div>
+            </div>
+          </div>
+
+          <div class="quest-entry quest-optional">
+            <div class="quest-badges">
+              <span class="badge bd-optional">Opcional</span>
+              <span class="badge bd-moral">Consequência tardia</span>
+            </div>
+            <div class="quest-name">A Criança Doente de Lara</div>
+            <div class="quest-giver">Lara Ravel</div>
+            <div class="quest-desc">
+              Lara está cuidando de uma criança com os primeiros sintomas. Ela não tem remédio. Artemy pode encontrar Tvyrin, um farmacêutico relutante no distrito leste, para conseguir o medicamento — mas Tvyrin exige um favor em troca que compromete a reputação de Artemy com os Saburov.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Criança sobrevive. Lara tem confiança máxima em Artemy até o fim.
+              </div>
+              <div class="consequence con-bad">
+                <span class="consequence-icon">✗</span>
+                Favor a Tvyrin: Saburov não fornece informações no Dia 5 sem negociação extra.
+              </div>
+              <div class="consequence con-dead">
+                <span class="consequence-icon">☠</span>
+                Ignorar a quest: a criança morre no Dia 3. Lara ainda ajuda Artemy, mas com distância emocional perceptível.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DECISÃO MORAL DESTACADA -->
+      <div class="decision-box reveal">
+        <div class="decision-box-header">⚖ Decisão · Dia 3 — O Poço Contaminado</div>
+        <div class="decision-options">
+          <div class="decision-option">
+            <div class="decision-label lbl-a">Opção A — Selar o Poço</div>
+            <div class="decision-text">
+              Reportar a contaminação às autoridades e selar o poço do distrito sudoeste. <strong>O bloco perde sua única fonte de água</strong> por quatro dias — os moradores precisarão comprar água ou migrar para outros pontos. Alguns não conseguirão.
+            </div>
+            <div class="decision-cost">Custo: 6–8 civis adoecem por desidratação · Bloco fica limpo · Reputação com Saburov sobe</div>
+          </div>
+          <div class="decision-option">
+            <div class="decision-label lbl-b">Opção B — Manter o Poço Aberto</div>
+            <div class="decision-text">
+              Não reportar. O poço continua funcionando. <strong>A contaminação se alastra silenciosamente</strong> pelos próximos dois dias antes de ser descoberta por outros meios — com o dobro de infectados.
+            </div>
+            <div class="decision-cost">Custo: 15–20 infectados adicionais até o Dia 5 · Reputação com moradores do bloco sobe · Saburov desconfia de você</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIA 4 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">4</div>
+          <div class="day-title">O Segredo de Isidor</div>
+          <div class="day-meta">Narrativa central · Revelações do Menkhu</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+            </div>
+            <div class="quest-name">O Diário do Mestre</div>
+            <div class="quest-giver">Notkin — Adherent Kid</div>
+            <div class="quest-desc">
+              Notkin encontrou parte do diário de Isidor escondido no Bloco dos Açougueiros. As anotações revelam que <strong>Isidor sabia da praga antes de ela surgir</strong> — não como profecia, mas como diagnóstico. Ele identificou os primeiros sintomas semanas antes e tentou desenvolver uma cura usando as plantas que crescem sobre os ossários Kin. Os últimos registros mencionam a Torre dos Stamatin como peça-chave.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Abre acesso a Peter Stamatin como fonte de informação sobre a arquitetura ritual da Cidade.
+              </div>
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                Sugere que a cura existe — mas provavelmente não tem forma médica convencional.
+              </div>
+            </div>
+          </div>
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+              <span class="badge bd-fatal">Personagem em risco</span>
+            </div>
+            <div class="quest-name">A Febre de Capella</div>
+            <div class="quest-giver">Victor Kain</div>
+            <div class="quest-desc">
+              Capella Kain — filha de Simon — apresenta sintomas. Victor pede ajuda a Artemy discretamente, sem querer envolver as autoridades. A cura requer um componente que só existe no estoque de Dankovsky, <strong>mas Dankovsky está ocupado com outra crise e o acesso ao laboratório é limitado</strong>. Gerencie o tempo com cuidado.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Capella sobrevive. Acesso à Casa Kain nos dias seguintes.
+              </div>
+              <div class="consequence con-dead">
+                <span class="consequence-icon">☠</span>
+                Capella morre no Dia 5. Victor nunca perdoa. A ala Kain fecha para Artemy permanentemente.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIA 5-6 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">5–6</div>
+          <div class="day-title">A Quarentena e os Que Ficam de Fora</div>
+          <div class="day-meta">Zonas infectadas avançam · Recursos escassos</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+              <span class="badge bd-moral">Sem resposta certa</span>
+            </div>
+            <div class="quest-name">Os Portões do Distrito Leste</div>
+            <div class="quest-giver">Saburov — Autoridade Municipal</div>
+            <div class="quest-desc">
+              Saburov ordena o fechamento do Distrito Leste — uma das zonas mais populosas — por suspeita de contaminação em massa. <strong>Lara Ravel está dentro do distrito</strong> cuidando de doentes. Sair agora significa abandonar os pacientes. Ficar significa arriscar ser trancada do lado de dentro por dias. Artemy precisa decidir se usa sua influência para manter os portões abertos um pouco mais — o que desagrada Saburov — ou se respeita a ordem.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                Manter os portões abertos: Lara sai, 3 doentes morrem sem atendimento. Saburov hostil até o Dia 8.
+              </div>
+              <div class="consequence con-bad">
+                <span class="consequence-icon">✗</span>
+                Respeitar a ordem: Lara fica presa. Você não a vê por dois dias. Ela sai viva mas enfraquecida. Saburov cooperativo.
+              </div>
+            </div>
+          </div>
+
+          <div class="quest-entry quest-optional">
+            <div class="quest-badges">
+              <span class="badge bd-optional">Opcional</span>
+            </div>
+            <div class="quest-name">O Estoque de Peter Stamatin</div>
+            <div class="quest-giver">Andrey Stamatin</div>
+            <div class="quest-desc">
+              Andrey pede que Artemy convença o irmão Peter a parar de beber e voltar a trabalhar na Torre — há um andar que só Peter sabe construir e que pode ser relevante para conter a praga de forma não-convencional. Peter só coopera se alguém ouvir suas teorias sem julgamento. <strong>Isso consome entre duas e três horas de jogo</strong> — tempo que tem custo real enquanto outros eventos avançam.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Torre completa no Dia 8 — abre opção narrativa no clímax.
+              </div>
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                Ignorar: a Torre permanece inacabada. Andrey fica em silêncio. Peter desaparece nos dias finais.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIA 7 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">7</div>
+          <div class="day-title">A Inquisidora Chega</div>
+          <div class="day-meta">Ponto sem retorno em várias quests</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+              <span class="badge bd-fatal">Muda o jogo</span>
+            </div>
+            <div class="quest-name">Audiência com Aglaja Lilich</div>
+            <div class="quest-giver">Automático — Aglaja chega à Cidade</div>
+            <div class="quest-desc">
+              A Inquisidora da Capital se apresenta com poderes de exceção: ela pode ordenar a queima de bairros inteiros como medida de contenção. Artemy precisa convencê-la de que seu método — o caminho Menkhu, a cura pela terra — é válido, ou ela tomará decisões unilaterais que matarão centenas para salvar o conjunto. <strong>A conversa com Aglaja é o momento em que o jogo testa se você entendeu o que a Cidade realmente é.</strong>
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Convencer Aglaja: ela atrasa a queima até o Dia 10, dando três dias extras para encontrar a cura.
+              </div>
+              <div class="consequence con-bad">
+                <span class="consequence-icon">✗</span>
+                Falhar: queima do bairro sudoeste no Dia 9. Dezenas de mortos. Inclui NPCs que tinham quests ativas.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DECISÃO MORAL DIA 9 -->
+      <div class="decision-box reveal">
+        <div class="decision-box-header">⚖ Decisão · Dia 9 — Quem Recebe o Último Remédio</div>
+        <div class="decision-options">
+          <div class="decision-option">
+            <div class="decision-label lbl-a">Lara Ravel</div>
+            <div class="decision-text">
+              Lara está gravemente doente. <strong>Ela é o personagem com quem Artemy tem o vínculo mais pessoal</strong> — irmã de criação, aliada desde o Dia 1. Salvar Lara garante apoio emocional e logístico nos dias finais.
+            </div>
+            <div class="decision-cost">Custo: o outro personagem morre. Você escolhe quem.</div>
+          </div>
+          <div class="decision-option">
+            <div class="decision-label lbl-b">Um Curandeiro Kin anônimo</div>
+            <div class="decision-text">
+              O curandeiro conhece a localização de uma plantação de panacea que Isidor cultivava em segredo. <strong>Essa informação é necessária para uma das rotas de cura finais.</strong> Sem ele, a rota fecha.
+            </div>
+            <div class="decision-cost">Custo: Lara morre. O impacto narrativo é real e duradouro até os créditos.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIA 10-11 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">10–11</div>
+          <div class="day-title">A Cura ou a Queima</div>
+          <div class="day-meta">Reta final · Decisões irreversíveis</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Principal</span>
+              <span class="badge bd-moral">Define o final</span>
+            </div>
+            <div class="quest-name">As Três Rotas para o Dia 12</div>
+            <div class="quest-giver">Artemy · Dankovsky · Aglaja</div>
+            <div class="quest-desc">
+              No Dia 10, as três abordagens à crise convergem para três caminhos possíveis para o desfecho. <strong>O jogador não escolhe explicitamente</strong> — as quests concluídas e abandonadas nos dias anteriores determinam qual rota está acessível.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-good">
+                <span class="consequence-icon">✓</span>
+                Rota Menkhu (Artemy): requer o diário de Isidor completo, o curandeiro Kin vivo e Peter Stamatin cooperativo. A Cidade é preservada por meio de um ritual que a maioria dos personagens não entende.
+              </div>
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                Rota Científica (Dankovsky): requer laboratório funcional e Capella viva. Produz uma vacina que funciona — mas chega tarde demais para metade da população.
+              </div>
+              <div class="consequence con-bad">
+                <span class="consequence-icon">✗</span>
+                Rota da Inquisição (Aglaja): queima controlada dos distritos mais infectados. A Cidade sobrevive reduzida. O menor número de mortos no longo prazo — e o maior número de mortos imediatos.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DIA 12 -->
+      <div class="day-block reveal">
+        <div class="day-header">
+          <div class="day-num">12</div>
+          <div class="day-title">O Último Dia</div>
+          <div class="day-meta">Sem novas quests · Apenas consequências</div>
+        </div>
+        <div class="quest-list">
+
+          <div class="quest-entry quest-critical">
+            <div class="quest-badges">
+              <span class="badge bd-critical">Final</span>
+            </div>
+            <div class="quest-name">Executar a Rota Escolhida</div>
+            <div class="quest-giver">—</div>
+            <div class="quest-desc">
+              O Dia 12 não oferece novas missões. Ele cobra tudo o que foi prometido, adiado ou ignorado. <strong>Personagens que você não salvou não aparecem.</strong> Aliados que você traiu não ajudam. O jogo contabiliza silenciosamente cada decisão dos onze dias anteriores e apresenta uma Cidade que é o resultado exato do que você fez — sem julgamento explícito, sem tela de pontuação.
+            </div>
+            <div class="quest-consequences">
+              <div class="consequence con-warn">
+                <span class="consequence-icon">→</span>
+                O epílogo varia de acordo com quantos Adherent Kids sobreviveram, qual rota foi executada e se Lara está viva.
+              </div>
+              <div class="consequence">
+                <span class="consequence-icon">→</span>
+                Nenhum final é classificado como "bom" ou "ruim" pelo jogo. Todos têm peso e nenhum tem redenção completa.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /days-timeline -->
+
+    <p class="page-note reveal">
+      Pathologic 2 (Ice-Pick Lodge, 2019). As quests descritas refletem a campanha do Harúspex — a única jogável na versão atual. Nomes e detalhes podem variar entre versões. Missões menores de gerenciamento de recursos e reputação de distrito não foram documentadas nesta página.
+    </p>
+
+  </main>
+
+  <footer>
+    © 2026 Hub de Wikis de Jogos · Pathologic 2 © Ice-Pick Lodge
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

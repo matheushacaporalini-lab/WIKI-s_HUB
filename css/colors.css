@@ -1,0 +1,84 @@
+/* Hub de Wikis de Jogos - Definições de Cores de Fundo */
+
+body {
+  background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+  background-color: #0a0a0a;
+}
+
+body.home-page .hero {
+  background: transparent;
+}
+
+body.home-page {
+  isolation: isolate;
+}
+
+#game-backgrounds {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.game-background-layer {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 650ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.game-background-layer.is-visible {
+  opacity: 1;
+}
+
+body.home-page > main,
+body.home-page > footer {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  background-color: #121212;
+}
+
+nav ul li a:hover {
+  background-color: #9b6cd3;
+}
+
+.hero h1 {
+  background: rgba(26, 115, 232, 0.8);
+}
+
+.game-card {
+  background: #1f1f1f;
+}
+
+.game-card .img-container {
+  background-color: #111;
+}
+
+.game-card .content {
+  background-color: #1f1f1f;
+}
+
+footer {
+  background-color: #121212;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-background-layer {
+    transition: none;
+  }
+
+  .game-card {
+    transition: none;
+  }
+
+  .game-card:hover {
+    transform: none;
+  }
+}
